@@ -200,7 +200,8 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.4
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -667,13 +668,17 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R1,C1,D1,U1,Q1,#PWR2,M1-2",
     "variants": []
   },
   "sheets": [
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "AVA"
+    ],
+    [
+      "4dc20c32-2784-4169-a463-fb5f9412986b",
+      "BMU"
     ]
   ],
   "text_variables": {},

@@ -3292,7 +3292,7 @@
 	)
 	(symbol
 		(lib_id "AVA:ESC_Servo")
-		(at 168.91 72.39 0)
+		(at 168.91 38.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3303,7 +3303,7 @@
 		(fields_autoplaced yes)
 		(uuid "caa8e4e6-9e81-43da-8144-c79b401f158f")
 		(property "Reference" "U1"
-			(at 175.26 71.12 0)
+			(at 175.26 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3313,7 +3313,7 @@
 			)
 		)
 		(property "Value" ""
-			(at 168.91 72.39 0)
+			(at 168.91 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3323,7 +3323,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.91 72.39 0)
+			(at 168.91 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3334,7 +3334,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 72.39 0)
+			(at 168.91 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3345,7 +3345,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.91 72.39 0)
+			(at 168.91 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
