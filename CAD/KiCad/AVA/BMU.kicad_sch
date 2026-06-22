@@ -764,6 +764,172 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:MBR745"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MBR745"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "45V 7.5A Schottky Barrier Rectifier Diode, TO-220"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO?220*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MBR745_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MBR745_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:IRF9540N"
 			(pin_names
 				(hide yes)
@@ -1193,147 +1359,8 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:VCC"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "VCC"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VCC_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
-	(text_box "Notes\n---\n\n- if U_{Bat} dips below 4V, P-MOSFET turns on --> discharging cap causes current backflow\n- ignore for now, test discharge current under different load conditions later\n- U_{Bat1}, U_{Bat2} needed by battery charger"
+	(text_box "Notes\n---\n\n- if U_{Bat} dips below 4V, P-MOSFET turns on --> schottky diode blocks reversed current flow\n- U_{Bat1}, U_{Bat2} needed by battery charger\n! current issue: Jetson Orin NX accepts 5VDC-20VDC through barrel plug\n	--> DC/DC buck converter could smooth voltage ripple caused by ESC but requires higher battery voltage (currently at 7.2V)\n= either increase battery voltage for buck converter or add capacitors for voltage ripple\n= gamble for now and use P-Mosfet supply with 1uF cap, MBR745 with U_{Forward-Max}=0.75V"
 		(exclude_from_sim no)
 		(at 176.53 130.81 0)
 		(size 107.95 34.29)
@@ -1354,80 +1381,74 @@
 		(uuid "2f6677bf-cbb0-4d81-9a53-b4140df0c63e")
 	)
 	(junction
-		(at 74.93 57.15)
+		(at 107.95 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0633283c-d3af-4936-9dcb-03c30bd58fa0")
 	)
 	(junction
-		(at 74.93 71.12)
+		(at 107.95 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08177a47-cdc2-44f7-9661-003c51cc4466")
 	)
 	(junction
-		(at 55.88 71.12)
+		(at 152.4 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28ffefee-6585-4e89-934e-8e3b16a8a5ff")
+	)
+	(junction
+		(at 88.9 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4aacf7b1-c22f-404b-bfd6-8731edc766b3")
 	)
 	(junction
-		(at 66.04 71.12)
+		(at 99.06 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5b3e7fbe-fa8b-45c7-b7aa-7a49170fc5c3")
 	)
 	(junction
-		(at 74.93 44.45)
+		(at 107.95 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69d2c7ab-7a0e-43d3-80fa-3d80ee146b95")
 	)
 	(junction
-		(at 106.68 71.12)
+		(at 139.7 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "804d9491-69c0-454c-8030-bf6f653808bb")
 	)
 	(junction
-		(at 106.68 54.61)
+		(at 139.7 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9fc9872f-1899-4293-8255-807f108817b2")
 	)
 	(junction
-		(at 55.88 44.45)
+		(at 88.9 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aa8c53fa-4046-4e85-b5b6-d1d433a1d8c1")
 	)
 	(junction
-		(at 55.88 57.15)
+		(at 177.8 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8d0f3bc-08d2-4650-ab83-4f2b0f57d067")
+	)
+	(junction
+		(at 88.9 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e17828a4-987a-4d37-aff5-3e0fb6863eb2")
 	)
-	(junction
-		(at 132.08 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e3ca7a18-23da-40ae-8567-f04c5587fddf")
-	)
-	(junction
-		(at 66.04 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea147cee-fc03-4d20-8df0-8b8ab12e5530")
-	)
-	(junction
-		(at 119.38 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6d6a478-f326-4734-91cf-831f45aa2730")
-	)
 	(wire
 		(pts
-			(xy 43.18 71.12) (xy 55.88 71.12)
+			(xy 76.2 80.01) (xy 88.9 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1437,7 +1458,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 66.04) (xy 55.88 71.12)
+			(xy 88.9 74.93) (xy 88.9 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1447,17 +1468,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 44.45) (xy 153.67 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "100d3af2-75ce-42a5-9000-04c01918e76e")
-	)
-	(wire
-		(pts
-			(xy 132.08 57.15) (xy 132.08 44.45)
+			(xy 177.8 63.5) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1467,7 +1478,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 73.66) (xy 66.04 71.12)
+			(xy 99.06 82.55) (xy 99.06 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1477,7 +1488,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 44.45) (xy 119.38 44.45)
+			(xy 144.78 53.34) (xy 152.4 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1487,7 +1498,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 54.61) (xy 119.38 54.61)
+			(xy 139.7 63.5) (xy 152.4 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1497,7 +1508,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 54.61) (xy 119.38 53.34)
+			(xy 152.4 63.5) (xy 152.4 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1507,7 +1518,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 71.12) (xy 106.68 71.12)
+			(xy 107.95 80.01) (xy 139.7 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1517,7 +1528,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 55.88) (xy 74.93 57.15)
+			(xy 107.95 64.77) (xy 107.95 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1527,7 +1538,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 44.45) (xy 101.6 44.45)
+			(xy 107.95 53.34) (xy 134.62 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1537,7 +1548,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 57.15) (xy 55.88 58.42)
+			(xy 88.9 66.04) (xy 88.9 67.31)
 		)
 		(stroke
 			(width 0)
@@ -1547,7 +1558,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 71.12) (xy 74.93 66.04)
+			(xy 107.95 80.01) (xy 107.95 74.93)
 		)
 		(stroke
 			(width 0)
@@ -1557,17 +1568,27 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 40.64) (xy 66.04 44.45)
+			(xy 168.91 53.34) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4b8dbe23-19b5-44ab-99f7-3621e678eb5e")
+		(uuid "3f53b14b-3227-4235-accd-9d9e431ad01b")
 	)
 	(wire
 		(pts
-			(xy 74.93 57.15) (xy 74.93 58.42)
+			(xy 152.4 53.34) (xy 161.29 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "564533e4-ef05-40cc-a71b-7352fded953a")
+	)
+	(wire
+		(pts
+			(xy 107.95 66.04) (xy 107.95 67.31)
 		)
 		(stroke
 			(width 0)
@@ -1577,7 +1598,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 54.61) (xy 106.68 57.15)
+			(xy 139.7 63.5) (xy 139.7 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1587,7 +1608,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 54.61) (xy 106.68 52.07)
+			(xy 139.7 63.5) (xy 139.7 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1597,7 +1618,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 57.15) (xy 43.18 57.15)
+			(xy 88.9 66.04) (xy 76.2 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1607,17 +1628,17 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 44.45) (xy 119.38 44.45)
+			(xy 177.8 53.34) (xy 186.69 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8cdfe19d-6bdd-42dc-90ee-3c1a5b6b277a")
+		(uuid "8bbda626-8d37-4d86-84bc-94e1744f9ad7")
 	)
 	(wire
 		(pts
-			(xy 132.08 64.77) (xy 132.08 71.12)
+			(xy 177.8 71.12) (xy 177.8 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1627,7 +1648,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 71.12) (xy 132.08 71.12)
+			(xy 139.7 80.01) (xy 177.8 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1637,7 +1658,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 55.88) (xy 55.88 57.15)
+			(xy 88.9 64.77) (xy 88.9 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1647,7 +1668,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 71.12) (xy 66.04 71.12)
+			(xy 88.9 80.01) (xy 99.06 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1657,17 +1678,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 44.45) (xy 66.04 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf89ae92-56ab-4903-88ed-21df625ded59")
-	)
-	(wire
-		(pts
-			(xy 74.93 44.45) (xy 74.93 48.26)
+			(xy 107.95 53.34) (xy 107.95 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1677,7 +1688,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 57.15) (xy 74.93 57.15)
+			(xy 120.65 66.04) (xy 107.95 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1687,7 +1698,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 44.45) (xy 74.93 44.45)
+			(xy 88.9 53.34) (xy 107.95 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1697,7 +1708,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 48.26) (xy 55.88 44.45)
+			(xy 88.9 57.15) (xy 88.9 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1707,7 +1718,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 64.77) (xy 106.68 71.12)
+			(xy 139.7 73.66) (xy 139.7 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1717,7 +1728,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 45.72) (xy 119.38 44.45)
+			(xy 152.4 54.61) (xy 152.4 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1727,7 +1738,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 71.12) (xy 74.93 71.12)
+			(xy 99.06 80.01) (xy 107.95 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1737,7 +1748,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 44.45) (xy 55.88 44.45)
+			(xy 76.2 53.34) (xy 88.9 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1745,9 +1756,9 @@
 		)
 		(uuid "ff95ab63-97b2-40f3-957e-58e978c3d88d")
 	)
-	(hierarchical_label "5V"
+	(hierarchical_label "U_{Bat-Regulated}"
 		(shape input)
-		(at 153.67 44.45 0)
+		(at 186.69 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1758,7 +1769,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape input)
-		(at 43.18 71.12 180)
+		(at 76.2 80.01 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1767,9 +1778,9 @@
 		)
 		(uuid "6d8107a7-5e9a-4b39-a047-e0f6f55eebce")
 	)
-	(hierarchical_label "VCC"
+	(hierarchical_label "U_{Bat1+Bat2-Unregulated}"
 		(shape input)
-		(at 43.18 44.45 180)
+		(at 76.2 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1780,7 +1791,7 @@
 	)
 	(hierarchical_label "U_{BAT2}"
 		(shape input)
-		(at 87.63 57.15 0)
+		(at 120.65 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1791,7 +1802,7 @@
 	)
 	(hierarchical_label "U_{BAT1}"
 		(shape input)
-		(at 43.18 57.15 180)
+		(at 76.2 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1802,7 +1813,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 73.66 0)
+		(at 99.06 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1813,7 +1824,7 @@
 		(fields_autoplaced yes)
 		(uuid "29cae922-fc35-4a6e-a74c-0e5e3657e519")
 		(property "Reference" "#PWR01"
-			(at 66.04 80.01 0)
+			(at 99.06 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1824,7 +1835,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 66.04 78.74 0)
+			(at 99.06 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1834,7 +1845,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 73.66 0)
+			(at 99.06 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1845,7 +1856,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 73.66 0)
+			(at 99.06 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1856,7 +1867,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 66.04 73.66 0)
+			(at 99.06 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1880,7 +1891,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 55.88 63.5 0)
+		(at 88.9 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1891,7 +1902,7 @@
 		(fields_autoplaced yes)
 		(uuid "33f46960-2d4c-4ec3-8aa7-ffa6ccb57114")
 		(property "Reference" "BT2"
-			(at 59.69 60.3885 0)
+			(at 92.71 69.2785 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1902,7 +1913,7 @@
 			)
 		)
 		(property "Value" "3.6V"
-			(at 59.69 62.9285 0)
+			(at 92.71 71.8185 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1913,7 +1924,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 61.976 90)
+			(at 88.9 70.866 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1924,7 +1935,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 61.976 90)
+			(at 88.9 70.866 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1935,7 +1946,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 55.88 63.5 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1946,7 +1957,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 55.88 63.5 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1957,7 +1968,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 55.88 63.5 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1968,7 +1979,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 55.88 63.5 0)
+			(at 88.9 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1995,7 +2006,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 119.38 49.53 270)
+		(at 152.4 58.42 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2006,7 +2017,7 @@
 		(fields_autoplaced yes)
 		(uuid "3419dd6a-1150-4998-b1ff-aeab292a66b3")
 		(property "Reference" "D1"
-			(at 121.92 48.26 90)
+			(at 154.94 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2016,8 +2027,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5V"
-			(at 121.92 50.8 90)
+		(property "Value" "6.2V"
+			(at 154.94 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2028,7 +2039,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_A-405_P10.16mm_Horizontal"
-			(at 119.38 49.53 0)
+			(at 152.4 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2039,7 +2050,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 49.53 0)
+			(at 152.4 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2050,7 +2061,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 119.38 49.53 0)
+			(at 152.4 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2077,7 +2088,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 106.68 60.96 180)
+		(at 139.7 69.85 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2088,7 +2099,7 @@
 		(fields_autoplaced yes)
 		(uuid "5f8a1148-6fcf-4445-8185-c0a0b680cb5f")
 		(property "Reference" "R1"
-			(at 109.22 59.69 0)
+			(at 142.24 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2099,7 +2110,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 109.22 62.23 0)
+			(at 142.24 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2110,7 +2121,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 105.664 60.706 90)
+			(at 138.684 69.596 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2121,7 +2132,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 60.96 0)
+			(at 139.7 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2132,7 +2143,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 106.68 60.96 0)
+			(at 139.7 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2159,7 +2170,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:IRF9540N")
-		(at 106.68 46.99 90)
+		(at 139.7 55.88 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2170,7 +2181,7 @@
 		(fields_autoplaced yes)
 		(uuid "781df941-89b9-46b2-9727-200e919559ab")
 		(property "Reference" "Q1"
-			(at 106.68 38.1 90)
+			(at 139.7 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2180,7 +2191,7 @@
 			)
 		)
 		(property "Value" "IRF9540N"
-			(at 106.68 40.64 90)
+			(at 139.7 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2190,7 +2201,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 108.585 41.91 0)
+			(at 141.605 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2203,7 +2214,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf9540n.pdf"
-			(at 110.49 41.91 0)
+			(at 143.51 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2215,7 +2226,7 @@
 			)
 		)
 		(property "Description" "-23A Id, -100V Vds, 117mOhm Rds, P-Channel HEXFET Power MOSFET, TO-220"
-			(at 106.68 46.99 0)
+			(at 139.7 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2245,7 +2256,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 74.93 53.34 0)
+		(at 107.95 62.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2256,7 +2267,7 @@
 		(fields_autoplaced yes)
 		(uuid "8937ea0a-6fbe-4c6a-8de3-d531a9e329b2")
 		(property "Reference" "BT3"
-			(at 78.74 50.2285 0)
+			(at 111.76 59.1185 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2267,7 +2278,7 @@
 			)
 		)
 		(property "Value" "3.6V"
-			(at 78.74 52.7685 0)
+			(at 111.76 61.6585 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2278,7 +2289,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 51.816 90)
+			(at 107.95 60.706 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2289,7 +2300,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 51.816 90)
+			(at 107.95 60.706 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2300,7 +2311,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 74.93 53.34 0)
+			(at 107.95 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2311,7 +2322,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 74.93 53.34 0)
+			(at 107.95 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2322,7 +2333,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 74.93 53.34 0)
+			(at 107.95 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2333,7 +2344,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 74.93 53.34 0)
+			(at 107.95 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2359,86 +2370,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 66.04 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a584de18-e5dd-4fa1-a4be-7badf49c07a4")
-		(property "Reference" "#PWR02"
-			(at 66.04 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 66.04 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 66.04 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "22288ea6-3917-42e1-97a4-069b3006723b")
-		)
-		(instances
-			(project "AVA"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4dc20c32-2784-4169-a463-fb5f9412986b"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized_US")
-		(at 132.08 60.96 0)
+		(at 177.8 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2449,7 +2382,7 @@
 		(fields_autoplaced yes)
 		(uuid "a6bb67f5-76fb-432c-a40a-80e799606966")
 		(property "Reference" "C1"
-			(at 135.89 59.055 0)
+			(at 181.61 65.405 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2460,7 +2393,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 135.89 61.595 0)
+			(at 181.61 67.945 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2471,7 +2404,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm"
-			(at 132.08 60.96 0)
+			(at 177.8 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2482,7 +2415,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 60.96 0)
+			(at 177.8 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2493,7 +2426,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, US symbol"
-			(at 132.08 60.96 0)
+			(at 177.8 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2520,7 +2453,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 55.88 53.34 0)
+		(at 88.9 62.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2531,7 +2464,7 @@
 		(fields_autoplaced yes)
 		(uuid "b2cf97ce-af04-445b-8c37-6617ca9b3094")
 		(property "Reference" "BT1"
-			(at 59.69 50.2285 0)
+			(at 92.71 59.1185 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2542,7 +2475,7 @@
 			)
 		)
 		(property "Value" "3.6V"
-			(at 59.69 52.7685 0)
+			(at 92.71 61.6585 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2553,7 +2486,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 51.816 90)
+			(at 88.9 60.706 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2564,7 +2497,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 51.816 90)
+			(at 88.9 60.706 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2575,7 +2508,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 55.88 53.34 0)
+			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2586,7 +2519,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 55.88 53.34 0)
+			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2597,7 +2530,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 55.88 53.34 0)
+			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2608,7 +2541,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 55.88 53.34 0)
+			(at 88.9 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2635,7 +2568,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 74.93 63.5 0)
+		(at 107.95 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2646,7 +2579,7 @@
 		(fields_autoplaced yes)
 		(uuid "c9edaa51-cae2-455a-9746-fecfec1c3cda")
 		(property "Reference" "BT4"
-			(at 78.74 60.3885 0)
+			(at 111.76 69.2785 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2657,7 +2590,7 @@
 			)
 		)
 		(property "Value" "3.6V"
-			(at 78.74 62.9285 0)
+			(at 111.76 71.8185 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2668,7 +2601,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 61.976 90)
+			(at 107.95 70.866 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2679,7 +2612,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 61.976 90)
+			(at 107.95 70.866 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2690,7 +2623,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 74.93 63.5 0)
+			(at 107.95 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2701,7 +2634,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 74.93 63.5 0)
+			(at 107.95 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2712,7 +2645,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 74.93 63.5 0)
+			(at 107.95 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2723,7 +2656,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 74.93 63.5 0)
+			(at 107.95 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2743,6 +2676,86 @@
 			(project "AVA"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4dc20c32-2784-4169-a463-fb5f9412986b"
 					(reference "BT4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:MBR745")
+		(at 165.1 53.34 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed00dfb7-8c42-4269-ac27-1c70db1efc71")
+		(property "Reference" "D2"
+			(at 165.4175 46.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MBR745"
+			(at 165.4175 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
+			(at 165.1 48.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF"
+			(at 165.1 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "45V 7.5A Schottky Barrier Rectifier Diode, TO-220"
+			(at 165.1 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5b3a83c5-afb5-4bcc-b5a1-a4a918f2afa9")
+		)
+		(pin "1"
+			(uuid "231123c6-0e71-4cc5-a08e-8a109c337773")
+		)
+		(instances
+			(project "AVA"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4dc20c32-2784-4169-a463-fb5f9412986b"
+					(reference "D2")
 					(unit 1)
 				)
 			)
