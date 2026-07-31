@@ -764,172 +764,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:MBR745"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MBR745"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
-				(at 0 -4.445 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "45V 7.5A Schottky Barrier Rectifier Diode, TO-220"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO?220*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MBR745_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MBR745_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_FET:IRF9540N"
 			(pin_names
 				(hide yes)
@@ -1360,7 +1194,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Notes\n---\n\n- if U_{Bat} dips below 4V, P-MOSFET turns on --> schottky diode blocks reversed current flow\n- U_{Bat1}, U_{Bat2} needed by battery charger\n! current issue: Jetson Orin NX accepts 5VDC-20VDC through barrel plug\n	--> DC/DC buck converter could smooth voltage ripple caused by ESC but requires higher battery voltage (currently at 7.2V)\n= either increase battery voltage for buck converter or add capacitors for voltage ripple\n= gamble for now and use P-Mosfet supply with 1uF cap, MBR745 with U_{Forward-Max}=0.75V"
+	(text_box "Notes\n---\n\n- if U_{Bat} dips below 4V, P-MOSFET turns on --> ESC's builtin caps might save power rail in case of current surge?\n- U_{Bat1}, U_{Bat2} needed by battery charger\n! current issue: Jetson Orin NX accepts 5VDC-20VDC through barrel plug\n	--> DC/DC buck converter could smooth voltage ripple caused by ESC but requires higher battery voltage (currently at 7.2V, need at least 9V)\n= either add switching regulator or add capacitors for voltage ripple\n= gamble for now and use P-Mosfet supply with 1uF cap\n? Jetson Orin NX Carrier Board includes decoupling caps, issue fixed? "
 		(exclude_from_sim no)
 		(at 176.53 130.81 0)
 		(size 107.95 34.29)
@@ -1387,13 +1221,7 @@
 		(uuid "0633283c-d3af-4936-9dcb-03c30bd58fa0")
 	)
 	(junction
-		(at 107.95 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "08177a47-cdc2-44f7-9661-003c51cc4466")
-	)
-	(junction
-		(at 152.4 53.34)
+		(at 148.59 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "28ffefee-6585-4e89-934e-8e3b16a8a5ff")
@@ -1411,19 +1239,13 @@
 		(uuid "5b3e7fbe-fa8b-45c7-b7aa-7a49170fc5c3")
 	)
 	(junction
-		(at 107.95 53.34)
+		(at 107.95 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "69d2c7ab-7a0e-43d3-80fa-3d80ee146b95")
+		(uuid "621677c5-ab7e-42bd-a664-b26686a39599")
 	)
 	(junction
-		(at 139.7 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "804d9491-69c0-454c-8030-bf6f653808bb")
-	)
-	(junction
-		(at 139.7 63.5)
+		(at 135.89 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9fc9872f-1899-4293-8255-807f108817b2")
@@ -1435,16 +1257,22 @@
 		(uuid "aa8c53fa-4046-4e85-b5b6-d1d433a1d8c1")
 	)
 	(junction
-		(at 177.8 53.34)
+		(at 135.89 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d8d0f3bc-08d2-4650-ab83-4f2b0f57d067")
+		(uuid "c4e0e110-4491-4476-a066-ef8b0a1d8c57")
 	)
 	(junction
 		(at 88.9 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e17828a4-987a-4d37-aff5-3e0fb6863eb2")
+	)
+	(junction
+		(at 107.95 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc0eb48e-6fd1-4773-9994-0bbb4aaed88b")
 	)
 	(wire
 		(pts
@@ -1468,7 +1296,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 63.5) (xy 177.8 53.34)
+			(xy 173.99 63.5) (xy 173.99 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1488,7 +1316,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 53.34) (xy 152.4 53.34)
+			(xy 140.97 53.34) (xy 148.59 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1498,7 +1326,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 63.5) (xy 152.4 63.5)
+			(xy 135.89 63.5) (xy 148.59 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1508,23 +1336,13 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 63.5) (xy 152.4 62.23)
+			(xy 148.59 63.5) (xy 148.59 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2f7b6ee2-8f69-408d-aacc-77c99bea6401")
-	)
-	(wire
-		(pts
-			(xy 107.95 80.01) (xy 139.7 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30feedca-e583-4dea-83fe-bef5fef1351b")
 	)
 	(wire
 		(pts
@@ -1535,16 +1353,6 @@
 			(type default)
 		)
 		(uuid "3559784c-7b39-4c3e-bee8-707f5dc9dd13")
-	)
-	(wire
-		(pts
-			(xy 107.95 53.34) (xy 134.62 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38d93bb2-5694-47e2-b135-6dd1d7ea6cc3")
 	)
 	(wire
 		(pts
@@ -1568,17 +1376,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 53.34) (xy 177.8 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f53b14b-3227-4235-accd-9d9e431ad01b")
-	)
-	(wire
-		(pts
-			(xy 152.4 53.34) (xy 161.29 53.34)
+			(xy 148.59 53.34) (xy 173.99 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1598,7 +1396,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 63.5) (xy 139.7 66.04)
+			(xy 135.89 63.5) (xy 135.89 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1608,7 +1406,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 63.5) (xy 139.7 60.96)
+			(xy 135.89 63.5) (xy 135.89 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1628,33 +1426,13 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 53.34) (xy 186.69 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bbda626-8d37-4d86-84bc-94e1744f9ad7")
-	)
-	(wire
-		(pts
-			(xy 177.8 71.12) (xy 177.8 80.01)
+			(xy 173.99 71.12) (xy 173.99 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9122b68e-2a79-4f03-aa65-fe54d6f6b552")
-	)
-	(wire
-		(pts
-			(xy 139.7 80.01) (xy 177.8 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97fd26e5-e0c7-4b2a-a72e-4b9c20ded7ac")
 	)
 	(wire
 		(pts
@@ -1675,6 +1453,16 @@
 			(type default)
 		)
 		(uuid "aa34d5de-1731-47f3-8e21-296911ddc6ee")
+	)
+	(wire
+		(pts
+			(xy 107.95 80.01) (xy 135.89 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cda1d774-402f-46a6-af94-b480fa7810e6")
 	)
 	(wire
 		(pts
@@ -1708,6 +1496,26 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 53.34) (xy 130.81 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3d96734-eb29-4138-9465-34895def6ccc")
+	)
+	(wire
+		(pts
+			(xy 135.89 80.01) (xy 173.99 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed32f412-d238-4eb1-8cb5-66aecab2a8db")
+	)
+	(wire
+		(pts
 			(xy 88.9 57.15) (xy 88.9 53.34)
 		)
 		(stroke
@@ -1718,7 +1526,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 73.66) (xy 139.7 80.01)
+			(xy 135.89 73.66) (xy 135.89 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1728,7 +1536,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 54.61) (xy 152.4 53.34)
+			(xy 148.59 54.61) (xy 148.59 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2006,7 +1814,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 152.4 58.42 270)
+		(at 148.59 58.42 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2017,7 +1825,7 @@
 		(fields_autoplaced yes)
 		(uuid "3419dd6a-1150-4998-b1ff-aeab292a66b3")
 		(property "Reference" "D1"
-			(at 154.94 57.15 90)
+			(at 151.13 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2027,8 +1835,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "6.2V"
-			(at 154.94 59.69 90)
+		(property "Value" "5.6V"
+			(at 151.13 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2039,7 +1847,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_A-405_P10.16mm_Horizontal"
-			(at 152.4 58.42 0)
+			(at 148.59 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2050,7 +1858,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 58.42 0)
+			(at 148.59 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2061,7 +1869,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 152.4 58.42 0)
+			(at 148.59 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2088,7 +1896,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 139.7 69.85 180)
+		(at 135.89 69.85 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2099,7 +1907,7 @@
 		(fields_autoplaced yes)
 		(uuid "5f8a1148-6fcf-4445-8185-c0a0b680cb5f")
 		(property "Reference" "R1"
-			(at 142.24 68.58 0)
+			(at 138.43 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2110,7 +1918,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 142.24 71.12 0)
+			(at 138.43 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2121,7 +1929,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 138.684 69.596 90)
+			(at 134.874 69.596 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2132,7 +1940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 69.85 0)
+			(at 135.89 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2143,7 +1951,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 139.7 69.85 0)
+			(at 135.89 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2170,7 +1978,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:IRF9540N")
-		(at 139.7 55.88 90)
+		(at 135.89 55.88 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2181,7 +1989,7 @@
 		(fields_autoplaced yes)
 		(uuid "781df941-89b9-46b2-9727-200e919559ab")
 		(property "Reference" "Q1"
-			(at 139.7 46.99 90)
+			(at 135.89 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2191,7 +1999,7 @@
 			)
 		)
 		(property "Value" "IRF9540N"
-			(at 139.7 49.53 90)
+			(at 135.89 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2201,7 +2009,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
-			(at 141.605 50.8 0)
+			(at 137.795 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2214,7 +2022,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf9540n.pdf"
-			(at 143.51 50.8 0)
+			(at 139.7 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2226,7 +2034,7 @@
 			)
 		)
 		(property "Description" "-23A Id, -100V Vds, 117mOhm Rds, P-Channel HEXFET Power MOSFET, TO-220"
-			(at 139.7 55.88 0)
+			(at 135.89 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2371,7 +2179,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized_US")
-		(at 177.8 67.31 0)
+		(at 173.99 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2382,7 +2190,7 @@
 		(fields_autoplaced yes)
 		(uuid "a6bb67f5-76fb-432c-a40a-80e799606966")
 		(property "Reference" "C1"
-			(at 181.61 65.405 0)
+			(at 177.8 65.405 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2393,7 +2201,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 181.61 67.945 0)
+			(at 177.8 67.945 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2404,7 +2212,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm"
-			(at 177.8 67.31 0)
+			(at 173.99 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2415,7 +2223,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 67.31 0)
+			(at 173.99 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2426,7 +2234,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, US symbol"
-			(at 177.8 67.31 0)
+			(at 173.99 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2676,86 +2484,6 @@
 			(project "AVA"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4dc20c32-2784-4169-a463-fb5f9412986b"
 					(reference "BT4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:MBR745")
-		(at 165.1 53.34 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ed00dfb7-8c42-4269-ac27-1c70db1efc71")
-		(property "Reference" "D2"
-			(at 165.4175 46.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MBR745"
-			(at 165.4175 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-2_Vertical"
-			(at 165.1 48.895 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF"
-			(at 165.1 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "45V 7.5A Schottky Barrier Rectifier Diode, TO-220"
-			(at 165.1 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5b3a83c5-afb5-4bcc-b5a1-a4a918f2afa9")
-		)
-		(pin "1"
-			(uuid "231123c6-0e71-4cc5-a08e-8a109c337773")
-		)
-		(instances
-			(project "AVA"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4dc20c32-2784-4169-a463-fb5f9412986b"
-					(reference "D2")
 					(unit 1)
 				)
 			)

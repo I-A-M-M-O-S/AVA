@@ -3541,7 +3541,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Notes\n---\n\n- Tnfeeon's battery eliminator circuit (BEC) keeps U_{Servo} at 5.8V\n- ESC has preattached capacitors against voltage ripple (no idea how much C, enough I hope)\n- Jetson Orin NX gets stabilized 5V-6.1V (P-Channel Mosfet, standard automotive with schottky rectifier)\n- hunting down Jeff Bezo's for datasheets rn"
+	(text_box "Notes\n---\n\n- Tnfeeon's battery eliminator circuit (BEC) keeps U_{Servo} at 5.8V\n- ESC has preattached capacitors against voltage ripple (no idea how much C, enough I hope)\n- Jetson Orin NX gets stabilized 5V-6.1V (P-Channel Mosfet, standard automotive with schottky rectifier)\n- hunting down Jeff Bezos for datasheets rn"
 		(exclude_from_sim no)
 		(at 177.8 132.08 0)
 		(size 106.68 33.02)
@@ -3699,16 +3699,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 146.05) (xy 161.29 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2778f3b6-9071-487e-b819-26f0ead03a06")
-	)
-	(wire
-		(pts
 			(xy 128.27 31.75) (xy 133.35 31.75)
 		)
 		(stroke
@@ -3766,26 +3756,6 @@
 			(type default)
 		)
 		(uuid "3e57953a-85f0-4b26-ab84-2254ac3d6777")
-	)
-	(wire
-		(pts
-			(xy 173.99 113.03) (xy 177.8 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f982473-473e-409a-bf28-1baab88c7ec5")
-	)
-	(wire
-		(pts
-			(xy 161.29 146.05) (xy 161.29 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4180eabc-1e7e-432f-a821-39a54da6c104")
 	)
 	(wire
 		(pts
@@ -3896,16 +3866,6 @@
 			(type default)
 		)
 		(uuid "65987304-796e-4158-8ed8-c1e4ab2a67a7")
-	)
-	(wire
-		(pts
-			(xy 161.29 107.95) (xy 177.8 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66f146a5-d7e3-457a-8181-ebbfa282de68")
 	)
 	(wire
 		(pts
@@ -4199,16 +4159,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 110.49) (xy 177.8 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2a25293-0a7f-4e1f-b028-0dbcaa0f0e3c")
-	)
-	(wire
-		(pts
 			(xy 72.39 77.47) (xy 124.46 77.47)
 		)
 		(stroke
@@ -4316,6 +4266,16 @@
 			(type default)
 		)
 		(uuid "e45d96ea-cc0a-4c7e-b202-befbc85113b5")
+	)
+	(wire
+		(pts
+			(xy 50.8 146.05) (xy 69.85 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e82e385a-2137-4e49-a78b-3d2422240ae0")
 	)
 	(wire
 		(pts
@@ -5337,7 +5297,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C_Polarized_US"
+		(property "Value" "?F"
 			(at 201.93 56.515 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5471,85 +5431,6 @@
 			(project "AVA"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 173.99 110.49 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a48f5d3f-ced0-4a11-b006-686308298ae9")
-		(property "Reference" "#PWR08"
-			(at 177.8 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 170.18 110.49 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 173.99 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7969024c-0fc4-4f05-89f6-0442929f8fa2")
-		)
-		(instances
-			(project "AVA"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -6013,7 +5894,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Steering_Front_Servo"
+		(property "Value" "Steering_Servo"
 			(at 194.31 97.3569 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6070,91 +5951,6 @@
 			(project "AVA"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "M2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Motor:Motor_Servo")
-		(at 185.42 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ee546bdd-7120-452f-a85f-5a9232ec165e")
-		(property "Reference" "M3"
-			(at 194.31 108.7869 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Steering_Back_Servo"
-			(at 194.31 111.3269 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 185.42 115.316 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
-			(at 185.42 115.316 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
-			(at 185.42 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "32dfa5c7-1170-4d11-801c-0103377276f1")
-		)
-		(pin "1"
-			(uuid "922ad09e-88f7-49b4-8f76-a212949420f8")
-		)
-		(pin "3"
-			(uuid "af412680-4818-407e-9ac2-1841b054ea06")
-		)
-		(instances
-			(project "AVA"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "M3")
 					(unit 1)
 				)
 			)
@@ -6349,85 +6145,6 @@
 			(project "AVA"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 173.99 113.03 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f604f6a9-a296-48e7-a9d3-4c9c64a66477")
-		(property "Reference" "#PWR09"
-			(at 167.64 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 113.03 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 173.99 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "61df6017-a657-4080-a395-3c77ec855726")
-		)
-		(instances
-			(project "AVA"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR09")
 					(unit 1)
 				)
 			)
