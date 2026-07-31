@@ -139,6 +139,7 @@
 <ref refid="46480165-8d20-11f1-a897-fb02fba3bdca"/>
 <ref refid="ea0e4155-8d20-11f1-a6ea-fb02fba3bdca"/>
 <ref refid="3c05da99-8d21-11f1-930a-fb02fba3bdca"/>
+<ref refid="b634b75a-8d25-11f1-9d39-fb02fba3bdca"/>
 </reflist>
 </ownedType>
 <owningPackage>
@@ -151,6 +152,7 @@
 <ref refid="46480165-8d20-11f1-a897-fb02fba3bdca"/>
 <ref refid="ea0e4155-8d20-11f1-a6ea-fb02fba3bdca"/>
 <ref refid="3c05da99-8d21-11f1-930a-fb02fba3bdca"/>
+<ref refid="b634b75a-8d25-11f1-9d39-fb02fba3bdca"/>
 </reflist>
 </packagedElement>
 </UML:Package>
@@ -291,10 +293,12 @@
 <ref refid="46494b2e-8d20-11f1-8339-fb02fba3bdca"/>
 <ref refid="ea0f6d06-8d20-11f1-a780-fb02fba3bdca"/>
 <ref refid="3c071c36-8d21-11f1-8062-fb02fba3bdca"/>
+<ref refid="b6360189-8d25-11f1-a236-fb02fba3bdca"/>
 <ref refid="c8b7c683-8d21-11f1-ae6d-fb02fba3bdca"/>
 <ref refid="cbd2f043-8d21-11f1-9d93-fb02fba3bdca"/>
 <ref refid="cf7522e2-8d21-11f1-b398-fb02fba3bdca"/>
-<ref refid="b32b926a-8d21-11f1-ac79-fb02fba3bdca"/>
+<ref refid="1aa6d95a-8d27-11f1-b8ff-fb02fba3bdca"/>
+<ref refid="db3f87cf-8d27-11f1-aea3-fb02fba3bdca"/>
 </reflist>
 </ownedPresentation>
 <presentation>
@@ -1728,7 +1732,7 @@
 <val>2</val>
 </externalId>
 <name>
-<val>RC-Auto-Fahrmodus-HMI</val>
+<val>Manueller Fahrmodus</val>
 </name>
 <owningPackage>
 <ref refid="012edaba-70f5-11ec-aabc-f47b099bf663"/>
@@ -1747,12 +1751,12 @@
 </reflist>
 </targetDirectedRelationshipPropertyPath_>
 <text>
-<val>Im manuellen Fahrmodus muss das RC-Auto durch den Bediener ferngesteuert werden.</val>
+<val>Im manuellen Modus muss das RC-Auto durch den Bediener ferngesteuert werden.</val>
 </text>
 </SysML:Requirement>
 <SysML:RequirementItem id="8d5e6e6c-8d1c-11f1-b768-fb02fba3bdca">
 <matrix>
-<val>(1.0, 0.0, 0.0, 1.0, 398.31591796875, 440.90960693359375)</val>
+<val>(1.0, 0.0, 0.0, 1.0, 183.27304077148438, 436.3058166503906)</val>
 </matrix>
 <top-left>
 <val>(11.2073974609375, 0.0)</val>
@@ -1761,7 +1765,7 @@
 <val>266.0</val>
 </width>
 <height>
-<val>151.0</val>
+<val>134.0</val>
 </height>
 <diagram>
 <ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
@@ -1799,7 +1803,7 @@
 </SysML:Requirement>
 <SysML:RequirementItem id="46494b2e-8d20-11f1-8339-fb02fba3bdca">
 <matrix>
-<val>(1.0, 0.0, 0.0, 1.0, 759.3170776367188, 440.90960693359375)</val>
+<val>(1.0, 0.0, 0.0, 1.0, 547.9783630371094, 436.3058166503906)</val>
 </matrix>
 <top-left>
 <val>(0.0, 0.0)</val>
@@ -1846,7 +1850,7 @@
 </SysML:Requirement>
 <SysML:RequirementItem id="ea0f6d06-8d20-11f1-a780-fb02fba3bdca">
 <matrix>
-<val>(1.0, 0.0, 0.0, 1.0, 1062.5083312988281, 429.6095275878906)</val>
+<val>(1.0, 0.0, 0.0, 1.0, 847.4654541015625, 425.0057373046875)</val>
 </matrix>
 <top-left>
 <val>(0.0, 0.0)</val>
@@ -1869,7 +1873,7 @@
 <val>5</val>
 </externalId>
 <name>
-<val>RC-Auto-Weboberfläche</val>
+<val>Weboberfläche</val>
 </name>
 <owningPackage>
 <ref refid="012edaba-70f5-11ec-aabc-f47b099bf663"/>
@@ -1884,7 +1888,7 @@
 </presentation>
 <targetDirectedRelationshipPropertyPath_>
 <reflist>
-<ref refid="b5ad8ca1-8d21-11f1-b051-fb02fba3bdca"/>
+<ref refid="1c2af835-8d27-11f1-bb3f-fb02fba3bdca"/>
 </reflist>
 </targetDirectedRelationshipPropertyPath_>
 <text>
@@ -1893,16 +1897,16 @@
 </SysML:Requirement>
 <SysML:RequirementItem id="3c071c36-8d21-11f1-8062-fb02fba3bdca">
 <matrix>
-<val>(1.0, 0.0, 0.0, 1.0, 30.292510986328125, 441.1614532470703)</val>
+<val>(1.0, 0.0, 0.0, 1.0, 547.9783630371094, 681.4743902996456)</val>
 </matrix>
 <top-left>
 <val>(0.0, 0.0)</val>
 </top-left>
 <width>
-<val>260.6092529296875</val>
+<val>229.53787231445312</val>
 </width>
 <height>
-<val>134.0</val>
+<val>151.0</val>
 </height>
 <diagram>
 <ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
@@ -1928,7 +1932,7 @@
 <val>(1.0, 0.0, 0.0, 1.0, 638.4276733398438, 313.30218505859375)</val>
 </matrix>
 <points>
-<val>[(0.0, -0.742950439453125), (-95.90435791015625, 127.607421875)]</val>
+<val>[(0.0, -0.742950439453125), (-310.9472351074219, 123.00363159179688)]</val>
 </points>
 <head-connection>
 <ref refid="a4b75356-8d17-11f1-b32f-fb02fba3bdca"/>
@@ -1967,7 +1971,7 @@
 <val>(1.0, 0.0, 0.0, 1.0, 672.9024658203125, 311.7772216796875)</val>
 </matrix>
 <points>
-<val>[(0.0, 0.782012939453125), (201.1835479736328, 129.13238525390625)]</val>
+<val>[(0.0, 0.782012939453125), (-10.155166625976562, 124.52859497070312)]</val>
 </points>
 <head-connection>
 <ref refid="a4b75356-8d17-11f1-b32f-fb02fba3bdca"/>
@@ -2006,7 +2010,7 @@
 <val>(1.0, 0.0, 0.0, 1.0, 729.842041015625, 305.9928283691406)</val>
 </matrix>
 <points>
-<val>[(0.0, 6.56640625), (416.709228515625, 123.61669921875)]</val>
+<val>[(0.0, 6.56640625), (201.66635131835938, 119.01290893554688)]</val>
 </points>
 <head-connection>
 <ref refid="a4b75356-8d17-11f1-b32f-fb02fba3bdca"/>
@@ -2026,45 +2030,6 @@
 </sourceContext>
 <targetContext>
 <ref refid="ea0e4155-8d20-11f1-a6ea-fb02fba3bdca"/>
-</targetContext>
-</SysML:Refine>
-<SysML:RefineItem id="b32b926a-8d21-11f1-ac79-fb02fba3bdca">
-<diagram>
-<ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
-</diagram>
-<horizontal>
-<val>False</val>
-</horizontal>
-<orthogonal>
-<val>False</val>
-</orthogonal>
-<subject>
-<ref refid="b5ad8ca1-8d21-11f1-b051-fb02fba3bdca"/>
-</subject>
-<matrix>
-<val>(1.0, 0.0, 0.0, 1.0, 609.3631591796875, 312.3851623535156)</val>
-</matrix>
-<points>
-<val>[(0.0, 0.174072265625), (-448.7660217285156, 128.7762908935547)]</val>
-</points>
-<head-connection>
-<ref refid="a4b75356-8d17-11f1-b32f-fb02fba3bdca"/>
-</head-connection>
-<tail-connection>
-<ref refid="3c071c36-8d21-11f1-8062-fb02fba3bdca"/>
-</tail-connection>
-</SysML:RefineItem>
-<SysML:Refine id="b5ad8ca1-8d21-11f1-b051-fb02fba3bdca">
-<presentation>
-<reflist>
-<ref refid="b32b926a-8d21-11f1-ac79-fb02fba3bdca"/>
-</reflist>
-</presentation>
-<sourceContext>
-<ref refid="a4b4c651-8d17-11f1-9710-fb02fba3bdca"/>
-</sourceContext>
-<targetContext>
-<ref refid="3c05da99-8d21-11f1-930a-fb02fba3bdca"/>
 </targetContext>
 </SysML:Refine>
 <SysML:BlockItem id="b7932cec-8d23-11f1-8084-fb02fba3bdca">
@@ -2672,5 +2637,130 @@
 <ref refid="8fdc6def-8d24-11f1-b5a9-fb02fba3bdca"/>
 </type>
 </UML:Property>
+<SysML:Requirement id="b634b75a-8d25-11f1-9d39-fb02fba3bdca">
+<externalId>
+<val>6</val>
+</externalId>
+<name>
+<val>Manuelles Steuergerät</val>
+</name>
+<owningPackage>
+<ref refid="012edaba-70f5-11ec-aabc-f47b099bf663"/>
+</owningPackage>
+<package>
+<ref refid="012edaba-70f5-11ec-aabc-f47b099bf663"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="b6360189-8d25-11f1-a236-fb02fba3bdca"/>
+</reflist>
+</presentation>
+<targetDirectedRelationshipPropertyPath_>
+<reflist>
+<ref refid="dcd4bc8f-8d27-11f1-8a2a-fb02fba3bdca"/>
+</reflist>
+</targetDirectedRelationshipPropertyPath_>
+<text>
+<val>Im manuellen Modus soll der Bediener das RC-Auto mit einem mobilen Steuergerät lenken.</val>
+</text>
+</SysML:Requirement>
+<SysML:RequirementItem id="b6360189-8d25-11f1-a236-fb02fba3bdca">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 194.48043823242188, 681.4743902996456)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>266.0</val>
+</width>
+<height>
+<val>151.0</val>
+</height>
+<diagram>
+<ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
+</diagram>
+<subject>
+<ref refid="b634b75a-8d25-11f1-9d39-fb02fba3bdca"/>
+</subject>
+</SysML:RequirementItem>
+<SysML:DeriveReqtItem id="1aa6d95a-8d27-11f1-b8ff-fb02fba3bdca">
+<diagram>
+<ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
+</diagram>
+<horizontal>
+<val>False</val>
+</horizontal>
+<orthogonal>
+<val>False</val>
+</orthogonal>
+<subject>
+<ref refid="1c2af835-8d27-11f1-bb3f-fb02fba3bdca"/>
+</subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 642.0022618716512, 570.3427092686223)</val>
+</matrix>
+<points>
+<val>[(20.745037322684766, 16.963107381768282), (20.745037322684766, 111.13168103102328)]</val>
+</points>
+<head-connection>
+<ref refid="46494b2e-8d20-11f1-8339-fb02fba3bdca"/>
+</head-connection>
+<tail-connection>
+<ref refid="3c071c36-8d21-11f1-8062-fb02fba3bdca"/>
+</tail-connection>
+</SysML:DeriveReqtItem>
+<SysML:DeriveReqt id="1c2af835-8d27-11f1-bb3f-fb02fba3bdca">
+<presentation>
+<reflist>
+<ref refid="1aa6d95a-8d27-11f1-b8ff-fb02fba3bdca"/>
+</reflist>
+</presentation>
+<sourceContext>
+<ref refid="46480165-8d20-11f1-a897-fb02fba3bdca"/>
+</sourceContext>
+<targetContext>
+<ref refid="3c05da99-8d21-11f1-930a-fb02fba3bdca"/>
+</targetContext>
+</SysML:DeriveReqt>
+<SysML:DeriveReqtItem id="db3f87cf-8d27-11f1-aea3-fb02fba3bdca">
+<diagram>
+<ref refid="01a97fa8-70f6-11ec-aabc-f47b099bf663"/>
+</diagram>
+<horizontal>
+<val>False</val>
+</horizontal>
+<orthogonal>
+<val>False</val>
+</orthogonal>
+<subject>
+<ref refid="dcd4bc8f-8d27-11f1-8a2a-fb02fba3bdca"/>
+</subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 321.0097691958699, 573.303311075263)</val>
+</matrix>
+<points>
+<val>[(6.4706690365519535, -2.997494424872343), (6.4706690365519535, 108.17107922438265)]</val>
+</points>
+<head-connection>
+<ref refid="8d5e6e6c-8d1c-11f1-b768-fb02fba3bdca"/>
+</head-connection>
+<tail-connection>
+<ref refid="b6360189-8d25-11f1-a236-fb02fba3bdca"/>
+</tail-connection>
+</SysML:DeriveReqtItem>
+<SysML:DeriveReqt id="dcd4bc8f-8d27-11f1-8a2a-fb02fba3bdca">
+<presentation>
+<reflist>
+<ref refid="db3f87cf-8d27-11f1-aea3-fb02fba3bdca"/>
+</reflist>
+</presentation>
+<sourceContext>
+<ref refid="8d5d44b4-8d1c-11f1-bac8-fb02fba3bdca"/>
+</sourceContext>
+<targetContext>
+<ref refid="b634b75a-8d25-11f1-9d39-fb02fba3bdca"/>
+</targetContext>
+</SysML:DeriveReqt>
 </model>
 </gaphor>
