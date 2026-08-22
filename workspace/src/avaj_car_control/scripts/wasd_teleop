@@ -1,0 +1,170 @@
+#!/usr/bin/env python3
+
+"""Qt keyboard client with real key-press and key-release handling."""
+
+import sys
+import time
+
+import rclpy
+from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
+from rclpy.node import Node
+
+from avaj_car_control.msg import DriveCommand
+
+
+class DrivePublisher(Node):
+    def __init__(self):
+        super().__init__('wasd_teleop')
+        self._publisher = self.create_publisher(
+            DriveCommand, '/drive_command', 10
+        )
+
+    def publish(self, steering, acceleration):
+        command = DriveCommand()
+        command.steering = steering
+        command.acceleration = acceleration
+        self._publisher.publish(command)
+
+    def neutral(self):
+        for _ in range(3):
+            self.publish(50, 50)
+            time.sleep(0.02)
+
+
+class WasdWindow(QWidget):
+    def __init__(self, drive_publisher):
+        super().__init__()
+        self._drive_publisher = drive_publisher
+        self._pressed = set()
+        self.steering = 50
+        self.acceleration = 50
+
+        self.setWindowTitle('AVAJ WASD-Steuerung')
+        self.setMinimumSize(460, 240)
+        self.setFocusPolicy(Qt.StrongFocus)
+
+        title = QLabel('WASD FAHRSTEUERUNG')
+        title.setAlignment(Qt.AlignCenter)
+        title.setFont(QFont('Sans', 18, QFont.Bold))
+
+        self._values = QLabel()
+        self._values.setAlignment(Qt.AlignCenter)
+        self._values.setFont(QFont('Monospace', 16, QFont.Bold))
+
+        help_text = QLabel(
+            'Tasten gedrueckt halten\n'
+            'W = vorwaerts    S = rueckwaerts\n'
+            'A = links        D = rechts\n\n'
+            'Loslassen = sofort zurueck auf 50\n'
+            'Fensterwechsel = Not-Stopp'
+        )
+        help_text.setAlignment(Qt.AlignCenter)
+
+        layout = QVBoxLayout(self)
+        layout.addWidget(title)
+        layout.addWidget(self._values)
+        layout.addWidget(help_text)
+        self.setStyleSheet(
+            'QWidget { background: #17202a; color: #ecf0f1; }'
+            'QLabel { padding: 6px; }'
+        )
+        self._update_display()
+
+        self._timer = QTimer(self)
+        self._timer.timeout.connect(self._publish)
+        self._timer.start(20)  # 50 Hz
+
+    def keyPressEvent(self, event):
+        if event.isAutoRepeat():
+            return
+        key = event.key()
+        if key in (Qt.Key_W, Qt.Key_A, Qt.Key_S, Qt.Key_D):
+            self._pressed.add(key)
+            self._update_command()
+            self._publish()
+            event.accept()
+            return
+        if key in (Qt.Key_Escape, Qt.Key_Q):
+            self.close()
+            event.accept()
+            return
+        super().keyPressEvent(event)
+
+    def keyReleaseEvent(self, event):
+        if event.isAutoRepeat():
+            return
+        key = event.key()
+        if key in (Qt.Key_W, Qt.Key_A, Qt.Key_S, Qt.Key_D):
+            self._pressed.discard(key)
+            self._update_command()
+            self._publish()
+            event.accept()
+            return
+        super().keyReleaseEvent(event)
+
+    def focusOutEvent(self, event):
+        self._neutralize()
+        super().focusOutEvent(event)
+
+    def closeEvent(self, event):
+        self._neutralize()
+        self._drive_publisher.neutral()
+        event.accept()
+
+    def _update_command(self):
+        if (Qt.Key_A in self._pressed) == (Qt.Key_D in self._pressed):
+            self.steering = 50
+        elif Qt.Key_A in self._pressed:
+            self.steering = 0
+        else:
+            self.steering = 100
+
+        if (Qt.Key_W in self._pressed) == (Qt.Key_S in self._pressed):
+            self.acceleration = 50
+        elif Qt.Key_W in self._pressed:
+            self.acceleration = 100
+        else:
+            self.acceleration = 0
+        self._update_display()
+
+    def _neutralize(self):
+        self._pressed.clear()
+        self.steering = 50
+        self.acceleration = 50
+        self._update_display()
+        self._publish()
+
+    def _publish(self):
+        self._drive_publisher.publish(self.steering, self.acceleration)
+
+    def _update_display(self):
+        self._values.setText(
+            f'Lenkung: {self.steering:3d}    '
+            f'Beschleunigung: {self.acceleration:3d}'
+        )
+
+
+def main():
+    rclpy.init(args=sys.argv)
+    drive_publisher = DrivePublisher()
+    app = QApplication([sys.argv[0]])
+    window = WasdWindow(drive_publisher)
+    window.show()
+    window.raise_()
+    window.activateWindow()
+    QTimer.singleShot(0, window.setFocus)
+
+    try:
+        return_code = app.exec_()
+    finally:
+        drive_publisher.neutral()
+        drive_publisher.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+    return return_code
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
