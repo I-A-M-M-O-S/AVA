@@ -1,0 +1,5 @@
+(version 1)
+(rule "TO-92_Clearance_Exception"
+	(condition "A.Type == 'Pad'")
+	(constraint clearance (min 5mil))
+)
