@@ -1,0 +1,19 @@
+# ROS 2 / colcon generated output
+workspace/build/
+workspace/install/
+workspace/log/
+
+# Python cache and local tooling files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated SLAM maps (keep the directory, not every recorded map)
+workspace/maps/*
+!workspace/maps/.gitkeep
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
