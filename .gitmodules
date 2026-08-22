@@ -1,0 +1,6 @@
+[submodule "ros2_jazzy/workspace/src/ldlidar_stl_ros2"]
+	path = ros2_jazzy/workspace/src/ldlidar_stl_ros2
+	url = https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2
+[submodule "ros2_jazzy/workspace/src/bno08x_ros2_driver"]
+	path = ros2_jazzy/workspace/src/bno08x_ros2_driver
+	url = https://github.com/bnbhat/bno08x_ros2_driver
