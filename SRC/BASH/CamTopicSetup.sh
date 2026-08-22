@@ -21,10 +21,6 @@ standby(){
     2)
       echo ''
       ;;
-    *)
-      echo 'Invalid choice'
-      standby
-      ;;
   esac
   return 0;
 }
