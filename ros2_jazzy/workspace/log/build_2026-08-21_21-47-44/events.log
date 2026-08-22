@@ -1,0 +1,283 @@
+[0.000000] (-) TimerEvent: {}
+[0.000383] (-) JobUnselected: {'identifier': 'avaj_car_control'}
+[0.000544] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.001250] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.001300] (control_center) JobQueued: {'identifier': 'control_center', 'dependencies': OrderedDict({'avaj_car_control': '/workspace/install/avaj_car_control'})}
+[0.001576] (control_center) JobStarted: {'identifier': 'control_center'}
+[0.025012] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'cmake'}
+[0.027665] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'build'}
+[0.027787] (control_center) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/control_center', '--', '-j8', '-l8'], 'cwd': '/workspace/build/control_center', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/control_center', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099298] (-) TimerEvent: {}
+[0.104400] (control_center) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.199461] (-) TimerEvent: {}
+[0.299798] (-) TimerEvent: {}
+[0.400161] (-) TimerEvent: {}
+[0.500461] (-) TimerEvent: {}
+[0.541631] (control_center) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.559972] (control_center) StdoutLine: {'line': b'-- Found avaj_car_control: 0.1.0 (/workspace/install/avaj_car_control/share/avaj_car_control/cmake)\n'}
+[0.600653] (-) TimerEvent: {}
+[0.614077] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.632909] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.657611] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.679824] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700871] (-) TimerEvent: {}
+[0.703148] (control_center) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.801050] (-) TimerEvent: {}
+[0.823710] (control_center) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.884065] (control_center) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.887470] (control_center) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.901211] (-) TimerEvent: {}
+[1.001592] (-) TimerEvent: {}
+[1.004035] (control_center) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.101822] (-) TimerEvent: {}
+[1.109301] (control_center) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.201952] (-) TimerEvent: {}
+[1.302291] (-) TimerEvent: {}
+[1.343409] (control_center) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.372923] (control_center) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.380222] (control_center) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/control_center\n'}
+[1.402477] (-) TimerEvent: {}
+[1.464434] (control_center) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/control_center.dir/control_center.cpp.o\n'}
+[1.502651] (-) TimerEvent: {}
+[1.603072] (-) TimerEvent: {}
+[1.703450] (-) TimerEvent: {}
+[1.803827] (-) TimerEvent: {}
+[1.904245] (-) TimerEvent: {}
+[1.995063] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:152:38: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.995800] (control_center) StderrLine: {'line': b'  152 |            << "{\\"camera\\":{"received\\":" << (image_received_ ? "true" : "false")\n'}
+[1.996016] (control_center) StderrLine: {'line': b'      |                                      ^\n'}
+[1.996364] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:156:36: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.996789] (control_center) StderrLine: {'line': b'  156 |            << "\\"lidar\\":{"received\\":" << (scan_received_ ? "true" : "false")\n'}
+[1.996922] (control_center) StderrLine: {'line': b'      |                                    ^\n'}
+[1.997172] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:159:34: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.997335] (control_center) StderrLine: {'line': b'  159 |            << "\\"imu\\":{"received\\":" << (imu_received_ ? "true" : "false")\n'}
+[1.997539] (control_center) StderrLine: {'line': b'      |                                  ^\n'}
+[1.997700] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:163:43: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.998536] (control_center) StderrLine: {'line': b'  163 |            << "\\"magnetometer\\":{"received\\":" << (mag_received_ ? "true" : "false")\n'}
+[1.998705] (control_center) StderrLine: {'line': b'      |                                           ^\n'}
+[1.998862] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:166:39: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.999011] (control_center) StderrLine: {'line': b'  166 |            << "\\"odometry\\":{"received\\":" << (odom_received_ ? "true" : "false")\n'}
+[1.999148] (control_center) StderrLine: {'line': b'      |                                       ^\n'}
+[1.999305] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:169:36: error: stray \xe2\x80\x98\\\xe2\x80\x99 in program\n'}
+[1.999449] (control_center) StderrLine: {'line': b'  169 |            << "\\"drive\\":{"received\\":" << (drive_received_ ? "true" : "false")\n'}
+[1.999580] (control_center) StderrLine: {'line': b'      |                                    ^\n'}
+[2.004313] (-) TimerEvent: {}
+[2.104566] (-) TimerEvent: {}
+[2.204942] (-) TimerEvent: {}
+[2.305317] (-) TimerEvent: {}
+[2.406242] (-) TimerEvent: {}
+[2.506633] (-) TimerEvent: {}
+[2.607048] (-) TimerEvent: {}
+[2.707417] (-) TimerEvent: {}
+[2.807777] (-) TimerEvent: {}
+[2.908149] (-) TimerEvent: {}
+[3.008527] (-) TimerEvent: {}
+[3.108928] (-) TimerEvent: {}
+[3.209312] (-) TimerEvent: {}
+[3.309713] (-) TimerEvent: {}
+[3.410082] (-) TimerEvent: {}
+[3.510446] (-) TimerEvent: {}
+[3.610915] (-) TimerEvent: {}
+[3.711289] (-) TimerEvent: {}
+[3.811657] (-) TimerEvent: {}
+[3.912025] (-) TimerEvent: {}
+[4.012438] (-) TimerEvent: {}
+[4.112868] (-) TimerEvent: {}
+[4.213236] (-) TimerEvent: {}
+[4.313601] (-) TimerEvent: {}
+[4.413968] (-) TimerEvent: {}
+[4.514366] (-) TimerEvent: {}
+[4.614884] (-) TimerEvent: {}
+[4.715264] (-) TimerEvent: {}
+[4.815677] (-) TimerEvent: {}
+[4.916048] (-) TimerEvent: {}
+[5.016447] (-) TimerEvent: {}
+[5.116901] (-) TimerEvent: {}
+[5.217322] (-) TimerEvent: {}
+[5.317849] (-) TimerEvent: {}
+[5.418221] (-) TimerEvent: {}
+[5.518620] (-) TimerEvent: {}
+[5.619026] (-) TimerEvent: {}
+[5.719408] (-) TimerEvent: {}
+[5.819776] (-) TimerEvent: {}
+[5.920157] (-) TimerEvent: {}
+[6.021145] (-) TimerEvent: {}
+[6.121590] (-) TimerEvent: {}
+[6.222096] (-) TimerEvent: {}
+[6.323345] (-) TimerEvent: {}
+[6.423742] (-) TimerEvent: {}
+[6.524117] (-) TimerEvent: {}
+[6.624492] (-) TimerEvent: {}
+[6.724992] (-) TimerEvent: {}
+[6.825392] (-) TimerEvent: {}
+[6.925781] (-) TimerEvent: {}
+[7.020381] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp: In member function \xe2\x80\x98void ControlCenter::publish_status()\xe2\x80\x99:\n'}
+[7.020917] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:152:39: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [13]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.021110] (control_center) StderrLine: {'line': b'  152 |            << "{\\"camera\\":{"received\\":" << (image_received_ ? "true" : "false")\n'}
+[7.021246] (control_center) StderrLine: {'line': b'      |                                       ^~~\n'}
+[7.021370] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:156:37: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [11]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.021493] (control_center) StderrLine: {'line': b'  156 |            << "\\"lidar\\":{"received\\":" << (scan_received_ ? "true" : "false")\n'}
+[7.021611] (control_center) StderrLine: {'line': b'      |                                     ^~~\n'}
+[7.021732] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:159:35: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [9]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.021849] (control_center) StderrLine: {'line': b'  159 |            << "\\"imu\\":{"received\\":" << (imu_received_ ? "true" : "false")\n'}
+[7.021985] (control_center) StderrLine: {'line': b'      |                                   ^~~\n'}
+[7.022099] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:163:44: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [18]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.022212] (control_center) StderrLine: {'line': b'  163 |            << "\\"magnetometer\\":{"received\\":" << (mag_received_ ? "true" : "false")\n'}
+[7.022323] (control_center) StderrLine: {'line': b'      |                                            ^~~\n'}
+[7.022431] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:166:40: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [14]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.022562] (control_center) StderrLine: {'line': b'  166 |            << "\\"odometry\\":{"received\\":" << (odom_received_ ? "true" : "false")\n'}
+[7.022676] (control_center) StderrLine: {'line': b'      |                                        ^~~\n'}
+[7.022786] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:169:37: error: unable to find string literal operator \xe2\x80\x98operator""received\xe2\x80\x99 with \xe2\x80\x98const char [11]\xe2\x80\x99, \xe2\x80\x98long unsigned int\xe2\x80\x99 arguments\n'}
+[7.022944] (control_center) StderrLine: {'line': b'  169 |            << "\\"drive\\":{"received\\":" << (drive_received_ ? "true" : "false")\n'}
+[7.023057] (control_center) StderrLine: {'line': b'      |                                     ^~~\n'}
+[7.025890] (-) TimerEvent: {}
+[7.126379] (-) TimerEvent: {}
+[7.226766] (-) TimerEvent: {}
+[7.327157] (-) TimerEvent: {}
+[7.427529] (-) TimerEvent: {}
+[7.527891] (-) TimerEvent: {}
+[7.628266] (-) TimerEvent: {}
+[7.728642] (-) TimerEvent: {}
+[7.829012] (-) TimerEvent: {}
+[7.929381] (-) TimerEvent: {}
+[8.029779] (-) TimerEvent: {}
+[8.133918] (-) TimerEvent: {}
+[8.234239] (-) TimerEvent: {}
+[8.334645] (-) TimerEvent: {}
+[8.435668] (-) TimerEvent: {}
+[8.536050] (-) TimerEvent: {}
+[8.636442] (-) TimerEvent: {}
+[8.736823] (-) TimerEvent: {}
+[8.837260] (-) TimerEvent: {}
+[8.937683] (-) TimerEvent: {}
+[9.038062] (-) TimerEvent: {}
+[9.138573] (-) TimerEvent: {}
+[9.239004] (-) TimerEvent: {}
+[9.339372] (-) TimerEvent: {}
+[9.439753] (-) TimerEvent: {}
+[9.540139] (-) TimerEvent: {}
+[9.640503] (-) TimerEvent: {}
+[9.740915] (-) TimerEvent: {}
+[9.841323] (-) TimerEvent: {}
+[9.941724] (-) TimerEvent: {}
+[10.042095] (-) TimerEvent: {}
+[10.142518] (-) TimerEvent: {}
+[10.242945] (-) TimerEvent: {}
+[10.343359] (-) TimerEvent: {}
+[10.443723] (-) TimerEvent: {}
+[10.544087] (-) TimerEvent: {}
+[10.644480] (-) TimerEvent: {}
+[10.744899] (-) TimerEvent: {}
+[10.845319] (-) TimerEvent: {}
+[10.945702] (-) TimerEvent: {}
+[11.046063] (-) TimerEvent: {}
+[11.146437] (-) TimerEvent: {}
+[11.246906] (-) TimerEvent: {}
+[11.347306] (-) TimerEvent: {}
+[11.447834] (-) TimerEvent: {}
+[11.548223] (-) TimerEvent: {}
+[11.648610] (-) TimerEvent: {}
+[11.749081] (-) TimerEvent: {}
+[11.851087] (-) TimerEvent: {}
+[11.951489] (-) TimerEvent: {}
+[12.051877] (-) TimerEvent: {}
+[12.152846] (-) TimerEvent: {}
+[12.253347] (-) TimerEvent: {}
+[12.353758] (-) TimerEvent: {}
+[12.454317] (-) TimerEvent: {}
+[12.554684] (-) TimerEvent: {}
+[12.655070] (-) TimerEvent: {}
+[12.755441] (-) TimerEvent: {}
+[12.855812] (-) TimerEvent: {}
+[12.956173] (-) TimerEvent: {}
+[13.056541] (-) TimerEvent: {}
+[13.156968] (-) TimerEvent: {}
+[13.257360] (-) TimerEvent: {}
+[13.357731] (-) TimerEvent: {}
+[13.458092] (-) TimerEvent: {}
+[13.558471] (-) TimerEvent: {}
+[13.658896] (-) TimerEvent: {}
+[13.759265] (-) TimerEvent: {}
+[13.859659] (-) TimerEvent: {}
+[13.960071] (-) TimerEvent: {}
+[14.060718] (-) TimerEvent: {}
+[14.161138] (-) TimerEvent: {}
+[14.261606] (-) TimerEvent: {}
+[14.362694] (-) TimerEvent: {}
+[14.463667] (-) TimerEvent: {}
+[14.564139] (-) TimerEvent: {}
+[14.664536] (-) TimerEvent: {}
+[14.765047] (-) TimerEvent: {}
+[14.865740] (-) TimerEvent: {}
+[14.966190] (-) TimerEvent: {}
+[15.066983] (-) TimerEvent: {}
+[15.167436] (-) TimerEvent: {}
+[15.267878] (-) TimerEvent: {}
+[15.368305] (-) TimerEvent: {}
+[15.468704] (-) TimerEvent: {}
+[15.569143] (-) TimerEvent: {}
+[15.669693] (-) TimerEvent: {}
+[15.770133] (-) TimerEvent: {}
+[15.870548] (-) TimerEvent: {}
+[15.970963] (-) TimerEvent: {}
+[16.071336] (-) TimerEvent: {}
+[16.171705] (-) TimerEvent: {}
+[16.272075] (-) TimerEvent: {}
+[16.372399] (-) TimerEvent: {}
+[16.472767] (-) TimerEvent: {}
+[16.573143] (-) TimerEvent: {}
+[16.673514] (-) TimerEvent: {}
+[16.773876] (-) TimerEvent: {}
+[16.874252] (-) TimerEvent: {}
+[16.974637] (-) TimerEvent: {}
+[17.075018] (-) TimerEvent: {}
+[17.175393] (-) TimerEvent: {}
+[17.275791] (-) TimerEvent: {}
+[17.376252] (-) TimerEvent: {}
+[17.476673] (-) TimerEvent: {}
+[17.577045] (-) TimerEvent: {}
+[17.677413] (-) TimerEvent: {}
+[17.777779] (-) TimerEvent: {}
+[17.878152] (-) TimerEvent: {}
+[17.978477] (-) TimerEvent: {}
+[18.078852] (-) TimerEvent: {}
+[18.179218] (-) TimerEvent: {}
+[18.279570] (-) TimerEvent: {}
+[18.379940] (-) TimerEvent: {}
+[18.480325] (-) TimerEvent: {}
+[18.580717] (-) TimerEvent: {}
+[18.681086] (-) TimerEvent: {}
+[18.781454] (-) TimerEvent: {}
+[18.881930] (-) TimerEvent: {}
+[18.982308] (-) TimerEvent: {}
+[19.082669] (-) TimerEvent: {}
+[19.183041] (-) TimerEvent: {}
+[19.283416] (-) TimerEvent: {}
+[19.383812] (-) TimerEvent: {}
+[19.484203] (-) TimerEvent: {}
+[19.584568] (-) TimerEvent: {}
+[19.684955] (-) TimerEvent: {}
+[19.785333] (-) TimerEvent: {}
+[19.885733] (-) TimerEvent: {}
+[19.986112] (-) TimerEvent: {}
+[20.086507] (-) TimerEvent: {}
+[20.186932] (-) TimerEvent: {}
+[20.287271] (-) TimerEvent: {}
+[20.387655] (-) TimerEvent: {}
+[20.488041] (-) TimerEvent: {}
+[20.588359] (-) TimerEvent: {}
+[20.688736] (-) TimerEvent: {}
+[20.789119] (-) TimerEvent: {}
+[20.889485] (-) TimerEvent: {}
+[20.989856] (-) TimerEvent: {}
+[21.090222] (-) TimerEvent: {}
+[21.190591] (-) TimerEvent: {}
+[21.290933] (-) TimerEvent: {}
+[21.391312] (-) TimerEvent: {}
+[21.453024] (control_center) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/control_center.dir/build.make:76: CMakeFiles/control_center.dir/control_center.cpp.o] Error 1\n'}
+[21.453705] (control_center) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2\n'}
+[21.453877] (control_center) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[21.456899] (control_center) CommandEnded: {'returncode': 2}
+[21.484482] (control_center) JobEnded: {'identifier': 'control_center', 'rc': 2}
+[21.491479] (-) TimerEvent: {}
+[21.496205] (-) EventReactorShutdown: {}

@@ -1,0 +1,19 @@
+[100%] Built target control_center
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /workspace/install/control_center/lib/control_center/control_center
+-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/package_run_dependencies/control_center
+-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/parent_prefix_path/control_center
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.sh
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.dsv
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.bash
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.sh
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.zsh
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.dsv
+-- Symlinking: /workspace/install/control_center/share/control_center/package.dsv
+-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/packages/control_center
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig.cmake
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig-version.cmake
+-- Up-to-date symlink: /workspace/install/control_center/share/control_center/package.xml

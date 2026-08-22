@@ -1,0 +1,83 @@
+[0.000000] (-) TimerEvent: {}
+[0.000383] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.001026] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.001172] (avaj_car_control) JobQueued: {'identifier': 'avaj_car_control', 'dependencies': OrderedDict()}
+[0.001619] (avaj_car_control) JobStarted: {'identifier': 'avaj_car_control'}
+[0.023424] (avaj_car_control) JobProgress: {'identifier': 'avaj_car_control', 'progress': 'cmake'}
+[0.026396] (avaj_car_control) Command: {'cmd': ['/usr/bin/cmake', '/workspace/src/avaj_car_control', '-DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_car_control'], 'cwd': '/workspace/build/avaj_car_control', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/avaj_car_control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.099527] (-) TimerEvent: {}
+[0.147621] (avaj_car_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199689] (-) TimerEvent: {}
+[0.253628] (avaj_car_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.285989] (avaj_car_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299861] (-) TimerEvent: {}
+[0.400207] (-) TimerEvent: {}
+[0.475730] (avaj_car_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.486628] (avaj_car_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.487951] (avaj_car_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.488152] (avaj_car_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.500380] (-) TimerEvent: {}
+[0.505151] (avaj_car_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600538] (-) TimerEvent: {}
+[0.700906] (-) TimerEvent: {}
+[0.702886] (avaj_car_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.734056] (avaj_car_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.734678] (avaj_car_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.735736] (avaj_car_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.746685] (avaj_car_control) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.801073] (-) TimerEvent: {}
+[0.901418] (-) TimerEvent: {}
+[1.001780] (-) TimerEvent: {}
+[1.064584] (avaj_car_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.101918] (-) TimerEvent: {}
+[1.202228] (-) TimerEvent: {}
+[1.302589] (-) TimerEvent: {}
+[1.349993] (avaj_car_control) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[1.402757] (-) TimerEvent: {}
+[1.466538] (avaj_car_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.502920] (-) TimerEvent: {}
+[1.505266] (avaj_car_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.549454] (avaj_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.596561] (avaj_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.603054] (-) TimerEvent: {}
+[1.694620] (avaj_car_control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.703259] (-) TimerEvent: {}
+[1.752871] (avaj_car_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.803395] (-) TimerEvent: {}
+[1.903724] (-) TimerEvent: {}
+[2.004028] (-) TimerEvent: {}
+[2.104363] (-) TimerEvent: {}
+[2.204706] (-) TimerEvent: {}
+[2.305044] (-) TimerEvent: {}
+[2.345038] (avaj_car_control) StderrLine: {'line': b"Error parsing '/workspace/src/avaj_car_control/package.xml':\n"}
+[2.345809] (avaj_car_control) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.345964] (avaj_car_control) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>\n'}
+[2.346095] (avaj_car_control) StderrLine: {'line': b'    main()\n'}
+[2.346431] (avaj_car_control) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main\n'}
+[2.346710] (avaj_car_control) StderrLine: {'line': b'    raise e\n'}
+[2.346847] (avaj_car_control) StderrLine: {'line': b'  File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main\n'}
+[2.346974] (avaj_car_control) StderrLine: {'line': b'    package = parse_package_string(\n'}
+[2.347105] (avaj_car_control) StderrLine: {'line': b'              ^^^^^^^^^^^^^^^^^^^^^\n'}
+[2.347367] (avaj_car_control) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string\n'}
+[2.347495] (avaj_car_control) StderrLine: {'line': b'    pkg.validate(warnings=warnings)\n'}
+[2.347613] (avaj_car_control) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate\n'}
+[2.347727] (avaj_car_control) StderrLine: {'line': b"    raise InvalidPackage('\\n'.join(errors), self.filename)\n"}
+[2.347888] (avaj_car_control) StderrLine: {'line': b"catkin_pkg.package.InvalidPackage: Error(s) in package '/workspace/src/avaj_car_control/package.xml':\n"}
+[2.348002] (avaj_car_control) StderrLine: {'line': b'Invalid email "avaj@localhost" for person "avaj"\n'}
+[2.404906] (avaj_car_control) StderrLine: {'line': b'CMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):\n'}
+[2.405795] (-) TimerEvent: {}
+[2.405857] (avaj_car_control) StderrLine: {'line': b'  execute_process(/usr/bin/python3\n'}
+[2.406068] (avaj_car_control) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py\n'}
+[2.406236] (avaj_car_control) StderrLine: {'line': b'  /workspace/src/avaj_car_control/package.xml\n'}
+[2.406390] (avaj_car_control) StderrLine: {'line': b'  /workspace/build/avaj_car_control/ament_cmake_core/package.cmake) returned\n'}
+[2.406549] (avaj_car_control) StderrLine: {'line': b'  error code 1\n'}
+[2.406693] (avaj_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.406830] (avaj_car_control) StderrLine: {'line': b'  /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)\n'}
+[2.406964] (avaj_car_control) StderrLine: {'line': b'  /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:220 (ament_package_xml)\n'}
+[2.407165] (avaj_car_control) StderrLine: {'line': b'  CMakeLists.txt:8 (rosidl_generate_interfaces)\n'}
+[2.407492] (avaj_car_control) StderrLine: {'line': b'\n'}
+[2.407711] (avaj_car_control) StderrLine: {'line': b'\n'}
+[2.407918] (avaj_car_control) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.424832] (avaj_car_control) CommandEnded: {'returncode': 1}
+[2.426242] (avaj_car_control) JobEnded: {'identifier': 'avaj_car_control', 'rc': 1}
+[2.438574] (-) EventReactorShutdown: {}

@@ -1,0 +1,59 @@
+[0.027s] Invoking command in '/workspace/build/control_center': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/control_center -- -j8 -l8
+[0.103s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.540s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.558s] -- Found avaj_car_control: 0.1.0 (/workspace/install/avaj_car_control/share/avaj_car_control/cmake)
+[0.613s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.631s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.656s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.678s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.702s] -- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.822s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.883s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.886s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.003s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.108s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.342s] -- Configuring done (1.3s)
+[1.371s] -- Generating done (0.0s)
+[1.379s] -- Build files have been written to: /workspace/build/control_center
+[1.463s] [ 50%] Building CXX object CMakeFiles/control_center.dir/control_center.cpp.o
+[1.994s] /workspace/build/control_center/control_center.cpp:152:38: error: stray ‘\’ in program
+[1.994s]   152 |            << "{\"camera\":{"received\":" << (image_received_ ? "true" : "false")
+[1.994s]       |                                      ^
+[1.995s] /workspace/build/control_center/control_center.cpp:156:36: error: stray ‘\’ in program
+[1.995s]   156 |            << "\"lidar\":{"received\":" << (scan_received_ ? "true" : "false")
+[1.995s]       |                                    ^
+[1.995s] /workspace/build/control_center/control_center.cpp:159:34: error: stray ‘\’ in program
+[1.996s]   159 |            << "\"imu\":{"received\":" << (imu_received_ ? "true" : "false")
+[1.996s]       |                                  ^
+[1.997s] /workspace/build/control_center/control_center.cpp:163:43: error: stray ‘\’ in program
+[1.997s]   163 |            << "\"magnetometer\":{"received\":" << (mag_received_ ? "true" : "false")
+[1.997s]       |                                           ^
+[1.997s] /workspace/build/control_center/control_center.cpp:166:39: error: stray ‘\’ in program
+[1.997s]   166 |            << "\"odometry\":{"received\":" << (odom_received_ ? "true" : "false")
+[1.997s]       |                                       ^
+[1.998s] /workspace/build/control_center/control_center.cpp:169:36: error: stray ‘\’ in program
+[1.998s]   169 |            << "\"drive\":{"received\":" << (drive_received_ ? "true" : "false")
+[1.998s]       |                                    ^
+[7.019s] /workspace/build/control_center/control_center.cpp: In member function ‘void ControlCenter::publish_status()’:
+[7.019s] /workspace/build/control_center/control_center.cpp:152:39: error: unable to find string literal operator ‘operator""received’ with ‘const char [13]’, ‘long unsigned int’ arguments
+[7.019s]   152 |            << "{\"camera\":{"received\":" << (image_received_ ? "true" : "false")
+[7.019s]       |                                       ^~~
+[7.020s] /workspace/build/control_center/control_center.cpp:156:37: error: unable to find string literal operator ‘operator""received’ with ‘const char [11]’, ‘long unsigned int’ arguments
+[7.020s]   156 |            << "\"lidar\":{"received\":" << (scan_received_ ? "true" : "false")
+[7.020s]       |                                     ^~~
+[7.020s] /workspace/build/control_center/control_center.cpp:159:35: error: unable to find string literal operator ‘operator""received’ with ‘const char [9]’, ‘long unsigned int’ arguments
+[7.020s]   159 |            << "\"imu\":{"received\":" << (imu_received_ ? "true" : "false")
+[7.020s]       |                                   ^~~
+[7.020s] /workspace/build/control_center/control_center.cpp:163:44: error: unable to find string literal operator ‘operator""received’ with ‘const char [18]’, ‘long unsigned int’ arguments
+[7.020s]   163 |            << "\"magnetometer\":{"received\":" << (mag_received_ ? "true" : "false")
+[7.021s]       |                                            ^~~
+[7.021s] /workspace/build/control_center/control_center.cpp:166:40: error: unable to find string literal operator ‘operator""received’ with ‘const char [14]’, ‘long unsigned int’ arguments
+[7.021s]   166 |            << "\"odometry\":{"received\":" << (odom_received_ ? "true" : "false")
+[7.021s]       |                                        ^~~
+[7.021s] /workspace/build/control_center/control_center.cpp:169:37: error: unable to find string literal operator ‘operator""received’ with ‘const char [11]’, ‘long unsigned int’ arguments
+[7.021s]   169 |            << "\"drive\":{"received\":" << (drive_received_ ? "true" : "false")
+[7.021s]       |                                     ^~~
+[21.452s] gmake[2]: *** [CMakeFiles/control_center.dir/build.make:76: CMakeFiles/control_center.dir/control_center.cpp.o] Error 1
+[21.452s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2
+[21.452s] gmake: *** [Makefile:146: all] Error 2
+[21.455s] Invoked command in '/workspace/build/control_center' returned '2': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/control_center -- -j8 -l8

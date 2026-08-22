@@ -1,0 +1,152 @@
+[0.000000] (-) TimerEvent: {}
+[0.000139] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.000313] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.000557] (avaj_car_control) JobQueued: {'identifier': 'avaj_car_control', 'dependencies': OrderedDict()}
+[0.001041] (avaj_car_control) JobStarted: {'identifier': 'avaj_car_control'}
+[0.021911] (avaj_car_control) JobProgress: {'identifier': 'avaj_car_control', 'progress': 'cmake'}
+[0.023081] (avaj_car_control) JobProgress: {'identifier': 'avaj_car_control', 'progress': 'build'}
+[0.024260] (avaj_car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/avaj_car_control', '--', '-j8', '-l8'], 'cwd': '/workspace/build/avaj_car_control', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/avaj_car_control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099508] (-) TimerEvent: {}
+[0.158274] (avaj_car_control) StdoutLine: {'line': b'[  2%] Built target avaj_car_control__rosidl_generator_type_description\n'}
+[0.159219] (avaj_car_control) StdoutLine: {'line': b'[  5%] Built target avaj_car_control__rs\n'}
+[0.180300] (avaj_car_control) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_symlink_avaj_car_control\n'}
+[0.200752] (-) TimerEvent: {}
+[0.216830] (avaj_car_control) StdoutLine: {'line': b'[  8%] Built target avaj_car_control__cpp\n'}
+[0.232353] (avaj_car_control) StdoutLine: {'line': b'[ 22%] Built target avaj_car_control__rosidl_generator_c\n'}
+[0.289422] (avaj_car_control) StdoutLine: {'line': b'[ 31%] Built target avaj_car_control__rosidl_typesupport_introspection_c\n'}
+[0.300888] (-) TimerEvent: {}
+[0.307553] (avaj_car_control) StdoutLine: {'line': b'[ 40%] Built target avaj_car_control__rosidl_typesupport_cpp\n'}
+[0.313001] (avaj_car_control) StdoutLine: {'line': b'[ 48%] Built target avaj_car_control__rosidl_typesupport_fastrtps_c\n'}
+[0.324951] (avaj_car_control) StdoutLine: {'line': b'[ 57%] Built target avaj_car_control__rosidl_typesupport_introspection_cpp\n'}
+[0.329657] (avaj_car_control) StdoutLine: {'line': b'[ 65%] Built target avaj_car_control__rosidl_typesupport_c\n'}
+[0.338371] (avaj_car_control) StdoutLine: {'line': b'[ 74%] Built target avaj_car_control__rosidl_typesupport_fastrtps_cpp\n'}
+[0.393224] (avaj_car_control) StdoutLine: {'line': b'[ 74%] Built target avaj_car_control\n'}
+[0.401030] (-) TimerEvent: {}
+[0.437531] (avaj_car_control) StdoutLine: {'line': b'[ 77%] Built target avaj_car_control__py\n'}
+[0.492618] (avaj_car_control) StdoutLine: {'line': b'[ 82%] Built target avaj_car_control__rosidl_generator_py\n'}
+[0.501221] (-) TimerEvent: {}
+[0.549903] (avaj_car_control) StdoutLine: {'line': b'[ 88%] Built target avaj_car_control_s__rosidl_typesupport_fastrtps_c\n'}
+[0.560882] (avaj_car_control) StdoutLine: {'line': b'[ 94%] Built target avaj_car_control_s__rosidl_typesupport_introspection_c\n'}
+[0.561743] (avaj_car_control) StdoutLine: {'line': b'[100%] Built target avaj_car_control_s__rosidl_typesupport_c\n'}
+[0.601340] (-) TimerEvent: {}
+[0.641204] (avaj_car_control) StdoutLine: {'line': b'running egg_info\n'}
+[0.677857] (avaj_car_control) StdoutLine: {'line': b'writing avaj_car_control.egg-info/PKG-INFO\n'}
+[0.678462] (avaj_car_control) StdoutLine: {'line': b'writing dependency_links to avaj_car_control.egg-info/dependency_links.txt\n'}
+[0.678934] (avaj_car_control) StdoutLine: {'line': b'writing top-level names to avaj_car_control.egg-info/top_level.txt\n'}
+[0.701488] (-) TimerEvent: {}
+[0.783094] (avaj_car_control) StdoutLine: {'line': b"reading manifest file 'avaj_car_control.egg-info/SOURCES.txt'\n"}
+[0.783564] (avaj_car_control) StdoutLine: {'line': b"writing manifest file 'avaj_car_control.egg-info/SOURCES.txt'\n"}
+[0.801661] (-) TimerEvent: {}
+[0.880889] (avaj_car_control) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_avaj_car_control_egg\n'}
+[0.903117] (-) TimerEvent: {}
+[0.906969] (avaj_car_control) CommandEnded: {'returncode': 0}
+[0.908597] (avaj_car_control) JobProgress: {'identifier': 'avaj_car_control', 'progress': 'install'}
+[0.928989] (avaj_car_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/avaj_car_control'], 'cwd': '/workspace/build/avaj_car_control', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/avaj_car_control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.950000] (avaj_car_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.950741] (avaj_car_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.951065] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/ament_index/resource_index/rosidl_interfaces/avaj_car_control\n'}
+[0.951260] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/msg/DriveCommand.json\n'}
+[0.951492] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__functions.h\n'}
+[0.951626] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__struct.h\n'}
+[0.951747] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__type_support.h\n'}
+[0.951932] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/drive_command.h\n'}
+[0.952111] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.952234] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/library_path.sh\n'}
+[0.952351] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/library_path.dsv\n'}
+[0.952681] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__rosidl_typesupport_fastrtps_c.h\n'}
+[0.952860] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.953428] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__builder.hpp\n'}
+[0.953620] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__struct.hpp\n'}
+[0.953799] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__traits.hpp\n'}
+[0.953973] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__type_support.hpp\n'}
+[0.954153] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/drive_command.hpp\n'}
+[0.954332] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.955151] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.955574] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.956349] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__rosidl_typesupport_introspection_c.h\n'}
+[0.956611] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.956882] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/include/avaj_car_control/avaj_car_control/msg/detail/drive_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.957120] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/pythonpath.sh\n'}
+[0.957361] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/pythonpath.dsv\n'}
+[0.957705] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control-0.1.0-py3.12.egg-info/PKG-INFO\n'}
+[0.958019] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control-0.1.0-py3.12.egg-info/SOURCES.txt\n'}
+[0.958255] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control-0.1.0-py3.12.egg-info/dependency_links.txt\n'}
+[0.958407] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control-0.1.0-py3.12.egg-info/top_level.txt\n'}
+[0.959080] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/__init__.py\n'}
+[0.959570] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/_avaj_car_control_s.ep.rosidl_typesupport_c.c\n'}
+[0.959949] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/_avaj_car_control_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.960143] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/_avaj_car_control_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.960278] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_c.so\n'}
+[0.960406] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.960666] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_introspection_c.so\n'}
+[0.960814] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/msg/__init__.py\n'}
+[0.961034] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/msg/_drive_command.py\n'}
+[0.961167] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/msg/_drive_command_s.c\n'}
+[0.961375] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.961501] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_introspection_c.so\n'}
+[0.962097] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/avaj_car_control_s__rosidl_typesupport_c.so\n'}
+[0.962262] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/ament_index/resource_index/rust_packages/avaj_car_control\n'}
+[0.962849] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/rust/Cargo.toml\n'}
+[0.964486] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/rust/build.rs\n'}
+[0.964722] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/rust/src/lib.rs\n'}
+[0.964872] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/rust/src/msg.rs\n'}
+[0.964999] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/rust/src/msg/rmw.rs\n'}
+[0.965119] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/msg/DriveCommand.idl\n'}
+[0.965236] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/msg/DriveCommand.msg\n'}
+[0.965347] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/avaj_car_control/drive_command_to_twist\n'}
+[0.965457] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/lib/avaj_car_control/wasd_teleop\n'}
+[0.965794] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/ament_index/resource_index/package_run_dependencies/avaj_car_control\n'}
+[0.966096] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/ament_index/resource_index/parent_prefix_path/avaj_car_control\n'}
+[0.966367] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/ament_prefix_path.sh\n'}
+[0.966505] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/ament_prefix_path.dsv\n'}
+[0.966689] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/path.sh\n'}
+[0.966869] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/environment/path.dsv\n'}
+[0.967093] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/local_setup.bash\n'}
+[0.967212] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/local_setup.sh\n'}
+[0.967324] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/local_setup.zsh\n'}
+[0.967432] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/local_setup.dsv\n'}
+[0.967539] (avaj_car_control) StdoutLine: {'line': b'-- Symlinking: /workspace/install/avaj_car_control/share/avaj_car_control/package.dsv\n'}
+[0.988296] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/ament_index/resource_index/packages/avaj_car_control\n'}
+[0.988865] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/rosidl_cmake-extras.cmake\n'}
+[0.989253] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.990011] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.990194] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.991057] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.991365] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.991586] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.992278] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[0.992421] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_controlConfig.cmake\n'}
+[0.992703] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_controlConfig-version.cmake\n'}
+[0.992900] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/avaj_car_control/share/avaj_car_control/package.xml\n'}
+[0.993035] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_generator_c.so\n'}
+[0.993284] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_fastrtps_c.so\n'}
+[0.993569] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.993914] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_introspection_c.so\n'}
+[0.994250] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_c.so\n'}
+[0.994601] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_introspection_cpp.so\n'}
+[0.995330] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_typesupport_cpp.so\n'}
+[1.003270] (-) TimerEvent: {}
+[1.069959] (avaj_car_control) StdoutLine: {'line': b"Listing '/workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control'...\n"}
+[1.070387] (avaj_car_control) StdoutLine: {'line': b"Listing '/workspace/install/avaj_car_control/lib/python3.12/site-packages/avaj_car_control/msg'...\n"}
+[1.086444] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/lib/libavaj_car_control__rosidl_generator_py.so\n'}
+[1.086987] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_generator_cExport.cmake\n'}
+[1.087285] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.087723] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.088051] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.088383] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_generator_cppExport.cmake\n'}
+[1.088667] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.088806] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.088925] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.089039] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.089151] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_cExport.cmake\n'}
+[1.089262] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.089374] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.089483] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.089594] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_cppExport.cmake\n'}
+[1.089717] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/avaj_car_control__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.089849] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_generator_pyExport.cmake\n'}
+[1.089963] (avaj_car_control) StdoutLine: {'line': b'-- Up-to-date: /workspace/install/avaj_car_control/share/avaj_car_control/cmake/export_avaj_car_control__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.092275] (avaj_car_control) CommandEnded: {'returncode': 0}
+[1.104063] (-) TimerEvent: {}
+[1.152731] (avaj_car_control) JobEnded: {'identifier': 'avaj_car_control', 'rc': 0}
+[1.153986] (-) EventReactorShutdown: {}

@@ -1,0 +1,496 @@
+[0.000000] (-) TimerEvent: {}
+[0.000136] (-) JobUnselected: {'identifier': 'avaj_car_control'}
+[0.000303] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.000520] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.000632] (control_center) JobQueued: {'identifier': 'control_center', 'dependencies': OrderedDict({'avaj_car_control': '/workspace/install/avaj_car_control'})}
+[0.001270] (control_center) JobStarted: {'identifier': 'control_center'}
+[0.027706] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'cmake'}
+[0.029081] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'build'}
+[0.030397] (control_center) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/control_center', '--', '-j8', '-l8'], 'cwd': '/workspace/build/control_center', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/control_center', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099407] (control_center) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099907] (-) TimerEvent: {}
+[0.200168] (-) TimerEvent: {}
+[0.300498] (-) TimerEvent: {}
+[0.400810] (-) TimerEvent: {}
+[0.501120] (-) TimerEvent: {}
+[0.532191] (control_center) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.548191] (control_center) StdoutLine: {'line': b'-- Found avaj_car_control: 0.1.0 (/workspace/install/avaj_car_control/share/avaj_car_control/cmake)\n'}
+[0.595827] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.601248] (-) TimerEvent: {}
+[0.612188] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.635232] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.659464] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.684579] (control_center) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.701432] (-) TimerEvent: {}
+[0.801828] (-) TimerEvent: {}
+[0.805818] (control_center) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.865738] (control_center) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.868365] (control_center) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.901940] (-) TimerEvent: {}
+[0.993162] (control_center) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.002112] (-) TimerEvent: {}
+[1.100673] (control_center) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.102168] (-) TimerEvent: {}
+[1.202381] (-) TimerEvent: {}
+[1.302728] (-) TimerEvent: {}
+[1.341954] (control_center) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.370192] (control_center) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.377750] (control_center) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/control_center\n'}
+[1.402894] (-) TimerEvent: {}
+[1.485552] (control_center) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/control_center.dir/control_center.cpp.o\n'}
+[1.503059] (-) TimerEvent: {}
+[1.603450] (-) TimerEvent: {}
+[1.706045] (-) TimerEvent: {}
+[1.806490] (-) TimerEvent: {}
+[1.906875] (-) TimerEvent: {}
+[2.007250] (-) TimerEvent: {}
+[2.107622] (-) TimerEvent: {}
+[2.207980] (-) TimerEvent: {}
+[2.308354] (-) TimerEvent: {}
+[2.408742] (-) TimerEvent: {}
+[2.509115] (-) TimerEvent: {}
+[2.609491] (-) TimerEvent: {}
+[2.710408] (-) TimerEvent: {}
+[2.810777] (-) TimerEvent: {}
+[2.911142] (-) TimerEvent: {}
+[3.011504] (-) TimerEvent: {}
+[3.111866] (-) TimerEvent: {}
+[3.212235] (-) TimerEvent: {}
+[3.312605] (-) TimerEvent: {}
+[3.412991] (-) TimerEvent: {}
+[3.513376] (-) TimerEvent: {}
+[3.613760] (-) TimerEvent: {}
+[3.714156] (-) TimerEvent: {}
+[3.814559] (-) TimerEvent: {}
+[3.915015] (-) TimerEvent: {}
+[4.015454] (-) TimerEvent: {}
+[4.115873] (-) TimerEvent: {}
+[4.216237] (-) TimerEvent: {}
+[4.316597] (-) TimerEvent: {}
+[4.416955] (-) TimerEvent: {}
+[4.517321] (-) TimerEvent: {}
+[4.617694] (-) TimerEvent: {}
+[4.718093] (-) TimerEvent: {}
+[4.818489] (-) TimerEvent: {}
+[4.918856] (-) TimerEvent: {}
+[5.019229] (-) TimerEvent: {}
+[5.119609] (-) TimerEvent: {}
+[5.220134] (-) TimerEvent: {}
+[5.320522] (-) TimerEvent: {}
+[5.420902] (-) TimerEvent: {}
+[5.521279] (-) TimerEvent: {}
+[5.621652] (-) TimerEvent: {}
+[5.722041] (-) TimerEvent: {}
+[5.822408] (-) TimerEvent: {}
+[5.922777] (-) TimerEvent: {}
+[6.023160] (-) TimerEvent: {}
+[6.123537] (-) TimerEvent: {}
+[6.223992] (-) TimerEvent: {}
+[6.324392] (-) TimerEvent: {}
+[6.424797] (-) TimerEvent: {}
+[6.525235] (-) TimerEvent: {}
+[6.625629] (-) TimerEvent: {}
+[6.726203] (-) TimerEvent: {}
+[6.826702] (-) TimerEvent: {}
+[6.927074] (-) TimerEvent: {}
+[7.027456] (-) TimerEvent: {}
+[7.127814] (-) TimerEvent: {}
+[7.228190] (-) TimerEvent: {}
+[7.328564] (-) TimerEvent: {}
+[7.428943] (-) TimerEvent: {}
+[7.529315] (-) TimerEvent: {}
+[7.629971] (-) TimerEvent: {}
+[7.730367] (-) TimerEvent: {}
+[7.830741] (-) TimerEvent: {}
+[7.931089] (-) TimerEvent: {}
+[8.031448] (-) TimerEvent: {}
+[8.131818] (-) TimerEvent: {}
+[8.232255] (-) TimerEvent: {}
+[8.332726] (-) TimerEvent: {}
+[8.433093] (-) TimerEvent: {}
+[8.533481] (-) TimerEvent: {}
+[8.633930] (-) TimerEvent: {}
+[8.734293] (-) TimerEvent: {}
+[8.834661] (-) TimerEvent: {}
+[8.935057] (-) TimerEvent: {}
+[9.035527] (-) TimerEvent: {}
+[9.135975] (-) TimerEvent: {}
+[9.236338] (-) TimerEvent: {}
+[9.336713] (-) TimerEvent: {}
+[9.437100] (-) TimerEvent: {}
+[9.537472] (-) TimerEvent: {}
+[9.637873] (-) TimerEvent: {}
+[9.738412] (-) TimerEvent: {}
+[9.838799] (-) TimerEvent: {}
+[9.939191] (-) TimerEvent: {}
+[10.039574] (-) TimerEvent: {}
+[10.139941] (-) TimerEvent: {}
+[10.240332] (-) TimerEvent: {}
+[10.340737] (-) TimerEvent: {}
+[10.441298] (-) TimerEvent: {}
+[10.541683] (-) TimerEvent: {}
+[10.642104] (-) TimerEvent: {}
+[10.742487] (-) TimerEvent: {}
+[10.842850] (-) TimerEvent: {}
+[10.943215] (-) TimerEvent: {}
+[11.043616] (-) TimerEvent: {}
+[11.144033] (-) TimerEvent: {}
+[11.244863] (-) TimerEvent: {}
+[11.345702] (-) TimerEvent: {}
+[11.446106] (-) TimerEvent: {}
+[11.546493] (-) TimerEvent: {}
+[11.648682] (-) TimerEvent: {}
+[11.749088] (-) TimerEvent: {}
+[11.849468] (-) TimerEvent: {}
+[11.949924] (-) TimerEvent: {}
+[12.050292] (-) TimerEvent: {}
+[12.150668] (-) TimerEvent: {}
+[12.251048] (-) TimerEvent: {}
+[12.351437] (-) TimerEvent: {}
+[12.451861] (-) TimerEvent: {}
+[12.552288] (-) TimerEvent: {}
+[12.652666] (-) TimerEvent: {}
+[12.753054] (-) TimerEvent: {}
+[12.853451] (-) TimerEvent: {}
+[12.953871] (-) TimerEvent: {}
+[13.054238] (-) TimerEvent: {}
+[13.154614] (-) TimerEvent: {}
+[13.254986] (-) TimerEvent: {}
+[13.355357] (-) TimerEvent: {}
+[13.455715] (-) TimerEvent: {}
+[13.556085] (-) TimerEvent: {}
+[13.656463] (-) TimerEvent: {}
+[13.756855] (-) TimerEvent: {}
+[13.857228] (-) TimerEvent: {}
+[13.957597] (-) TimerEvent: {}
+[14.057968] (-) TimerEvent: {}
+[14.158364] (-) TimerEvent: {}
+[14.258725] (-) TimerEvent: {}
+[14.359095] (-) TimerEvent: {}
+[14.459453] (-) TimerEvent: {}
+[14.559850] (-) TimerEvent: {}
+[14.660253] (-) TimerEvent: {}
+[14.760630] (-) TimerEvent: {}
+[14.861030] (-) TimerEvent: {}
+[14.961407] (-) TimerEvent: {}
+[15.061821] (-) TimerEvent: {}
+[15.162192] (-) TimerEvent: {}
+[15.265964] (-) TimerEvent: {}
+[15.366476] (-) TimerEvent: {}
+[15.466868] (-) TimerEvent: {}
+[15.567386] (-) TimerEvent: {}
+[15.667892] (-) TimerEvent: {}
+[15.768279] (-) TimerEvent: {}
+[15.868671] (-) TimerEvent: {}
+[15.969063] (-) TimerEvent: {}
+[16.069442] (-) TimerEvent: {}
+[16.169848] (-) TimerEvent: {}
+[16.270236] (-) TimerEvent: {}
+[16.370620] (-) TimerEvent: {}
+[16.470998] (-) TimerEvent: {}
+[16.571386] (-) TimerEvent: {}
+[16.673755] (-) TimerEvent: {}
+[16.774215] (-) TimerEvent: {}
+[16.874595] (-) TimerEvent: {}
+[16.974963] (-) TimerEvent: {}
+[17.075332] (-) TimerEvent: {}
+[17.175702] (-) TimerEvent: {}
+[17.276064] (-) TimerEvent: {}
+[17.376428] (-) TimerEvent: {}
+[17.476797] (-) TimerEvent: {}
+[17.577209] (-) TimerEvent: {}
+[17.677632] (-) TimerEvent: {}
+[17.778089] (-) TimerEvent: {}
+[17.878524] (-) TimerEvent: {}
+[17.978940] (-) TimerEvent: {}
+[18.080104] (-) TimerEvent: {}
+[18.180468] (-) TimerEvent: {}
+[18.280841] (-) TimerEvent: {}
+[18.381207] (-) TimerEvent: {}
+[18.481583] (-) TimerEvent: {}
+[18.581959] (-) TimerEvent: {}
+[18.682321] (-) TimerEvent: {}
+[18.782699] (-) TimerEvent: {}
+[18.883061] (-) TimerEvent: {}
+[18.984005] (-) TimerEvent: {}
+[19.084391] (-) TimerEvent: {}
+[19.184767] (-) TimerEvent: {}
+[19.285148] (-) TimerEvent: {}
+[19.385511] (-) TimerEvent: {}
+[19.485914] (-) TimerEvent: {}
+[19.586285] (-) TimerEvent: {}
+[19.686668] (-) TimerEvent: {}
+[19.787031] (-) TimerEvent: {}
+[19.887495] (-) TimerEvent: {}
+[19.987895] (-) TimerEvent: {}
+[20.088342] (-) TimerEvent: {}
+[20.188821] (-) TimerEvent: {}
+[20.289193] (-) TimerEvent: {}
+[20.389893] (-) TimerEvent: {}
+[20.490913] (-) TimerEvent: {}
+[20.591295] (-) TimerEvent: {}
+[20.691679] (-) TimerEvent: {}
+[20.792048] (-) TimerEvent: {}
+[20.892437] (-) TimerEvent: {}
+[20.992811] (-) TimerEvent: {}
+[21.093186] (-) TimerEvent: {}
+[21.193585] (-) TimerEvent: {}
+[21.293990] (-) TimerEvent: {}
+[21.394455] (-) TimerEvent: {}
+[21.494834] (-) TimerEvent: {}
+[21.595202] (-) TimerEvent: {}
+[21.695575] (-) TimerEvent: {}
+[21.795958] (-) TimerEvent: {}
+[21.896340] (-) TimerEvent: {}
+[21.996726] (-) TimerEvent: {}
+[22.097105] (-) TimerEvent: {}
+[22.197475] (-) TimerEvent: {}
+[22.297910] (-) TimerEvent: {}
+[22.399979] (-) TimerEvent: {}
+[22.502197] (-) TimerEvent: {}
+[22.602579] (-) TimerEvent: {}
+[22.702952] (-) TimerEvent: {}
+[22.803326] (-) TimerEvent: {}
+[22.903722] (-) TimerEvent: {}
+[23.004101] (-) TimerEvent: {}
+[23.104621] (-) TimerEvent: {}
+[23.205030] (-) TimerEvent: {}
+[23.305586] (-) TimerEvent: {}
+[23.406014] (-) TimerEvent: {}
+[23.506399] (-) TimerEvent: {}
+[23.606769] (-) TimerEvent: {}
+[23.707151] (-) TimerEvent: {}
+[23.807484] (-) TimerEvent: {}
+[23.907844] (-) TimerEvent: {}
+[24.008224] (-) TimerEvent: {}
+[24.108618] (-) TimerEvent: {}
+[24.209064] (-) TimerEvent: {}
+[24.309436] (-) TimerEvent: {}
+[24.409850] (-) TimerEvent: {}
+[24.510278] (-) TimerEvent: {}
+[24.610693] (-) TimerEvent: {}
+[24.711042] (-) TimerEvent: {}
+[24.811350] (-) TimerEvent: {}
+[24.911687] (-) TimerEvent: {}
+[25.012034] (-) TimerEvent: {}
+[25.112382] (-) TimerEvent: {}
+[25.212736] (-) TimerEvent: {}
+[25.313116] (-) TimerEvent: {}
+[25.413496] (-) TimerEvent: {}
+[25.513898] (-) TimerEvent: {}
+[25.614248] (-) TimerEvent: {}
+[25.714591] (-) TimerEvent: {}
+[25.814954] (-) TimerEvent: {}
+[25.915321] (-) TimerEvent: {}
+[26.015685] (-) TimerEvent: {}
+[26.116035] (-) TimerEvent: {}
+[26.216375] (-) TimerEvent: {}
+[26.316738] (-) TimerEvent: {}
+[26.417119] (-) TimerEvent: {}
+[26.517469] (-) TimerEvent: {}
+[26.617858] (-) TimerEvent: {}
+[26.718224] (-) TimerEvent: {}
+[26.818612] (-) TimerEvent: {}
+[26.918982] (-) TimerEvent: {}
+[27.019437] (-) TimerEvent: {}
+[27.119794] (-) TimerEvent: {}
+[27.220147] (-) TimerEvent: {}
+[27.320527] (-) TimerEvent: {}
+[27.420893] (-) TimerEvent: {}
+[27.521249] (-) TimerEvent: {}
+[27.621598] (-) TimerEvent: {}
+[27.722126] (-) TimerEvent: {}
+[27.822499] (-) TimerEvent: {}
+[27.922855] (-) TimerEvent: {}
+[28.023209] (-) TimerEvent: {}
+[28.123562] (-) TimerEvent: {}
+[28.223917] (-) TimerEvent: {}
+[28.324257] (-) TimerEvent: {}
+[28.424618] (-) TimerEvent: {}
+[28.525152] (-) TimerEvent: {}
+[28.625497] (-) TimerEvent: {}
+[28.725898] (-) TimerEvent: {}
+[28.826264] (-) TimerEvent: {}
+[28.926651] (-) TimerEvent: {}
+[29.029970] (-) TimerEvent: {}
+[29.130367] (-) TimerEvent: {}
+[29.230764] (-) TimerEvent: {}
+[29.331144] (-) TimerEvent: {}
+[29.431488] (-) TimerEvent: {}
+[29.532274] (-) TimerEvent: {}
+[29.632612] (-) TimerEvent: {}
+[29.732952] (-) TimerEvent: {}
+[29.833313] (-) TimerEvent: {}
+[29.933660] (-) TimerEvent: {}
+[30.034044] (-) TimerEvent: {}
+[30.134403] (-) TimerEvent: {}
+[30.234762] (-) TimerEvent: {}
+[30.335094] (-) TimerEvent: {}
+[30.435439] (-) TimerEvent: {}
+[30.535774] (-) TimerEvent: {}
+[30.636140] (-) TimerEvent: {}
+[30.736502] (-) TimerEvent: {}
+[30.836850] (-) TimerEvent: {}
+[30.937204] (-) TimerEvent: {}
+[31.037565] (-) TimerEvent: {}
+[31.137950] (-) TimerEvent: {}
+[31.238287] (-) TimerEvent: {}
+[31.338667] (-) TimerEvent: {}
+[31.439147] (-) TimerEvent: {}
+[31.539956] (-) TimerEvent: {}
+[31.640444] (-) TimerEvent: {}
+[31.740840] (-) TimerEvent: {}
+[31.841268] (-) TimerEvent: {}
+[31.941616] (-) TimerEvent: {}
+[32.041959] (-) TimerEvent: {}
+[32.142295] (-) TimerEvent: {}
+[32.242627] (-) TimerEvent: {}
+[32.342991] (-) TimerEvent: {}
+[32.443361] (-) TimerEvent: {}
+[32.543704] (-) TimerEvent: {}
+[32.644101] (-) TimerEvent: {}
+[32.744516] (-) TimerEvent: {}
+[32.845003] (-) TimerEvent: {}
+[32.945357] (-) TimerEvent: {}
+[33.045763] (-) TimerEvent: {}
+[33.146187] (-) TimerEvent: {}
+[33.246536] (-) TimerEvent: {}
+[33.346877] (-) TimerEvent: {}
+[33.447228] (-) TimerEvent: {}
+[33.547693] (-) TimerEvent: {}
+[33.648048] (-) TimerEvent: {}
+[33.748442] (-) TimerEvent: {}
+[33.849001] (-) TimerEvent: {}
+[33.949429] (-) TimerEvent: {}
+[34.049839] (-) TimerEvent: {}
+[34.150212] (-) TimerEvent: {}
+[34.250595] (-) TimerEvent: {}
+[34.350950] (-) TimerEvent: {}
+[34.451285] (-) TimerEvent: {}
+[34.552353] (-) TimerEvent: {}
+[34.652807] (-) TimerEvent: {}
+[34.753156] (-) TimerEvent: {}
+[34.853496] (-) TimerEvent: {}
+[34.953962] (-) TimerEvent: {}
+[35.054309] (-) TimerEvent: {}
+[35.154716] (-) TimerEvent: {}
+[35.255043] (-) TimerEvent: {}
+[35.355387] (-) TimerEvent: {}
+[35.455750] (-) TimerEvent: {}
+[35.556096] (-) TimerEvent: {}
+[35.656448] (-) TimerEvent: {}
+[35.756812] (-) TimerEvent: {}
+[35.857193] (-) TimerEvent: {}
+[35.957962] (-) TimerEvent: {}
+[36.058324] (-) TimerEvent: {}
+[36.158781] (-) TimerEvent: {}
+[36.259191] (-) TimerEvent: {}
+[36.359595] (-) TimerEvent: {}
+[36.459942] (-) TimerEvent: {}
+[36.560343] (-) TimerEvent: {}
+[36.660728] (-) TimerEvent: {}
+[36.761097] (-) TimerEvent: {}
+[36.861498] (-) TimerEvent: {}
+[36.961907] (-) TimerEvent: {}
+[37.062265] (-) TimerEvent: {}
+[37.162615] (-) TimerEvent: {}
+[37.262959] (-) TimerEvent: {}
+[37.363314] (-) TimerEvent: {}
+[37.463669] (-) TimerEvent: {}
+[37.564142] (-) TimerEvent: {}
+[37.664493] (-) TimerEvent: {}
+[37.764845] (-) TimerEvent: {}
+[37.865207] (-) TimerEvent: {}
+[37.965555] (-) TimerEvent: {}
+[38.065981] (-) TimerEvent: {}
+[38.166330] (-) TimerEvent: {}
+[38.266694] (-) TimerEvent: {}
+[38.369830] (-) TimerEvent: {}
+[38.470282] (-) TimerEvent: {}
+[38.570648] (-) TimerEvent: {}
+[38.671009] (-) TimerEvent: {}
+[38.771351] (-) TimerEvent: {}
+[38.871701] (-) TimerEvent: {}
+[38.972048] (-) TimerEvent: {}
+[39.072397] (-) TimerEvent: {}
+[39.172750] (-) TimerEvent: {}
+[39.273085] (-) TimerEvent: {}
+[39.373451] (-) TimerEvent: {}
+[39.473835] (-) TimerEvent: {}
+[39.574185] (-) TimerEvent: {}
+[39.674549] (-) TimerEvent: {}
+[39.774912] (-) TimerEvent: {}
+[39.875293] (-) TimerEvent: {}
+[39.975721] (-) TimerEvent: {}
+[40.076113] (-) TimerEvent: {}
+[40.176514] (-) TimerEvent: {}
+[40.276877] (-) TimerEvent: {}
+[40.377246] (-) TimerEvent: {}
+[40.477608] (-) TimerEvent: {}
+[40.578004] (-) TimerEvent: {}
+[40.678370] (-) TimerEvent: {}
+[40.778835] (-) TimerEvent: {}
+[40.879220] (-) TimerEvent: {}
+[40.979598] (-) TimerEvent: {}
+[41.079958] (-) TimerEvent: {}
+[41.180327] (-) TimerEvent: {}
+[41.280695] (-) TimerEvent: {}
+[41.381078] (-) TimerEvent: {}
+[41.481445] (-) TimerEvent: {}
+[41.581838] (-) TimerEvent: {}
+[41.682226] (-) TimerEvent: {}
+[41.782606] (-) TimerEvent: {}
+[41.882988] (-) TimerEvent: {}
+[41.983394] (-) TimerEvent: {}
+[42.083795] (-) TimerEvent: {}
+[42.184194] (-) TimerEvent: {}
+[42.284575] (-) TimerEvent: {}
+[42.384951] (-) TimerEvent: {}
+[42.485323] (-) TimerEvent: {}
+[42.555523] (control_center) StdoutLine: {'line': b'[100%] Linking CXX executable control_center\n'}
+[42.585681] (-) TimerEvent: {}
+[42.686557] (-) TimerEvent: {}
+[42.786945] (-) TimerEvent: {}
+[42.887446] (-) TimerEvent: {}
+[42.990781] (-) TimerEvent: {}
+[43.091218] (-) TimerEvent: {}
+[43.191604] (-) TimerEvent: {}
+[43.292000] (-) TimerEvent: {}
+[43.392386] (-) TimerEvent: {}
+[43.492765] (-) TimerEvent: {}
+[43.593194] (-) TimerEvent: {}
+[43.693579] (-) TimerEvent: {}
+[43.793949] (-) TimerEvent: {}
+[43.894310] (-) TimerEvent: {}
+[43.994696] (-) TimerEvent: {}
+[44.095071] (-) TimerEvent: {}
+[44.195438] (-) TimerEvent: {}
+[44.295751] (-) TimerEvent: {}
+[44.396131] (-) TimerEvent: {}
+[44.488760] (control_center) StdoutLine: {'line': b'[100%] Built target control_center\n'}
+[44.496293] (-) TimerEvent: {}
+[44.519345] (control_center) CommandEnded: {'returncode': 0}
+[44.520612] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'install'}
+[44.545131] (control_center) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/control_center'], 'cwd': '/workspace/build/control_center', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/control_center', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[44.562844] (control_center) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[44.563700] (control_center) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[44.564472] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/lib/control_center/control_center\n'}
+[44.564876] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/package_run_dependencies/control_center\n'}
+[44.565211] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/parent_prefix_path/control_center\n'}
+[44.565476] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.sh\n'}
+[44.565950] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.dsv\n'}
+[44.566903] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.sh\n'}
+[44.567276] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.dsv\n'}
+[44.567499] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.bash\n'}
+[44.567711] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.sh\n'}
+[44.567902] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.zsh\n'}
+[44.568266] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.dsv\n'}
+[44.568484] (control_center) StdoutLine: {'line': b'-- Symlinking: /workspace/install/control_center/share/control_center/package.dsv\n'}
+[44.588794] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/packages/control_center\n'}
+[44.589457] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig.cmake\n'}
+[44.589900] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig-version.cmake\n'}
+[44.590231] (control_center) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/control_center/share/control_center/package.xml\n'}
+[44.591895] (control_center) CommandEnded: {'returncode': 0}
+[44.596390] (-) TimerEvent: {}
+[44.631126] (control_center) JobEnded: {'identifier': 'control_center', 'rc': 0}
+[44.632282] (-) EventReactorShutdown: {}

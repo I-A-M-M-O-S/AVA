@@ -1,0 +1,85 @@
+services:
+  jazzy:
+    build:
+      context: .
+      network: host
+    image: local/ros2-jazzy:desktop
+    entrypoint: /ros2-jazzy-entrypoint.sh
+    network_mode: host
+    ipc: host
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+    environment:
+      DISPLAY: ${DISPLAY:-:0}
+      QT_X11_NO_MITSHM: "1"
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: all
+    volumes:
+      - ./workspace:/workspace
+      - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
+      - ./config:/config:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
+  lidar:
+    image: local/ros2-jazzy:desktop
+    container_name: ros2-jazzy-stl27l
+    entrypoint: /ros2-jazzy-entrypoint.sh
+    network_mode: host
+    ipc: host
+    group_add:
+      - "20"
+    devices:
+      - /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0:/dev/ttyUSB0
+    volumes:
+      - ./workspace:/workspace
+      - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
+    command: ["ros2", "launch", "ldlidar_stl_ros2", "stl27l.launch.py"]
+    restart: unless-stopped
+
+  camera:
+    image: local/ros2-jazzy:desktop
+    container_name: ros2-jazzy-camera
+    entrypoint: /ros2-jazzy-entrypoint.sh
+    network_mode: host
+    ipc: host
+    group_add:
+      - "44"
+    devices:
+      - /dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9782_USB_Camera_UC852-video-index0:/dev/video0
+      - /dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9782_USB_Camera_UC852-video-index1:/dev/video1
+    volumes:
+      - ./workspace:/workspace
+      - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
+      - ./config:/config:ro
+      - ./start-uc852.sh:/start-uc852.sh:ro
+    command: ["bash", "/start-uc852.sh"]
+    restart: unless-stopped
+
+  imu:
+    image: local/ros2-jazzy:desktop
+    container_name: ros2-jazzy-bno085
+    entrypoint: /ros2-jazzy-entrypoint.sh
+    network_mode: host
+    ipc: host
+    group_add:
+      - "116"
+    devices:
+      - /dev/i2c-7:/dev/i2c-7
+    volumes:
+      - ./workspace:/workspace
+      - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
+      - ./config:/config:ro
+    command:
+      - ros2
+      - run
+      - bno08x_driver
+      - bno08x_driver
+      - --ros-args
+      - --params-file
+      - /config/bno085.yaml
+      - -r
+      - /imu:=/imu/data
+      - -r
+      - /magnetic_field:=/imu/mag
+    restart: unless-stopped

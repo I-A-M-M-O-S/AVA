@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# One command starts both the autonomous C++ node and the DriveCommand->Twist
+# converter used by Gazebo.
+exec ros2 launch control_center control_center.launch.py "$@"

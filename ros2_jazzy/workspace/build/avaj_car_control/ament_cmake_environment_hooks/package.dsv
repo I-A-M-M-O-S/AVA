@@ -1,0 +1,4 @@
+source;share/avaj_car_control/local_setup.bash
+source;share/avaj_car_control/local_setup.dsv
+source;share/avaj_car_control/local_setup.sh
+source;share/avaj_car_control/local_setup.zsh

@@ -1,0 +1,152 @@
+[0.000000] (-) TimerEvent: {}
+[0.000247] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.000488] (bno08x_driver) JobQueued: {'identifier': 'bno08x_driver', 'dependencies': OrderedDict()}
+[0.000894] (bno08x_driver) JobStarted: {'identifier': 'bno08x_driver'}
+[0.017173] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'cmake'}
+[0.018167] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'build'}
+[0.019213] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/bno08x_driver', '--', '-j8', '-l8'], 'cwd': '/workspace/build/bno08x_driver', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/bno08x_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099465] (-) TimerEvent: {}
+[0.121391] (bno08x_driver) StdoutLine: {'line': b'[ 27%] Built target sh2_library\n'}
+[0.131893] (bno08x_driver) StdoutLine: {'line': b'[ 44%] Built target gmock\n'}
+[0.132625] (bno08x_driver) StdoutLine: {'line': b'[ 55%] Built target gmock_main\n'}
+[0.181917] (bno08x_driver) StdoutLine: {'line': b'[ 77%] Built target test_i2c_mock\n'}
+[0.182329] (bno08x_driver) StdoutLine: {'line': b'[ 77%] Built target test_watchdog\n'}
+[0.187997] (bno08x_driver) StdoutLine: {'line': b'[ 83%] Building CXX object CMakeFiles/bno08x_driver.dir/src/bno08x_ros.cpp.o\n'}
+[0.199621] (-) TimerEvent: {}
+[0.300118] (-) TimerEvent: {}
+[0.400477] (-) TimerEvent: {}
+[0.500838] (-) TimerEvent: {}
+[0.601198] (-) TimerEvent: {}
+[0.701562] (-) TimerEvent: {}
+[0.801926] (-) TimerEvent: {}
+[0.902301] (-) TimerEvent: {}
+[1.002681] (-) TimerEvent: {}
+[1.103062] (-) TimerEvent: {}
+[1.203436] (-) TimerEvent: {}
+[1.303815] (-) TimerEvent: {}
+[1.404180] (-) TimerEvent: {}
+[1.504569] (-) TimerEvent: {}
+[1.604958] (-) TimerEvent: {}
+[1.705367] (-) TimerEvent: {}
+[1.805767] (-) TimerEvent: {}
+[1.906124] (-) TimerEvent: {}
+[2.006479] (-) TimerEvent: {}
+[2.106826] (-) TimerEvent: {}
+[2.207180] (-) TimerEvent: {}
+[2.307530] (-) TimerEvent: {}
+[2.407869] (-) TimerEvent: {}
+[2.508226] (-) TimerEvent: {}
+[2.608579] (-) TimerEvent: {}
+[2.708920] (-) TimerEvent: {}
+[2.809277] (-) TimerEvent: {}
+[2.909621] (-) TimerEvent: {}
+[3.009958] (-) TimerEvent: {}
+[3.110296] (-) TimerEvent: {}
+[3.210636] (-) TimerEvent: {}
+[3.310975] (-) TimerEvent: {}
+[3.411315] (-) TimerEvent: {}
+[3.511664] (-) TimerEvent: {}
+[3.612014] (-) TimerEvent: {}
+[3.712371] (-) TimerEvent: {}
+[3.812728] (-) TimerEvent: {}
+[3.913115] (-) TimerEvent: {}
+[4.013486] (-) TimerEvent: {}
+[4.113818] (-) TimerEvent: {}
+[4.214167] (-) TimerEvent: {}
+[4.314507] (-) TimerEvent: {}
+[4.414879] (-) TimerEvent: {}
+[4.515239] (-) TimerEvent: {}
+[4.615585] (-) TimerEvent: {}
+[4.715933] (-) TimerEvent: {}
+[4.816276] (-) TimerEvent: {}
+[4.916611] (-) TimerEvent: {}
+[5.016942] (-) TimerEvent: {}
+[5.117312] (-) TimerEvent: {}
+[5.217653] (-) TimerEvent: {}
+[5.318004] (-) TimerEvent: {}
+[5.418373] (-) TimerEvent: {}
+[5.518746] (-) TimerEvent: {}
+[5.619112] (-) TimerEvent: {}
+[5.719485] (-) TimerEvent: {}
+[5.819844] (-) TimerEvent: {}
+[5.920252] (-) TimerEvent: {}
+[6.020629] (-) TimerEvent: {}
+[6.120992] (-) TimerEvent: {}
+[6.221373] (-) TimerEvent: {}
+[6.321739] (-) TimerEvent: {}
+[6.422088] (-) TimerEvent: {}
+[6.522442] (-) TimerEvent: {}
+[6.622806] (-) TimerEvent: {}
+[6.723193] (-) TimerEvent: {}
+[6.823562] (-) TimerEvent: {}
+[6.923944] (-) TimerEvent: {}
+[7.024322] (-) TimerEvent: {}
+[7.124700] (-) TimerEvent: {}
+[7.225102] (-) TimerEvent: {}
+[7.325473] (-) TimerEvent: {}
+[7.425851] (-) TimerEvent: {}
+[7.526218] (-) TimerEvent: {}
+[7.626575] (-) TimerEvent: {}
+[7.726942] (-) TimerEvent: {}
+[7.827306] (-) TimerEvent: {}
+[7.927649] (-) TimerEvent: {}
+[8.028011] (-) TimerEvent: {}
+[8.128367] (-) TimerEvent: {}
+[8.228711] (-) TimerEvent: {}
+[8.329080] (-) TimerEvent: {}
+[8.429424] (-) TimerEvent: {}
+[8.529759] (-) TimerEvent: {}
+[8.630086] (-) TimerEvent: {}
+[8.730433] (-) TimerEvent: {}
+[8.830768] (-) TimerEvent: {}
+[8.931110] (-) TimerEvent: {}
+[9.031452] (-) TimerEvent: {}
+[9.131794] (-) TimerEvent: {}
+[9.232135] (-) TimerEvent: {}
+[9.332464] (-) TimerEvent: {}
+[9.432794] (-) TimerEvent: {}
+[9.533143] (-) TimerEvent: {}
+[9.633476] (-) TimerEvent: {}
+[9.733813] (-) TimerEvent: {}
+[9.834157] (-) TimerEvent: {}
+[9.934511] (-) TimerEvent: {}
+[10.034863] (-) TimerEvent: {}
+[10.135208] (-) TimerEvent: {}
+[10.235553] (-) TimerEvent: {}
+[10.335940] (-) TimerEvent: {}
+[10.436398] (-) TimerEvent: {}
+[10.536840] (-) TimerEvent: {}
+[10.637287] (-) TimerEvent: {}
+[10.703931] (bno08x_driver) StdoutLine: {'line': b'[ 88%] Linking CXX executable bno08x_driver\n'}
+[10.737452] (-) TimerEvent: {}
+[10.837828] (-) TimerEvent: {}
+[10.938500] (-) TimerEvent: {}
+[11.039113] (-) TimerEvent: {}
+[11.090528] (bno08x_driver) StdoutLine: {'line': b'[100%] Built target bno08x_driver\n'}
+[11.112822] (bno08x_driver) CommandEnded: {'returncode': 0}
+[11.115251] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'install'}
+[11.132685] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/bno08x_driver'], 'cwd': '/workspace/build/bno08x_driver', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/bno08x_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[11.139207] (-) TimerEvent: {}
+[11.150804] (bno08x_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.151540] (bno08x_driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.152126] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/lib/bno08x_driver/bno08x_driver\n'}
+[11.152622] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml\n'}
+[11.153453] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py\n'}
+[11.153870] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver\n'}
+[11.154280] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver\n'}
+[11.154716] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh\n'}
+[11.155179] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv\n'}
+[11.155480] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.sh\n'}
+[11.155866] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.dsv\n'}
+[11.156318] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.bash\n'}
+[11.156766] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.sh\n'}
+[11.157234] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.zsh\n'}
+[11.157520] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.dsv\n'}
+[11.157793] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/package.dsv\n'}
+[11.173267] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver\n'}
+[11.173797] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake\n'}
+[11.174207] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake\n'}
+[11.174617] (bno08x_driver) StdoutLine: {'line': b'-- Up-to-date symlink: /workspace/install/bno08x_driver/share/bno08x_driver/package.xml\n'}
+[11.178432] (bno08x_driver) CommandEnded: {'returncode': 0}
+[11.230922] (bno08x_driver) JobEnded: {'identifier': 'bno08x_driver', 'rc': 0}
+[11.233241] (-) EventReactorShutdown: {}

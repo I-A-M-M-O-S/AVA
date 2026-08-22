@@ -1,0 +1,28 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/build/avaj_slam
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/launch/slam.launch.py
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/config/ekf_sim.yaml
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/config/slam_params.yaml
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/urdf/avaj_car.urdf
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/scripts/save_map.sh
+-- Symlinking: /workspace/install/avaj_slam/lib/avaj_slam/save_map.sh
+-- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/package_run_dependencies/avaj_slam
+-- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/parent_prefix_path/avaj_slam
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/ament_prefix_path.sh
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/ament_prefix_path.dsv
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/path.sh
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/path.dsv
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.bash
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.sh
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.zsh
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.dsv
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/package.dsv
+-- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/packages/avaj_slam
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/cmake/avaj_slamConfig.cmake
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/cmake/avaj_slamConfig-version.cmake
+-- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/package.xml

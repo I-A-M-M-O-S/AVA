@@ -1,0 +1,10 @@
+[Unit]
+Description=ROS-2-Sensor-Hotplug (%i)
+Requires=docker.service
+After=docker.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ros2-sensor-hotplug %i
+TimeoutStartSec=90

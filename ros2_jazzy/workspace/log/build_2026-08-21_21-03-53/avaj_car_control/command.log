@@ -1,0 +1,2 @@
+Invoking command in '/workspace/build/avaj_car_control': /usr/bin/cmake /workspace/src/avaj_car_control -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_car_control
+Invoked command in '/workspace/build/avaj_car_control' returned '1': /usr/bin/cmake /workspace/src/avaj_car_control -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_car_control

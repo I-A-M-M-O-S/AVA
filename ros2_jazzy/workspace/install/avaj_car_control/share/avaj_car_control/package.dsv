@@ -1,0 +1,14 @@
+source;share/avaj_car_control/hook/cmake_prefix_path.ps1
+source;share/avaj_car_control/hook/cmake_prefix_path.dsv
+source;share/avaj_car_control/hook/cmake_prefix_path.sh
+source;share/avaj_car_control/hook/ld_library_path_lib.ps1
+source;share/avaj_car_control/hook/ld_library_path_lib.dsv
+source;share/avaj_car_control/hook/ld_library_path_lib.sh
+source;share/avaj_car_control/hook/pythonpath.ps1
+source;share/avaj_car_control/hook/pythonpath.dsv
+source;share/avaj_car_control/hook/pythonpath.sh
+source;share/avaj_car_control/local_setup.bash
+source;share/avaj_car_control/local_setup.dsv
+source;share/avaj_car_control/local_setup.ps1
+source;share/avaj_car_control/local_setup.sh
+source;share/avaj_car_control/local_setup.zsh

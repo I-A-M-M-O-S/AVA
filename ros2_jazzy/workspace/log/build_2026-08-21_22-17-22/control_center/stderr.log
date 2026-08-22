@@ -1,0 +1,6 @@
+/workspace/build/control_center/control_center.cpp:310:16: error: expected initializer before ‘drive’
+  310 | void autonomus drive(){
+      |                ^~~~~
+gmake[2]: *** [CMakeFiles/control_center.dir/build.make:76: CMakeFiles/control_center.dir/control_center.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

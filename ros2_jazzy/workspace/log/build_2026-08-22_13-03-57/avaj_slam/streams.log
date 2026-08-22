@@ -1,0 +1,34 @@
+[0.026s] Invoking command in '/workspace/build/avaj_slam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/src/avaj_slam -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_slam
+[0.063s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.566s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.829s] -- Configuring done (0.8s)
+[0.841s] -- Generating done (0.0s)
+[0.845s] -- Build files have been written to: /workspace/build/avaj_slam
+[0.854s] Invoked command in '/workspace/build/avaj_slam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/src/avaj_slam -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_slam
+[0.855s] Invoking command in '/workspace/build/avaj_slam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/avaj_slam -- -j8 -l8
+[0.959s] Invoked command in '/workspace/build/avaj_slam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/avaj_slam -- -j8 -l8
+[0.986s] Invoking command in '/workspace/build/avaj_slam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/avaj_slam
+[1.008s] -- Install configuration: ""
+[1.008s] -- Execute custom install script
+[1.010s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/launch/slam.launch.py
+[1.033s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/config/ekf_sim.yaml
+[1.057s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/config/slam_params.yaml
+[1.080s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/urdf/avaj_car.urdf
+[1.103s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/scripts/save_map.sh
+[1.127s] -- Symlinking: /workspace/install/avaj_slam/lib/avaj_slam/save_map.sh
+[1.150s] -- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/package_run_dependencies/avaj_slam
+[1.174s] -- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/parent_prefix_path/avaj_slam
+[1.197s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/ament_prefix_path.sh
+[1.221s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/ament_prefix_path.dsv
+[1.243s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/path.sh
+[1.273s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/environment/path.dsv
+[1.296s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.bash
+[1.323s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.sh
+[1.351s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.zsh
+[1.375s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/local_setup.dsv
+[1.398s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/package.dsv
+[1.423s] -- Symlinking: /workspace/install/avaj_slam/share/ament_index/resource_index/packages/avaj_slam
+[1.447s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/cmake/avaj_slamConfig.cmake
+[1.473s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/cmake/avaj_slamConfig-version.cmake
+[1.497s] -- Symlinking: /workspace/install/avaj_slam/share/avaj_slam/package.xml
+[1.526s] Invoked command in '/workspace/build/avaj_slam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/avaj_slam

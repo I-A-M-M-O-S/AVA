@@ -1,0 +1,40 @@
+/workspace/build/control_center/control_center.cpp:152:38: error: stray ‘\’ in program
+  152 |            << "{\"camera\":{"received\":" << (image_received_ ? "true" : "false")
+      |                                      ^
+/workspace/build/control_center/control_center.cpp:156:36: error: stray ‘\’ in program
+  156 |            << "\"lidar\":{"received\":" << (scan_received_ ? "true" : "false")
+      |                                    ^
+/workspace/build/control_center/control_center.cpp:159:34: error: stray ‘\’ in program
+  159 |            << "\"imu\":{"received\":" << (imu_received_ ? "true" : "false")
+      |                                  ^
+/workspace/build/control_center/control_center.cpp:163:43: error: stray ‘\’ in program
+  163 |            << "\"magnetometer\":{"received\":" << (mag_received_ ? "true" : "false")
+      |                                           ^
+/workspace/build/control_center/control_center.cpp:166:39: error: stray ‘\’ in program
+  166 |            << "\"odometry\":{"received\":" << (odom_received_ ? "true" : "false")
+      |                                       ^
+/workspace/build/control_center/control_center.cpp:169:36: error: stray ‘\’ in program
+  169 |            << "\"drive\":{"received\":" << (drive_received_ ? "true" : "false")
+      |                                    ^
+/workspace/build/control_center/control_center.cpp: In member function ‘void ControlCenter::publish_status()’:
+/workspace/build/control_center/control_center.cpp:152:39: error: unable to find string literal operator ‘operator""received’ with ‘const char [13]’, ‘long unsigned int’ arguments
+  152 |            << "{\"camera\":{"received\":" << (image_received_ ? "true" : "false")
+      |                                       ^~~
+/workspace/build/control_center/control_center.cpp:156:37: error: unable to find string literal operator ‘operator""received’ with ‘const char [11]’, ‘long unsigned int’ arguments
+  156 |            << "\"lidar\":{"received\":" << (scan_received_ ? "true" : "false")
+      |                                     ^~~
+/workspace/build/control_center/control_center.cpp:159:35: error: unable to find string literal operator ‘operator""received’ with ‘const char [9]’, ‘long unsigned int’ arguments
+  159 |            << "\"imu\":{"received\":" << (imu_received_ ? "true" : "false")
+      |                                   ^~~
+/workspace/build/control_center/control_center.cpp:163:44: error: unable to find string literal operator ‘operator""received’ with ‘const char [18]’, ‘long unsigned int’ arguments
+  163 |            << "\"magnetometer\":{"received\":" << (mag_received_ ? "true" : "false")
+      |                                            ^~~
+/workspace/build/control_center/control_center.cpp:166:40: error: unable to find string literal operator ‘operator""received’ with ‘const char [14]’, ‘long unsigned int’ arguments
+  166 |            << "\"odometry\":{"received\":" << (odom_received_ ? "true" : "false")
+      |                                        ^~~
+/workspace/build/control_center/control_center.cpp:169:37: error: unable to find string literal operator ‘operator""received’ with ‘const char [11]’, ‘long unsigned int’ arguments
+  169 |            << "\"drive\":{"received\":" << (drive_received_ ? "true" : "false")
+      |                                     ^~~
+gmake[2]: *** [CMakeFiles/control_center.dir/build.make:76: CMakeFiles/control_center.dir/control_center.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,4 @@
+Invoking command in '/workspace/build/avaj_slam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/avaj_slam -- -j8 -l8
+Invoked command in '/workspace/build/avaj_slam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/avaj_slam -- -j8 -l8
+Invoking command in '/workspace/build/avaj_slam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/avaj_slam
+Invoked command in '/workspace/build/avaj_slam' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/avaj_slam

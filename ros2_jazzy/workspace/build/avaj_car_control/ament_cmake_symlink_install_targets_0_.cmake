@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/workspace/build/avaj_car_control/rosidl_generator_py/avaj_car_control/avaj_car_control_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "avaj_car_control_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/avaj_car_control")

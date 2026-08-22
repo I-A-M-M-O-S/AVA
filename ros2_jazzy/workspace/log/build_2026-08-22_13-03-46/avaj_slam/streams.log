@@ -1,0 +1,44 @@
+[0.034s] Invoking command in '/workspace/build/avaj_slam': /usr/bin/cmake /workspace/src/avaj_slam -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_slam
+[0.321s] -- The C compiler identification is GNU 13.3.0
+[0.532s] -- The CXX compiler identification is GNU 13.3.0
+[0.577s] -- Detecting C compiler ABI info
+[0.805s] -- Detecting C compiler ABI info - done
+[0.828s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.829s] -- Detecting C compile features
+[0.830s] -- Detecting C compile features - done
+[0.854s] -- Detecting CXX compiler ABI info
+[1.088s] -- Detecting CXX compiler ABI info - done
+[1.108s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.108s] -- Detecting CXX compile features
+[1.109s] -- Detecting CXX compile features - done
+[1.128s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.535s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.084s] Error parsing '/workspace/src/avaj_slam/package.xml':
+[2.084s] Traceback (most recent call last):
+[2.085s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[2.085s]     main()
+[2.085s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[2.085s]     raise e
+[2.085s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[2.086s]     package = parse_package_string(
+[2.086s]               ^^^^^^^^^^^^^^^^^^^^^
+[2.086s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 788, in parse_package_string
+[2.086s]     pkg.validate(warnings=warnings)
+[2.086s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 330, in validate
+[2.087s]     raise InvalidPackage('\n'.join(errors), self.filename)
+[2.087s] catkin_pkg.package.InvalidPackage: Error(s) in package '/workspace/src/avaj_slam/package.xml':
+[2.087s] Invalid email "avaj@localhost" for person "avaj"
+[2.134s] CMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[2.134s]   execute_process(/usr/bin/python3
+[2.134s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[2.135s]   /workspace/src/avaj_slam/package.xml
+[2.135s]   /workspace/build/avaj_slam/ament_cmake_core/package.cmake) returned error
+[2.135s]   code 1
+[2.135s] Call Stack (most recent call first):
+[2.135s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[2.135s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[2.136s]   CMakeLists.txt:14 (ament_package)
+[2.136s] 
+[2.136s] 
+[2.136s] -- Configuring incomplete, errors occurred!
+[2.148s] Invoked command in '/workspace/build/avaj_slam' returned '1': /usr/bin/cmake /workspace/src/avaj_slam -DCMAKE_INSTALL_PREFIX=/workspace/install/avaj_slam

@@ -1,0 +1,146 @@
+[0.000000] (-) TimerEvent: {}
+[0.000198] (ldlidar_stl_ros2) JobQueued: {'identifier': 'ldlidar_stl_ros2', 'dependencies': OrderedDict()}
+[0.000850] (ldlidar_stl_ros2) JobStarted: {'identifier': 'ldlidar_stl_ros2'}
+[0.019097] (ldlidar_stl_ros2) JobProgress: {'identifier': 'ldlidar_stl_ros2', 'progress': 'cmake'}
+[0.020083] (ldlidar_stl_ros2) JobProgress: {'identifier': 'ldlidar_stl_ros2', 'progress': 'build'}
+[0.020941] (ldlidar_stl_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/ldlidar_stl_ros2', '--', '-j8', '-l8'], 'cwd': '/workspace/build/ldlidar_stl_ros2', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ldlidar_stl_ros2', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099663] (-) TimerEvent: {}
+[0.190105] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/logger/log_module.cpp.o\n'}
+[0.190619] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/networkcom/network_socket_interface_linux.cpp.o\n'}
+[0.190800] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/serialcom/serial_interface_linux.cpp.o\n'}
+[0.190935] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/src/demo.cpp.o\n'}
+[0.191264] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/core/ldlidar_driver.cpp.o\n'}
+[0.199827] (-) TimerEvent: {}
+[0.300239] (-) TimerEvent: {}
+[0.400630] (-) TimerEvent: {}
+[0.500992] (-) TimerEvent: {}
+[0.601359] (-) TimerEvent: {}
+[0.701740] (-) TimerEvent: {}
+[0.802156] (-) TimerEvent: {}
+[0.903060] (-) TimerEvent: {}
+[1.003443] (-) TimerEvent: {}
+[1.103811] (-) TimerEvent: {}
+[1.204195] (-) TimerEvent: {}
+[1.304582] (-) TimerEvent: {}
+[1.404959] (-) TimerEvent: {}
+[1.505340] (-) TimerEvent: {}
+[1.605704] (-) TimerEvent: {}
+[1.706088] (-) TimerEvent: {}
+[1.806438] (-) TimerEvent: {}
+[1.906786] (-) TimerEvent: {}
+[2.007146] (-) TimerEvent: {}
+[2.107508] (-) TimerEvent: {}
+[2.207870] (-) TimerEvent: {}
+[2.308224] (-) TimerEvent: {}
+[2.408595] (-) TimerEvent: {}
+[2.508964] (-) TimerEvent: {}
+[2.609332] (-) TimerEvent: {}
+[2.709702] (-) TimerEvent: {}
+[2.810089] (-) TimerEvent: {}
+[2.910458] (-) TimerEvent: {}
+[3.010830] (-) TimerEvent: {}
+[3.111193] (-) TimerEvent: {}
+[3.211565] (-) TimerEvent: {}
+[3.311933] (-) TimerEvent: {}
+[3.412314] (-) TimerEvent: {}
+[3.512687] (-) TimerEvent: {}
+[3.613063] (-) TimerEvent: {}
+[3.713438] (-) TimerEvent: {}
+[3.813790] (-) TimerEvent: {}
+[3.914157] (-) TimerEvent: {}
+[4.014524] (-) TimerEvent: {}
+[4.114899] (-) TimerEvent: {}
+[4.215275] (-) TimerEvent: {}
+[4.315693] (-) TimerEvent: {}
+[4.416056] (-) TimerEvent: {}
+[4.516442] (-) TimerEvent: {}
+[4.616806] (-) TimerEvent: {}
+[4.717179] (-) TimerEvent: {}
+[4.817550] (-) TimerEvent: {}
+[4.917918] (-) TimerEvent: {}
+[5.018313] (-) TimerEvent: {}
+[5.118681] (-) TimerEvent: {}
+[5.219043] (-) TimerEvent: {}
+[5.319403] (-) TimerEvent: {}
+[5.419777] (-) TimerEvent: {}
+[5.520138] (-) TimerEvent: {}
+[5.620542] (-) TimerEvent: {}
+[5.720899] (-) TimerEvent: {}
+[5.821270] (-) TimerEvent: {}
+[5.921646] (-) TimerEvent: {}
+[6.022011] (-) TimerEvent: {}
+[6.122418] (-) TimerEvent: {}
+[6.222779] (-) TimerEvent: {}
+[6.323158] (-) TimerEvent: {}
+[6.423539] (-) TimerEvent: {}
+[6.523906] (-) TimerEvent: {}
+[6.624288] (-) TimerEvent: {}
+[6.724724] (-) TimerEvent: {}
+[6.825173] (-) TimerEvent: {}
+[6.925742] (-) TimerEvent: {}
+[7.026136] (-) TimerEvent: {}
+[7.126478] (-) TimerEvent: {}
+[7.226809] (-) TimerEvent: {}
+[7.327292] (-) TimerEvent: {}
+[7.427747] (-) TimerEvent: {}
+[7.528117] (-) TimerEvent: {}
+[7.628474] (-) TimerEvent: {}
+[7.728837] (-) TimerEvent: {}
+[7.829204] (-) TimerEvent: {}
+[7.929572] (-) TimerEvent: {}
+[8.029925] (-) TimerEvent: {}
+[8.130289] (-) TimerEvent: {}
+[8.230637] (-) TimerEvent: {}
+[8.330979] (-) TimerEvent: {}
+[8.431318] (-) TimerEvent: {}
+[8.531655] (-) TimerEvent: {}
+[8.631996] (-) TimerEvent: {}
+[8.732334] (-) TimerEvent: {}
+[8.832673] (-) TimerEvent: {}
+[8.933007] (-) TimerEvent: {}
+[9.033392] (-) TimerEvent: {}
+[9.133797] (-) TimerEvent: {}
+[9.234179] (-) TimerEvent: {}
+[9.332814] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 75%] Linking CXX executable ldlidar_stl_ros2_node\n'}
+[9.334241] (-) TimerEvent: {}
+[9.434539] (-) TimerEvent: {}
+[9.534987] (-) TimerEvent: {}
+[9.635446] (-) TimerEvent: {}
+[9.718463] (ldlidar_stl_ros2) StdoutLine: {'line': b'[100%] Built target ldlidar_stl_ros2_node\n'}
+[9.735560] (-) TimerEvent: {}
+[9.741763] (ldlidar_stl_ros2) CommandEnded: {'returncode': 0}
+[9.743260] (ldlidar_stl_ros2) JobProgress: {'identifier': 'ldlidar_stl_ros2', 'progress': 'install'}
+[9.761698] (ldlidar_stl_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/ldlidar_stl_ros2'], 'cwd': '/workspace/build/ldlidar_stl_ros2', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ldlidar_stl_ros2', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[9.777285] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.778044] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[9.778762] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/lib/ldlidar_stl_ros2/ldlidar_stl_ros2_node\n'}
+[9.798299] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/ld06.launch.py\n'}
+[9.815726] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/ld19.launch.py\n'}
+[9.833622] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/stl27l.launch.py\n'}
+[9.835659] (-) TimerEvent: {}
+[9.850706] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/viewer_ld06.launch.py\n'}
+[9.867890] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/viewer_ld19.launch.py\n'}
+[9.885195] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//launch/viewer_stl27l.launch.py\n'}
+[9.903128] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2//rviz2/ldlidar.rviz\n'}
+[9.920490] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ament_index/resource_index/package_run_dependencies/ldlidar_stl_ros2\n'}
+[9.935825] (-) TimerEvent: {}
+[9.938977] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ament_index/resource_index/parent_prefix_path/ldlidar_stl_ros2\n'}
+[9.957138] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/environment/ament_prefix_path.sh\n'}
+[9.974250] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/environment/ament_prefix_path.dsv\n'}
+[9.991121] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/environment/path.sh\n'}
+[10.009503] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/environment/path.dsv\n'}
+[10.028162] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/local_setup.bash\n'}
+[10.035923] (-) TimerEvent: {}
+[10.054716] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/local_setup.sh\n'}
+[10.076764] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/local_setup.zsh\n'}
+[10.094799] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/local_setup.dsv\n'}
+[10.114155] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/package.dsv\n'}
+[10.132541] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ament_index/resource_index/packages/ldlidar_stl_ros2\n'}
+[10.136020] (-) TimerEvent: {}
+[10.150986] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/cmake/ldlidar_stl_ros2Config.cmake\n'}
+[10.171689] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/cmake/ldlidar_stl_ros2Config-version.cmake\n'}
+[10.188624] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Symlinking: /workspace/install/ldlidar_stl_ros2/share/ldlidar_stl_ros2/package.xml\n'}
+[10.209326] (ldlidar_stl_ros2) CommandEnded: {'returncode': 0}
+[10.236651] (-) TimerEvent: {}
+[10.276874] (ldlidar_stl_ros2) JobEnded: {'identifier': 'ldlidar_stl_ros2', 'rc': 0}
+[10.278732] (-) EventReactorShutdown: {}
