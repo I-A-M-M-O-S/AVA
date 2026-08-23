@@ -684,17 +684,13 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "BT5-8,SW1,J2,R1-2,C1-3,D1-4,U1-2,Q1-2,#PWR2-10,M1-4",
+    "used_designators": "#SYM1,BT5-8,SW1,J1-7,R1-16,A1,C1-6,D1-4,U1-2,Q1-2,#PWR1-10,M1-4",
     "variants": []
   },
   "sheets": [
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "AVA"
-    ],
-    [
-      "4dc20c32-2784-4169-a463-fb5f9412986b",
-      "BMU"
     ]
   ],
   "text_variables": {},
