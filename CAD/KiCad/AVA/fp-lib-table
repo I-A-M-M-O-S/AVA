@@ -1,5 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Exotic_LED")(type "KiCad")(uri "${KIPRJMOD}/Exotic_LED.pretty")(options "")(descr ""))
-  (lib (name "MCU_PIC")(type "KiCad")(uri "${KIPRJMOD}/LIB/MCU_PIC.pretty")(options "")(descr ""))
-)
