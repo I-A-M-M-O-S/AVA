@@ -2269,7 +2269,7 @@
 		)
 		(uuid "287b1fc7-a521-4ba2-ad2e-58f012754941")
 	)
-	(text_box "Notes\n---\nPulling U1-EN low -> uC shutdown"
+	(text_box "Notes\n---\n- Pulling U1-EN low -> uC shutdown\n- U1, U2 are connected to Jetson Orin via USB\n	-> Power transmission, comms"
 		(exclude_from_sim no)
 		(at 177.8 133.35 0)
 		(size 106.68 33.02)
