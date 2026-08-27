@@ -3,7 +3,7 @@
 ## Goal
 Autonomous 1:10 RC-Car utilizing a Jetson Orin System.
 
-##Hardware
+## Hardware
 
 ### Custom PCB
 All the different ECUs and sensors need to be connected.
