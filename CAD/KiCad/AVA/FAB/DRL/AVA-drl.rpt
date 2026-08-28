@@ -1,0 +1,27 @@
+Drill report for AVA.kicad_pcb
+Created on 2026-08-28T16:05:14
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'AVA-PTH-drl.gbr' contains
+    plated through holes:
+    =============================================================
+    T1  0.800mm  0.0315"  (14 holes))
+    T2  0.800mm  0.0315"  (64 holes))
+    T3  0.900mm  0.0354"  (16 holes))
+    T4  1.000mm  0.0394"  (58 holes))
+
+    Total plated holes count 152
+
+
+Drill file 'AVA-NPTH-drl.gbr' contains
+    unplated through holes:
+    =============================================================
+    T1  2.000mm  0.0787"  (2 holes))
+    T2  3.200mm  0.1260"  (4 holes))
+
+    Total unplated holes count 6
