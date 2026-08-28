@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "10.0.5"
     },
-    "CreationDate": "2026-08-25T21:08:57+02:00"
+    "CreationDate": "2026-08-28T14:51:15+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -34,9 +34,24 @@
   ],
   "FilesAttributes": [
     {
+      "Path": "AVA-F_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "AVA-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
+    },
+    {
+      "Path": "AVA-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "AVA-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
     }
   ],
   "MaterialStackup": [

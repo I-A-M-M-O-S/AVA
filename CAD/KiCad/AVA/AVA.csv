@@ -1,0 +1,12 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"A1";"Arduino_Nano";1;"Arduino_Nano_ESP32";;;
+2;"C1, C2, C3, C4, C5, C6";"C_Disc_D5.0mm_W2.5mm_P5.00mm";6;"100nF";;;
+3;"J1, J2, J3, J4, J8, J9";"PinSocket_1x03_P2.54mm_Vertical";6;"Conn_01x03_Pin";;;
+4;"J5, J6, J7";"PinSocket_1x02_P2.54mm_Vertical";3;"Conn_01x02_Pin";;;
+5;"J10";"PinSocket_1x04_P2.54mm_Vertical";1;"Conn_01x04_Pin";;;
+6;"R1, R2";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";2;"100R";;;
+7;"R3, R6, R8, R10, R15, R16, R18, R19, R23, R24";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";10;"330R";;;
+8;"R4, R5, R7, R9, R12, R14, R17, R20, R21, R22, R25, R26";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";12;"10K";;;
+9;"R11";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";1;"22K";;;
+10;"R13";"R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal";1;"56K";;;
+11;"U1";"WEMOS_C3_mini";1;"WEMOS_C3_mini";;;
