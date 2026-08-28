@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "AVA") (type "KiCad") (uri "/home/engineer/College/Mittweida/Summer-School-2026/AVA/CAD/KiCad/Library/AVA.pretty") (options "") (descr ""))
+)
