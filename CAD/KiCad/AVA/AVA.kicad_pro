@@ -552,7 +552,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "FAB/GERBER/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
