@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 0,
+          "remove_islands": 1,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 1.2
         }
@@ -553,7 +553,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "FAB/SVG/",
+      "plot": "FAB/PDF/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -702,7 +702,7 @@
         "uuid": "3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
       }
     ],
-    "used_designators": "#PWR1-17,A1,C1-6,J1-10,R1-26,U1,H1-4",
+    "used_designators": "H1-4,U1-2,R1-26,J1-10,C1-6,A1,#PWR1-18",
     "variants": []
   },
   "sheets": [
