@@ -1341,69 +1341,40 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MCU_Module:Arduino_Nano_ESP32"
+		(symbol "Jumper:SolderJumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "A"
-				(at -14.986 23.622 0)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 				)
 			)
-			(property "Value" "Arduino_Nano_ESP32"
-				(at 3.81 -25.654 0)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left top)
 				)
 			)
-			(property "Footprint" "Module:Arduino_Nano"
-				(at 13.716 -34.036 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-				)
-			)
-			(property "Datasheet" "https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf"
-				(at 39.116 -31.496 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Arduino Nano board based on the ESP32-S3 with a dual-core 240 MHz processor, 384 kB ROM, 512 kB SRAM. Operates at 3.3V, with 5V USB-C® input and 6-21V VIN. Features Wi-Fi®, Bluetooth® LE, digital and analog pins, and supports SPI, I2C, UART, I2S, and CAN."
-				(at 138.43 -28.956 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Arduino Nano ESP32"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1414,7 +1385,29 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Arduino*Nano*"
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1425,24 +1418,72 @@
 					)
 				)
 			)
-			(symbol "Arduino_Nano_ESP32_0_1"
-				(rectangle
-					(start -15.24 22.86)
-					(end 15.24 -22.86)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "Arduino_Nano_ESP32_1_1"
-				(pin bidirectional line
-					(at -17.78 12.7 0)
-					(length 2.54)
-					(name "D1/TX"
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1457,10 +1498,10 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at -17.78 15.24 0)
-					(length 2.54)
-					(name "D0/RX"
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1468,511 +1509,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 17.78 12.7 180)
-					(length 2.54)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -25.4 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 10.16 0)
-					(length 2.54)
-					(name "D2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 7.62 0)
-					(length 2.54)
-					(name "D3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 5.08 0)
-					(length 2.54)
-					(name "D4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 2.54 0)
-					(length 2.54)
-					(name "D5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 0 0)
-					(length 2.54)
-					(name "D6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -2.54 0)
-					(length 2.54)
-					(name "D7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -5.08 0)
-					(length 2.54)
-					(name "D8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -7.62 0)
-					(length 2.54)
-					(name "D9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -10.16 0)
-					(length 2.54)
-					(name "D10/CS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -12.7 0)
-					(length 2.54)
-					(name "D11/COPI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -15.24 0)
-					(length 2.54)
-					(name "D12/CIPO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -17.78 0)
-					(length 2.54)
-					(name "D13/SCK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 17.78 20.32 180)
-					(length 2.54)
-					(name "3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 7.62 180)
-					(length 2.54)
-					(name "B0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 0 180)
-					(length 2.54)
-					(name "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -2.54 180)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -5.08 180)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -7.62 180)
-					(length 2.54)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -10.16 180)
-					(length 2.54)
-					(name "SDA/A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -12.7 180)
-					(length 2.54)
-					(name "SCL/A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -15.24 180)
-					(length 2.54)
-					(name "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -17.78 180)
-					(length 2.54)
-					(name "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 17.78 17.78 180)
-					(length 2.54)
-					(name "VUSB/5V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 5.08 180)
-					(length 2.54)
-					(name "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -25.4 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -17.78 20.32 0)
-					(length 2.54)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "30"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2077,6 +1613,794 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_Espressif:ESP32-DevKitC"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -30.48 38.1 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "ESP32-DevKitC"
+				(at -30.48 35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "PCM_Espressif:ESP32-DevKitC"
+				(at 0 -43.18 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html"
+				(at 0 -45.72 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Development Kit"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ESP32"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ESP32-DevKitC_0_0"
+				(text "ESP32-DevKitC"
+					(at -2.54 -20.32 0)
+					(effects
+						(font
+							(size 2.54 2.54)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -35.56 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 35.56 270)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "ESP32-DevKitC_0_1"
+				(rectangle
+					(start -30.48 33.02)
+					(end 30.48 -33.02)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ESP32-DevKitC_1_1"
+				(pin power_in line
+					(at 2.54 35.56 270)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -33.02 30.48 0)
+					(length 2.54)
+					(name "CHIP_PU"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -33.02 0 0)
+					(length 2.54)
+					(name "SENSOR_VP/GPIO36/ADC1_CH0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -33.02 -2.54 0)
+					(length 2.54)
+					(name "SENSOR_VN/GPIO39/ADC1_CH3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -33.02 5.08 0)
+					(length 2.54)
+					(name "VDET_1/GPIO34/ADC1_CH6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -33.02 2.54 0)
+					(length 2.54)
+					(name "VDET_2/GPIO35/ADC1_CH7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 25.4 0)
+					(length 2.54)
+					(name "32K_XP/GPIO32/ADC1_CH4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 22.86 0)
+					(length 2.54)
+					(name "32K_XN/GPIO33/ADC1_CH5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 0 180)
+					(length 2.54)
+					(name "DAC_1/ADC2_CH8/GPIO25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -2.54 180)
+					(length 2.54)
+					(name "DAC_2/ADC2_CH9/GPIO26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -5.08 180)
+					(length 2.54)
+					(name "ADC2_CH7/GPIO27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 12.7 0)
+					(length 2.54)
+					(name "MTMS/GPIO14/ADC2_CH6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 17.78 0)
+					(length 2.54)
+					(name "MTDI/GPIO12/ADC2_CH5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 15.24 0)
+					(length 2.54)
+					(name "MTCK/GPIO13/ADC2_CH4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -20.32 180)
+					(length 2.54)
+					(name "SD_DATA2/GPIO9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -22.86 180)
+					(length 2.54)
+					(name "SD_DATA3/GPIO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -25.4 180)
+					(length 2.54)
+					(name "CMD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -12.7 180)
+					(length 2.54)
+					(name "SD_CLK/GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -15.24 180)
+					(length 2.54)
+					(name "SD_DATA0/GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -17.78 180)
+					(length 2.54)
+					(name "SD_DATA1/GPIO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -33.02 10.16 0)
+					(length 2.54)
+					(name "MTDO/GPIO15/ADC2_CH3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 20.32 180)
+					(length 2.54)
+					(name "ADC2_CH2/GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 22.86 180)
+					(length 2.54)
+					(name "GPIO0/BOOT/ADC2_CH1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 17.78 180)
+					(length 2.54)
+					(name "ADC2_CH0/GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -27.94 180)
+					(length 2.54)
+					(name "GPIO16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 -30.48 180)
+					(length 2.54)
+					(name "GPIO17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 15.24 180)
+					(length 2.54)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 12.7 180)
+					(length 2.54)
+					(name "GPIO18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 10.16 180)
+					(length 2.54)
+					(name "GPIO19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -35.56 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 7.62 180)
+					(length 2.54)
+					(name "GPIO21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 27.94 180)
+					(length 2.54)
+					(name "U0RXD/GPIO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 30.48 180)
+					(length 2.54)
+					(name "U0TXD/GPIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 5.08 180)
+					(length 2.54)
+					(name "GPIO22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 33.02 2.54 180)
+					(length 2.54)
+					(name "GPIO23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -35.56 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -2377,7 +2701,7 @@
 		)
 		(uuid "287b1fc7-a521-4ba2-ad2e-58f012754941")
 	)
-	(text_box "Notes\n---\n- Pulling U1-EN low -> uC shutdown\n- U1, U2 are connected to Jetson Orin via USB\n	-> Power transmission, comms"
+	(text_box "Notes\n---\n- U1, U2 are connected to Jetson Orin via USB\n	-> Power transmission, comms\n-ESP32-DevKit has weak pull-downs (47K) for GPIO4, GPIO2, GPIO13, GPIO12"
 		(exclude_from_sim no)
 		(at 177.8 133.35 0)
 		(size 106.68 33.02)
@@ -2556,13 +2880,7 @@
 		(uuid "09e37d1d-0bd0-4445-bb90-366e16d4b354")
 	)
 	(junction
-		(at 121.92 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "19919216-7445-474a-8ea0-0916b244a36f")
-	)
-	(junction
-		(at 85.09 119.38)
+		(at 69.85 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23ec49b5-9cf4-4ba2-a436-818f57722408")
@@ -2574,34 +2892,10 @@
 		(uuid "2ee5e654-7984-4e79-9532-5624e6e875e1")
 	)
 	(junction
-		(at 168.91 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2ef1c86a-5a19-4aef-ade1-7c9eeef2edc1")
-	)
-	(junction
-		(at 186.69 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3262ec43-53b6-4265-a0e7-bbe86bf20a8c")
-	)
-	(junction
 		(at 147.32 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "360f2937-7e9a-46d1-ad6e-ac5c6c5e2620")
-	)
-	(junction
-		(at 97.79 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "378365be-251b-4e09-be16-c003304699d9")
-	)
-	(junction
-		(at 123.19 168.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4cc7dd4b-0809-43fb-9ca4-d0e11d7198d5")
 	)
 	(junction
 		(at 74.93 48.26)
@@ -2622,22 +2916,22 @@
 		(uuid "749940fe-91bd-4e6f-ba95-7cdffc1c2b15")
 	)
 	(junction
-		(at 85.09 102.87)
+		(at 69.85 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "777f4dc7-020f-4602-9acd-35fb2004df9a")
+	)
+	(junction
+		(at 82.55 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7aae1b31-559c-4d67-a13d-ee24e9dbcb36")
 	)
 	(junction
 		(at 85.09 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c68a578-0599-442f-a190-a7cf6d60e086")
-	)
-	(junction
-		(at 167.64 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8029797a-de21-4089-b9c5-15a40b7eed75")
 	)
 	(junction
 		(at 54.61 34.29)
@@ -2670,16 +2964,22 @@
 		(uuid "c022c420-cd37-493f-8f33-f4f1f0d17043")
 	)
 	(junction
-		(at 91.44 128.27)
+		(at 76.2 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4b830e2-184f-4f3c-821d-b68cf53a3e1c")
 	)
 	(junction
-		(at 91.44 111.76)
+		(at 76.2 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca85d4e4-b495-4673-99af-cb679b662d6c")
+	)
+	(junction
+		(at 82.55 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cefbf528-1f94-40fe-ac03-bf78f1c59c5e")
 	)
 	(junction
 		(at 85.09 57.15)
@@ -2698,12 +2998,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ebc11ea3-a7e1-40f5-9c7c-1904c65e6a51")
-	)
-	(junction
-		(at 97.79 102.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f39695f6-e0d7-4278-bade-32bb81ee65a1")
 	)
 	(junction
 		(at 54.61 60.96)
@@ -2725,17 +3019,17 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 45.72) (xy 198.12 45.72)
+			(xy 105.41 33.02) (xy 105.41 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0406b12c-ac56-4a2c-be06-2c32a049fd1f")
+		(uuid "02811336-5378-4b38-b331-1d17898ed32a")
 	)
 	(wire
 		(pts
-			(xy 41.91 105.41) (xy 72.39 105.41)
+			(xy 26.67 105.41) (xy 43.18 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2745,7 +3039,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 111.76) (xy 91.44 111.76)
+			(xy 69.85 111.76) (xy 76.2 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2755,23 +3049,13 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 105.41) (xy 168.91 105.41)
+			(xy 229.87 101.6) (xy 267.97 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "06220207-9c1b-4eab-931e-b5d39d51ef77")
-	)
-	(wire
-		(pts
-			(xy 186.69 104.14) (xy 186.69 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0760f7be-9ad8-4bd0-9f85-68e108a66ea2")
+		(uuid "06c52d07-9316-4702-ab18-a11328cef078")
 	)
 	(wire
 		(pts
@@ -2785,7 +3069,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 119.38) (xy 85.09 120.65)
+			(xy 69.85 119.38) (xy 69.85 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2802,6 +3086,16 @@
 			(type default)
 		)
 		(uuid "0a9cc0d4-d082-4783-9e3d-4f0ecee2ba53")
+	)
+	(wire
+		(pts
+			(xy 160.02 43.18) (xy 160.02 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ad5ddf4-4014-4fbb-b6a3-fca0a88f6446")
 	)
 	(wire
 		(pts
@@ -2825,6 +3119,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 45.72) (xy 269.24 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0eb17423-a00d-4e6a-b7bd-933cd17116ce")
+	)
+	(wire
+		(pts
 			(xy 74.93 77.47) (xy 74.93 62.23)
 		)
 		(stroke
@@ -2835,23 +3139,33 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 168.91) (xy 128.27 168.91)
+			(xy 163.83 50.8) (xy 163.83 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "13456c38-9c29-4fe1-bc22-84d716a3dad7")
+		(uuid "14454716-3341-4275-8874-b58c1d71a8f9")
 	)
 	(wire
 		(pts
-			(xy 72.39 105.41) (xy 72.39 119.38)
+			(xy 43.18 105.41) (xy 43.18 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "144da2c5-2442-47f3-8aa7-1cef8b92e176")
+	)
+	(wire
+		(pts
+			(xy 181.61 35.56) (xy 190.5 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14ff104f-69fc-41dc-88ef-be5a2784373d")
 	)
 	(wire
 		(pts
@@ -2892,26 +3206,6 @@
 			(type default)
 		)
 		(uuid "15e1e9be-710c-46e2-89c7-16df78dbe2a4")
-	)
-	(wire
-		(pts
-			(xy 165.1 74.93) (xy 106.68 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18c72d8b-aaeb-4f4b-8a6e-1cd8d07652ca")
-	)
-	(wire
-		(pts
-			(xy 167.64 102.87) (xy 158.75 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19060eb7-0868-4895-a909-546ff23f1f52")
 	)
 	(wire
 		(pts
@@ -2965,17 +3259,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 45.72) (xy 187.96 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1df02a6a-24db-42b9-be54-97a5968d2e71")
-	)
-	(wire
-		(pts
-			(xy 97.79 102.87) (xy 104.14 102.87)
+			(xy 82.55 102.87) (xy 104.14 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2985,23 +3269,13 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 116.84) (xy 171.45 116.84)
+			(xy 123.19 116.84) (xy 231.14 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "21cb7753-15a4-47d6-b918-f2b990ca2aaf")
-	)
-	(wire
-		(pts
-			(xy 121.92 143.51) (xy 128.27 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "226f3523-529c-4c93-87a9-749889a40be9")
 	)
 	(wire
 		(pts
@@ -3015,7 +3289,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 87.63) (xy 151.13 62.23)
+			(xy 151.13 74.93) (xy 151.13 62.23)
 		)
 		(stroke
 			(width 0)
@@ -3085,17 +3359,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 102.87) (xy 177.8 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f28c0d0-bca6-434e-84f5-373f1617242d")
-	)
-	(wire
-		(pts
-			(xy 82.55 102.87) (xy 85.09 102.87)
+			(xy 67.31 102.87) (xy 69.85 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3115,7 +3379,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 128.27) (xy 97.79 128.27)
+			(xy 76.2 128.27) (xy 82.55 128.27)
 		)
 		(stroke
 			(width 0)
@@ -3145,23 +3409,13 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 128.27) (xy 91.44 128.27)
+			(xy 69.85 128.27) (xy 76.2 128.27)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "384f9c50-cacd-4dc6-8c00-3b2e2f32ee49")
-	)
-	(wire
-		(pts
-			(xy 185.42 48.26) (xy 198.12 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c401be3-88ef-44f8-b4b6-ea66027e0e72")
 	)
 	(wire
 		(pts
@@ -3182,6 +3436,16 @@
 			(type default)
 		)
 		(uuid "3e2aed9c-47d8-4ec1-bcd0-093558b3bdc4")
+	)
+	(wire
+		(pts
+			(xy 229.87 101.6) (xy 229.87 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3faff1f6-f6aa-45d9-9f14-1c10969e6fc3")
 	)
 	(wire
 		(pts
@@ -3215,7 +3479,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 119.38) (xy 97.79 119.38)
+			(xy 69.85 119.38) (xy 82.55 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3225,7 +3489,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 86.36) (xy 149.86 86.36)
+			(xy 104.14 73.66) (xy 149.86 73.66)
 		)
 		(stroke
 			(width 0)
@@ -3255,16 +3519,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 48.26) (xy 177.8 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cca6f9b-6ea0-48d2-934c-24af3729f2ef")
-	)
-	(wire
-		(pts
 			(xy 49.53 140.97) (xy 80.01 140.97)
 		)
 		(stroke
@@ -3275,13 +3529,23 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 55.88) (xy 198.12 55.88)
+			(xy 158.75 105.41) (xy 161.29 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "53996e7a-5d6d-49df-94b1-2be42960f53d")
+		(uuid "530a3ba4-93c9-4c78-b0ab-c8e6b65caaf9")
+	)
+	(wire
+		(pts
+			(xy 104.14 64.77) (xy 109.22 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "546ef26e-ba84-4492-9e7e-7a751478fd9f")
 	)
 	(wire
 		(pts
@@ -3295,13 +3559,23 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 26.67) (xy 54.61 34.29)
+			(xy 54.61 27.94) (xy 54.61 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "579ebb14-e025-4e5e-8d4b-3d029acf7c74")
+	)
+	(wire
+		(pts
+			(xy 267.97 48.26) (xy 267.97 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57ea2117-ffd8-47be-abed-ad159ad38776")
 	)
 	(wire
 		(pts
@@ -3312,16 +3586,6 @@
 			(type default)
 		)
 		(uuid "580ffb82-126a-4f4c-858a-9f5c6c028ec2")
-	)
-	(wire
-		(pts
-			(xy 166.37 45.72) (xy 166.37 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58ee67c3-886b-4e93-82c1-5949bd16958f")
 	)
 	(wire
 		(pts
@@ -3345,7 +3609,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 115.57) (xy 170.18 115.57)
+			(xy 121.92 115.57) (xy 229.87 115.57)
 		)
 		(stroke
 			(width 0)
@@ -3365,23 +3629,13 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 119.38) (xy 173.99 119.38)
+			(xy 125.73 119.38) (xy 163.83 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "60db5a48-dba0-46e5-96e5-8ba949b8c250")
-	)
-	(wire
-		(pts
-			(xy 107.95 73.66) (xy 166.37 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63fb2db4-5a04-409b-beb3-238bd4825ac3")
 	)
 	(wire
 		(pts
@@ -3395,33 +3649,13 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 86.36) (xy 149.86 64.77)
+			(xy 149.86 73.66) (xy 149.86 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "66ea63c1-5abe-40b5-a7e6-4f361d11c649")
-	)
-	(wire
-		(pts
-			(xy 173.99 119.38) (xy 173.99 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68c445da-2c2e-4252-b18a-4bed7f39ea36")
-	)
-	(wire
-		(pts
-			(xy 170.18 115.57) (xy 170.18 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68c45ad7-f7df-43a9-a7eb-2caac05e0d8d")
 	)
 	(wire
 		(pts
@@ -3432,16 +3666,6 @@
 			(type default)
 		)
 		(uuid "69560081-f393-439b-8e48-facd23c2dfc3")
-	)
-	(wire
-		(pts
-			(xy 125.73 26.67) (xy 54.61 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "699c00f6-ac5c-42eb-ac28-0c4bba5a1119")
 	)
 	(wire
 		(pts
@@ -3465,23 +3689,13 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 116.84) (xy 171.45 58.42)
+			(xy 104.14 35.56) (xy 173.99 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6f6f42cc-4420-4e0b-bd43-4f6bffb5c18e")
-	)
-	(wire
-		(pts
-			(xy 186.69 105.41) (xy 185.42 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70e2b1b0-9254-4340-b249-4367495d17bc")
+		(uuid "702720ab-e962-42f9-a119-ce2900d9fa56")
 	)
 	(wire
 		(pts
@@ -3495,7 +3709,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 119.38) (xy 74.93 119.38)
+			(xy 43.18 119.38) (xy 59.69 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3545,6 +3759,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 102.87) (xy 160.02 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84c10c73-acf9-4ce5-8a72-d921e9e7254a")
+	)
+	(wire
+		(pts
 			(xy 40.64 60.96) (xy 54.61 60.96)
 		)
 		(stroke
@@ -3575,13 +3799,13 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 50.8) (xy 167.64 50.8)
+			(xy 190.5 50.8) (xy 163.83 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "902d3e78-5f78-4b43-893d-b0c9dae423c9")
+		(uuid "91472b28-08d5-46e1-a2c6-1df5e7cfa5b5")
 	)
 	(wire
 		(pts
@@ -3595,7 +3819,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 87.63) (xy 106.68 119.38)
+			(xy 106.68 74.93) (xy 106.68 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3615,16 +3839,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 74.93) (xy 106.68 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "99d9402c-f156-4ae8-9289-d29ef426e8fa")
-	)
-	(wire
-		(pts
 			(xy 121.92 177.8) (xy 124.46 177.8)
 		)
 		(stroke
@@ -3635,13 +3849,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 60.96) (xy 198.12 60.96)
+			(xy 231.14 102.87) (xy 231.14 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9d827e5b-781e-469e-99ab-33248c1a49dd")
+		(uuid "9d65e3bb-0dbf-4513-8dc7-9d66832ef1df")
 	)
 	(wire
 		(pts
@@ -3655,7 +3869,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 118.11) (xy 172.72 118.11)
+			(xy 124.46 118.11) (xy 162.56 118.11)
 		)
 		(stroke
 			(width 0)
@@ -3695,6 +3909,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 45.72) (xy 161.29 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a296e02b-28f2-432d-9d0b-4004fbee8cf5")
+	)
+	(wire
+		(pts
 			(xy 40.64 46.99) (xy 54.61 46.99)
 		)
 		(stroke
@@ -3702,16 +3926,6 @@
 			(type default)
 		)
 		(uuid "a2a3d5bb-7881-4be8-a740-2c50698585a2")
-	)
-	(wire
-		(pts
-			(xy 165.1 48.26) (xy 165.1 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2ad1476-7daf-4895-b764-75ea91c8bf71")
 	)
 	(wire
 		(pts
@@ -3765,6 +3979,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 48.26) (xy 267.97 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4f6082e-9497-461a-8efd-3cc6016ee1ba")
+	)
+	(wire
+		(pts
 			(xy 40.64 34.29) (xy 54.61 34.29)
 		)
 		(stroke
@@ -3775,13 +3999,33 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 102.87) (xy 74.93 102.87)
+			(xy 105.41 33.02) (xy 182.88 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8ecfa51-ba28-4b7e-bbcc-376878743046")
+	)
+	(wire
+		(pts
+			(xy 26.67 102.87) (xy 59.69 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "aa2377bf-5bf8-4f88-a458-67ae2591711f")
+	)
+	(wire
+		(pts
+			(xy 190.5 43.18) (xy 160.02 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abf54eda-1f4c-4106-98c6-5255fe674930")
 	)
 	(wire
 		(pts
@@ -3825,23 +4069,13 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 102.87) (xy 97.79 104.14)
+			(xy 82.55 102.87) (xy 82.55 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b122d4ec-0dbd-4d46-802f-bd066a7e37f8")
-	)
-	(wire
-		(pts
-			(xy 109.22 64.77) (xy 107.95 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b16da4d2-7a05-4a24-ae43-67b3783f8a6f")
 	)
 	(wire
 		(pts
@@ -3855,23 +4089,23 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 119.38) (xy 106.68 119.38)
+			(xy 256.54 45.72) (xy 269.24 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4446e94-6946-4cbd-9482-694c85859671")
+	)
+	(wire
+		(pts
+			(xy 82.55 119.38) (xy 106.68 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b47c0aad-a741-4705-b8b1-ecafc2d872fe")
-	)
-	(wire
-		(pts
-			(xy 168.91 105.41) (xy 177.8 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b530525a-23f9-4922-99df-31254bff71eb")
 	)
 	(wire
 		(pts
@@ -3915,13 +4149,23 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 111.76) (xy 97.79 111.76)
+			(xy 76.2 111.76) (xy 82.55 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b9b59600-8793-4aec-99bf-b8f7125a558f")
+	)
+	(wire
+		(pts
+			(xy 162.56 48.26) (xy 162.56 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb478445-acf2-4a65-bc45-7021733fa2b7")
 	)
 	(wire
 		(pts
@@ -3935,16 +4179,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 50.8) (xy 167.64 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc5ce969-82be-43c7-b323-7ff6103116d8")
-	)
-	(wire
-		(pts
 			(xy 54.61 74.93) (xy 40.64 74.93)
 		)
 		(stroke
@@ -3952,6 +4186,16 @@
 			(type default)
 		)
 		(uuid "bd16c8c7-9c17-43e0-a962-f1747c44c876")
+	)
+	(wire
+		(pts
+			(xy 161.29 45.72) (xy 161.29 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdac4968-12d8-440c-af75-69fad1081d92")
 	)
 	(wire
 		(pts
@@ -3985,7 +4229,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 62.23) (xy 109.22 62.23)
+			(xy 105.41 62.23) (xy 109.22 62.23)
 		)
 		(stroke
 			(width 0)
@@ -4015,16 +4259,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 118.11) (xy 172.72 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce8de7c4-8cb6-4f78-9370-f5f69fa403f5")
-	)
-	(wire
-		(pts
 			(xy 64.77 60.96) (xy 64.77 63.5)
 		)
 		(stroke
@@ -4035,23 +4269,23 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 86.36) (xy 104.14 102.87)
+			(xy 190.5 48.26) (xy 162.56 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d182116c-e2d7-4114-9f02-4b005901e425")
+	)
+	(wire
+		(pts
+			(xy 104.14 73.66) (xy 104.14 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d1dd31aa-dd3e-4ad7-b8ff-5ff11bd7f34d")
-	)
-	(wire
-		(pts
-			(xy 171.45 58.42) (xy 198.12 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d298f5c9-6b62-48c1-8554-b391a315d25f")
 	)
 	(wire
 		(pts
@@ -4065,7 +4299,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 119.38) (xy 85.09 119.38)
+			(xy 67.31 119.38) (xy 69.85 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4092,6 +4326,16 @@
 			(type default)
 		)
 		(uuid "d7adaa6c-9e8c-4a34-b216-ffb4418c9e3e")
+	)
+	(wire
+		(pts
+			(xy 104.14 64.77) (xy 104.14 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db5f783a-b29b-4504-8c31-ed7a63f74825")
 	)
 	(wire
 		(pts
@@ -4135,16 +4379,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 53.34) (xy 198.12 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e00872aa-f129-4072-aa56-1770fde60177")
-	)
-	(wire
-		(pts
 			(xy 74.93 48.26) (xy 74.93 34.29)
 		)
 		(stroke
@@ -4155,7 +4389,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 120.65) (xy 97.79 119.38)
+			(xy 82.55 120.65) (xy 82.55 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4185,17 +4419,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 102.87) (xy 186.69 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e54262f5-3428-4e1a-b7a6-d09dc48ce406")
-	)
-	(wire
-		(pts
-			(xy 85.09 104.14) (xy 85.09 102.87)
+			(xy 69.85 104.14) (xy 69.85 102.87)
 		)
 		(stroke
 			(width 0)
@@ -4225,7 +4449,17 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 27.94) (xy 158.75 27.94)
+			(xy 121.92 27.94) (xy 158.75 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7577794-aa29-4bee-b196-eb7db8699562")
+	)
+	(wire
+		(pts
+			(xy 74.93 27.94) (xy 111.76 27.94)
 		)
 		(stroke
 			(width 0)
@@ -4235,7 +4469,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 87.63) (xy 151.13 87.63)
+			(xy 106.68 74.93) (xy 151.13 74.93)
 		)
 		(stroke
 			(width 0)
@@ -4245,17 +4479,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 63.5) (xy 198.12 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e87fb5e0-c0bf-41c5-a6a3-a4b853f0801d")
-	)
-	(wire
-		(pts
-			(xy 85.09 102.87) (xy 97.79 102.87)
+			(xy 69.85 102.87) (xy 82.55 102.87)
 		)
 		(stroke
 			(width 0)
@@ -4305,16 +4529,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 64.77) (xy 107.95 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f40499e5-787f-42e5-8fbe-2fc6c1d568be")
-	)
-	(wire
-		(pts
 			(xy 40.64 80.01) (xy 53.34 80.01)
 		)
 		(stroke
@@ -4325,23 +4539,13 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 105.41) (xy 168.91 53.34)
+			(xy 269.24 102.87) (xy 231.14 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f8abbdb2-422f-4712-a695-ccd0526e67ec")
-	)
-	(wire
-		(pts
-			(xy 185.42 102.87) (xy 186.69 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa2126d3-4d16-481d-96fb-b6aab311934e")
+		(uuid "f9f6dc72-91d4-49c6-87a0-879602c1c246")
 	)
 	(wire
 		(pts
@@ -4454,7 +4658,7 @@
 		(uuid "982ce77d-283a-431c-923d-65d158602710")
 	)
 	(label "BAT2(8V)"
-		(at 48.26 105.41 0)
+		(at 33.02 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4484,7 +4688,7 @@
 		(uuid "a5585dbd-d287-43b2-9be1-abba62909988")
 	)
 	(label "BAT1(14V)"
-		(at 48.26 102.87 0)
+		(at 33.02 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4574,85 +4778,6 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 181.61 105.41 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "07df2df7-19a6-4f13-b044-ea9bbd0700cf")
-		(property "Reference" "R22"
-			(at 181.61 111.76 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 181.61 109.22 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 181.61 103.632 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 181.61 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6500190e-784e-40b6-817a-36e0aca81c82")
-		)
-		(pin "2"
-			(uuid "0fb0bac9-2897-4a2d-ad93-c9d9c5a8877f")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -4894,7 +5019,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 85.09 107.95 180)
+		(at 69.85 107.95 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4904,7 +5029,7 @@
 		(dnp no)
 		(uuid "1039f4a8-2d69-4d3a-a677-c66f8a3b1d5b")
 		(property "Reference" "R14"
-			(at 78.74 107.95 90)
+			(at 63.5 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4914,7 +5039,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 81.28 107.95 90)
+			(at 66.04 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4924,7 +5049,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 86.868 107.95 90)
+			(at 71.628 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4935,7 +5060,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 107.95 0)
+			(at 69.85 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4946,7 +5071,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 85.09 107.95 0)
+			(at 69.85 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5130,6 +5255,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 116.84 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "157f4fc5-ad2e-4e07-9b9b-5e825d4d4930")
+		(property "Reference" "JP1"
+			(at 116.84 21.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at 116.84 24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 116.84 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 116.84 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "25b21284-9136-4db2-a3d4-93e47ad5880f")
+		)
+		(pin "1"
+			(uuid "abda9e10-1634-4c33-afa5-0ce6ba89ff97")
+		)
+		(instances
+			(project "AVA"
+				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
 		(at 152.4 44.45 0)
 		(unit 1)
@@ -5208,86 +5413,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 181.61 102.87 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1f5c87b8-b6f4-41a9-857e-8ee3fc6a5c39")
-		(property "Reference" "R17"
-			(at 181.61 96.52 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 181.61 99.06 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 181.61 104.648 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 181.61 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 181.61 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c3e8e503-8d82-457d-a79b-4b5f5b0b05d5")
-		)
-		(pin "2"
-			(uuid "fcb32f31-1741-4331-9365-74486f2d0e3c")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 261.62 118.11 0)
 		(unit 1)
@@ -5358,85 +5483,6 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 135.89 168.91 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2169dfe8-d244-4b03-8fd1-e66720a25222")
-		(property "Reference" "#PWR016"
-			(at 142.24 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 168.91 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 135.89 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9fb12f0e-9c3e-4749-821e-adbc01849925")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -5601,7 +5647,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 125.73 26.67 270)
+		(at 54.61 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5612,7 +5658,7 @@
 		(fields_autoplaced yes)
 		(uuid "291897bc-72d3-40a7-b1a1-9eb38beaa8d6")
 		(property "Reference" "#PWR017"
-			(at 121.92 26.67 0)
+			(at 54.61 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5623,7 +5669,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 129.54 26.67 90)
+			(at 57.15 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5634,7 +5680,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 125.73 26.67 0)
+			(at 54.61 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5645,7 +5691,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 125.73 26.67 0)
+			(at 54.61 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5656,7 +5702,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 125.73 26.67 0)
+			(at 54.61 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5680,7 +5726,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 191.77 45.72 90)
+		(at 186.69 33.02 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5691,7 +5737,7 @@
 		(fields_autoplaced yes)
 		(uuid "29580b46-fe48-4eab-908c-0b5cdd0148d0")
 		(property "Reference" "R1"
-			(at 191.77 39.37 90)
+			(at 186.69 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5701,7 +5747,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 191.77 41.91 90)
+			(at 186.69 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5711,7 +5757,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 191.77 47.498 90)
+			(at 186.69 34.798 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5722,7 +5768,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 191.77 45.72 0)
+			(at 186.69 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5733,7 +5779,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 191.77 45.72 0)
+			(at 186.69 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5760,7 +5806,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 85.09 124.46 180)
+		(at 69.85 124.46 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5770,7 +5816,7 @@
 		(dnp no)
 		(uuid "2b2139d3-c20b-40da-b3ca-f13cfbeccd41")
 		(property "Reference" "R12"
-			(at 78.74 124.46 90)
+			(at 63.5 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5780,7 +5826,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 81.28 124.46 90)
+			(at 66.04 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5790,7 +5836,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 86.868 124.46 90)
+			(at 71.628 124.46 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5801,7 +5847,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 124.46 0)
+			(at 69.85 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5812,7 +5858,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 85.09 124.46 0)
+			(at 69.85 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6158,7 +6204,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 78.74 102.87 90)
+		(at 63.5 102.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6168,7 +6214,7 @@
 		(dnp no)
 		(uuid "42b18f81-0531-4ce2-93ad-e644e9406145")
 		(property "Reference" "R13"
-			(at 78.74 96.52 90)
+			(at 63.5 96.52 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6178,7 +6224,7 @@
 			)
 		)
 		(property "Value" "56K"
-			(at 78.74 99.06 90)
+			(at 63.5 99.06 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6188,7 +6234,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 78.74 104.648 90)
+			(at 63.5 104.648 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6199,7 +6245,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 102.87 0)
+			(at 63.5 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6210,7 +6256,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 78.74 102.87 0)
+			(at 63.5 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6309,171 +6355,6 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MCU_Module:Arduino_Nano_ESP32")
-		(at 215.9 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44e98677-a63d-486f-a966-12dc74f1fb69")
-		(property "Reference" "A1"
-			(at 215.9 33.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Arduino_Nano_ESP32"
-			(at 215.9 35.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Module:Arduino_Nano"
-			(at 229.616 94.996 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://docs.arduino.cc/resources/datasheets/ABX00083-datasheet.pdf"
-			(at 255.016 92.456 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Arduino Nano board based on the ESP32-S3 with a dual-core 240 MHz processor, 384 kB ROM, 512 kB SRAM. Operates at 3.3V, with 5V USB-C® input and 6-21V VIN. Features Wi-Fi®, Bluetooth® LE, digital and analog pins, and supports SPI, I2C, UART, I2S, and CAN."
-			(at 354.33 89.916 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "13"
-			(uuid "9546c729-cb68-4935-9746-a720f821273d")
-		)
-		(pin "27"
-			(uuid "8b827a84-dabf-4eb4-bd4d-8de88b5395ef")
-		)
-		(pin "26"
-			(uuid "5beb6494-d727-4d61-9d70-90f4e4c397f3")
-		)
-		(pin "17"
-			(uuid "5d42f546-c0c8-4530-be38-094f7b156d5d")
-		)
-		(pin "9"
-			(uuid "35e9869b-8385-47e3-834d-838364cd695d")
-		)
-		(pin "16"
-			(uuid "9d974fbc-43c0-4657-ae38-5148938059ed")
-		)
-		(pin "14"
-			(uuid "8e18d7c1-0100-4a18-9e57-0c522a99190c")
-		)
-		(pin "29"
-			(uuid "df8e5f9a-549d-427e-a894-9992701dee2f")
-		)
-		(pin "23"
-			(uuid "2bd9771c-d9a7-479b-8c1d-6b87160b5fc4")
-		)
-		(pin "15"
-			(uuid "2fac6a81-85d9-4674-9ffe-4aff61556b6a")
-		)
-		(pin "20"
-			(uuid "1ed8e09a-1764-4948-866a-1477f043ebd9")
-		)
-		(pin "21"
-			(uuid "1702bc0c-117c-48c2-864f-a6eab79c9e77")
-		)
-		(pin "8"
-			(uuid "060b0668-1f00-431b-a22f-f204137c2c83")
-		)
-		(pin "10"
-			(uuid "7b386744-2ecb-41c5-9556-4bab6422a247")
-		)
-		(pin "18"
-			(uuid "5de5a6ae-8fa5-4a6f-a310-b0f5b1fe2db1")
-		)
-		(pin "7"
-			(uuid "9fc3d371-5006-44e7-b859-e137263f4659")
-		)
-		(pin "4"
-			(uuid "ecaaae24-f74b-4a09-accd-abe3c124430c")
-		)
-		(pin "5"
-			(uuid "fa969a47-e83b-4b3a-86b5-f7bba77150f9")
-		)
-		(pin "6"
-			(uuid "5a828ff7-9dd5-427d-9c36-9cfcf8a0c0d9")
-		)
-		(pin "1"
-			(uuid "5e79aa2b-b6de-4afb-b920-376e0d7b2f6e")
-		)
-		(pin "30"
-			(uuid "17c6efb3-ea94-4717-a67c-469a90bdc2e2")
-		)
-		(pin "25"
-			(uuid "ba1ff379-641c-49ea-b0bb-c90441a2157a")
-		)
-		(pin "28"
-			(uuid "0196a48f-d849-449f-9614-c9f746f1bb24")
-		)
-		(pin "24"
-			(uuid "17ee4ce4-485b-4afe-a135-6455ed034ec7")
-		)
-		(pin "19"
-			(uuid "a9de040d-f04c-43eb-9aa7-aa759944330c")
-		)
-		(pin "11"
-			(uuid "15778888-13e0-4b7f-aab2-dd8e1ff0361f")
-		)
-		(pin "12"
-			(uuid "a0d078bf-b2cf-40e4-bd88-997afb2a0773")
-		)
-		(pin "2"
-			(uuid "aee0b62f-0e39-4489-a932-ebf55d78ee2b")
-		)
-		(pin "3"
-			(uuid "874c6752-e196-4097-9303-cb7ac28b1ac4")
-		)
-		(pin "22"
-			(uuid "79c400cd-ac12-44ac-88b0-4ae711b466a6")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "A1")
 					(unit 1)
 				)
 			)
@@ -7165,7 +7046,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 97.79 124.46 0)
+		(at 82.55 124.46 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7176,7 +7057,7 @@
 		(dnp no)
 		(uuid "66326b31-44fe-4e14-aabb-d82d5085cf75")
 		(property "Reference" "C5"
-			(at 90.17 124.46 90)
+			(at 74.93 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7186,7 +7067,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 92.71 124.46 90)
+			(at 77.47 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7196,7 +7077,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 98.7552 120.65 0)
+			(at 83.5152 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7207,7 +7088,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 97.79 124.46 0)
+			(at 82.55 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7218,7 +7099,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 97.79 124.46 0)
+			(at 82.55 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7482,7 +7363,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 97.79 107.95 0)
+		(at 82.55 107.95 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -7493,7 +7374,7 @@
 		(dnp no)
 		(uuid "6d5fe3a2-3e3f-462f-b538-9e1d0bd0d8cc")
 		(property "Reference" "C6"
-			(at 90.17 107.95 90)
+			(at 74.93 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7503,7 +7384,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 92.71 107.95 90)
+			(at 77.47 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7513,7 +7394,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
-			(at 98.7552 104.14 0)
+			(at 83.5152 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7524,7 +7405,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 97.79 107.95 0)
+			(at 82.55 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7535,7 +7416,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 97.79 107.95 0)
+			(at 82.55 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7562,7 +7443,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 181.61 48.26 90)
+		(at 177.8 35.56 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7573,7 +7454,7 @@
 		(fields_autoplaced yes)
 		(uuid "7594c631-6784-42bc-bfec-a5366c986de3")
 		(property "Reference" "R2"
-			(at 181.61 41.91 90)
+			(at 177.8 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7583,7 +7464,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 181.61 44.45 90)
+			(at 177.8 31.75 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7593,7 +7474,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 181.61 50.038 90)
+			(at 177.8 37.338 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7604,7 +7485,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 48.26 0)
+			(at 177.8 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7615,7 +7496,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 181.61 48.26 0)
+			(at 177.8 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7635,85 +7516,6 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 132.08 168.91 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7dbcffb5-0db7-4e16-907d-aff660648511")
-		(property "Reference" "R26"
-			(at 132.08 175.26 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 132.08 172.72 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 132.08 167.132 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 132.08 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "68ab84a1-fa97-4338-a4ab-cb74883394f8")
-		)
-		(pin "2"
-			(uuid "c5d51169-03b5-428f-9d8f-420625d59fd5")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -7797,165 +7599,6 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "J9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 132.08 143.51 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "877ca8d0-a02a-42cf-924e-0eb653509691")
-		(property "Reference" "R25"
-			(at 132.08 137.16 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 132.08 139.7 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 132.08 145.288 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 132.08 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7c9f6a65-2862-46e8-a611-09a350498b8e")
-		)
-		(pin "2"
-			(uuid "3afd9966-4693-4549-9a1e-afb941754350")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "R25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 186.69 104.14 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "87a8aa15-e6c1-4258-bb19-c5d1facb2b53")
-		(property "Reference" "#PWR014"
-			(at 193.04 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 190.5 104.14 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bdcccd7c-2da6-4e96-9f73-75cf2f9f5469")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -8117,6 +7760,196 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Espressif:ESP32-DevKitC")
+		(at 223.52 63.5 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8fc1107f-c3c5-4c8a-b6f7-182bb714426c")
+		(property "Reference" "U2"
+			(at 221.3591 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32-DevKitC"
+			(at 221.3591 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PCM_Espressif:ESP32-DevKitC"
+			(at 223.52 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/hw-reference/esp32/get-started-devkitc.html"
+			(at 223.52 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Development Kit"
+			(at 223.52 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "269be1a5-9173-47ed-bd56-cb429f823858")
+		)
+		(pin "19"
+			(uuid "e89cc0d0-57ff-41ac-90c8-47a1e881e71d")
+		)
+		(pin "4"
+			(uuid "f53eafd7-fc47-4a38-b259-285dedb3974b")
+		)
+		(pin "38"
+			(uuid "dd69e49e-5243-4c38-a306-11d84e954085")
+		)
+		(pin "5"
+			(uuid "a5d7ab9c-2ea6-4981-9c6f-f7bbba07a2f6")
+		)
+		(pin "2"
+			(uuid "9faa0c18-3710-4b2f-b3a1-44b67336dd60")
+		)
+		(pin "1"
+			(uuid "471a7158-fdbb-4d87-9ea1-fcccb787f6e5")
+		)
+		(pin "36"
+			(uuid "3018636b-3072-4147-b443-b6897dc30331")
+		)
+		(pin "35"
+			(uuid "5674ebd0-d55c-4890-abf0-38edfb4df053")
+		)
+		(pin "37"
+			(uuid "a1b69ee0-bb31-43c0-abfd-a1ade789eee1")
+		)
+		(pin "17"
+			(uuid "7f484054-4a2b-46bd-9714-cd3fcbf216bb")
+		)
+		(pin "22"
+			(uuid "6e4ba2c7-6681-4029-9f38-1bb1dd29457e")
+		)
+		(pin "18"
+			(uuid "e06e60eb-64c1-44a8-a550-0cfde75a4910")
+		)
+		(pin "16"
+			(uuid "ae5c1b4c-ad37-4fad-a85b-7a8919f3f047")
+		)
+		(pin "24"
+			(uuid "ef6b2530-5c47-4e10-bd8f-3bca4b4e24d8")
+		)
+		(pin "20"
+			(uuid "99516f02-bd41-4b98-a0a8-76755c116e1d")
+		)
+		(pin "23"
+			(uuid "308c7aad-3ddd-4f73-bd5e-f5d1a2d771d6")
+		)
+		(pin "15"
+			(uuid "92e79bda-da45-44b4-8da2-54c0e0111094")
+		)
+		(pin "21"
+			(uuid "76cd9d5c-e3a4-4e47-8765-6fe4f6e4d5d1")
+		)
+		(pin "12"
+			(uuid "080c587b-3500-4d89-bfeb-fb188656bcbd")
+		)
+		(pin "14"
+			(uuid "f8c688d4-62af-4c99-8511-42d4f808cdf0")
+		)
+		(pin "27"
+			(uuid "8c6cb7db-632b-4ca5-b1b2-aa7d8d483b7e")
+		)
+		(pin "34"
+			(uuid "030ff2ef-cc8b-4499-8a71-aee6a1f34c6c")
+		)
+		(pin "25"
+			(uuid "909f8e37-2a9b-4460-9bf0-af8f0fe0ef23")
+		)
+		(pin "33"
+			(uuid "18977dfc-abf9-4fdc-ac45-d03e471818b7")
+		)
+		(pin "9"
+			(uuid "a2b08aad-27ff-490f-be57-e0fdd81fe37c")
+		)
+		(pin "10"
+			(uuid "c8d340ab-490c-4b40-8ed8-0adbaa207de7")
+		)
+		(pin "13"
+			(uuid "29ca0c41-f029-484a-b106-046e30898b14")
+		)
+		(pin "8"
+			(uuid "be5f1788-a185-4ccb-a36c-111a24cbc759")
+		)
+		(pin "31"
+			(uuid "0540284b-adc5-46c8-bd8b-d9692acee34a")
+		)
+		(pin "32"
+			(uuid "fff562d0-c75d-4f9e-8afa-d68191e0421c")
+		)
+		(pin "29"
+			(uuid "11b7df12-1d63-4347-801f-d87b5c4cf64b")
+		)
+		(pin "30"
+			(uuid "22915fdb-bf9b-4203-a3c9-440a448648ff")
+		)
+		(pin "7"
+			(uuid "61abd3af-f7d2-430c-a9d3-ef9915625910")
+		)
+		(pin "11"
+			(uuid "60b6ebd6-6f06-413d-bbc6-87cb0384700a")
+		)
+		(pin "28"
+			(uuid "82379690-510e-4216-8eb1-32319e432c96")
+		)
+		(pin "6"
+			(uuid "530de14a-0eea-450e-a2eb-2dcb7c5eda88")
+		)
+		(pin "26"
+			(uuid "a65f5dc1-55a3-4020-852d-58d34081d986")
+		)
+		(instances
+			(project "AVA"
+				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
 		(at 44.45 180.34 0)
 		(unit 1)
@@ -8204,7 +8037,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 78.74 119.38 90)
+		(at 63.5 119.38 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8214,7 +8047,7 @@
 		(dnp no)
 		(uuid "90e8fd1f-2a43-4da5-be23-68b9ba947380")
 		(property "Reference" "R11"
-			(at 78.74 113.03 90)
+			(at 63.5 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8224,7 +8057,7 @@
 			)
 		)
 		(property "Value" "22K"
-			(at 78.74 115.57 90)
+			(at 63.5 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8234,7 +8067,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 78.74 121.158 90)
+			(at 63.5 121.158 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8245,7 +8078,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 119.38 0)
+			(at 63.5 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8256,7 +8089,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 78.74 119.38 0)
+			(at 63.5 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8441,84 +8274,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 215.9 86.36 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "989c86e9-be2f-44e0-9c8f-417c9253aeb5")
-		(property "Reference" "#PWR02"
-			(at 215.9 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 215.9 91.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 215.9 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "834e4aba-8036-43f9-9e48-3745e78680ba")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 154.94 105.41 270)
 		(unit 1)
@@ -8599,7 +8354,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 36.83 102.87 0)
+		(at 21.59 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8610,7 +8365,7 @@
 		(fields_autoplaced yes)
 		(uuid "9e4ce069-fb14-4aa2-bcbc-1f32a872933b")
 		(property "Reference" "J6"
-			(at 37.465 97.79 0)
+			(at 22.225 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8620,7 +8375,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 37.465 100.33 0)
+			(at 22.225 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8630,7 +8385,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 36.83 102.87 0)
+			(at 21.59 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8641,7 +8396,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 102.87 0)
+			(at 21.59 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8652,7 +8407,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 36.83 102.87 0)
+			(at 21.59 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8679,7 +8434,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 91.44 128.27 0)
+		(at 76.2 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8690,7 +8445,7 @@
 		(fields_autoplaced yes)
 		(uuid "a8fee77b-f50a-4717-9a18-a23af91a2c5d")
 		(property "Reference" "#PWR08"
-			(at 91.44 134.62 0)
+			(at 76.2 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8701,7 +8456,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 133.35 0)
+			(at 76.2 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8711,7 +8466,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 128.27 0)
+			(at 76.2 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8722,7 +8477,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 128.27 0)
+			(at 76.2 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8733,7 +8488,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 128.27 0)
+			(at 76.2 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9232,85 +8987,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 135.89 143.51 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d417d17d-f516-4bf1-9e75-bd0b9c726a98")
-		(property "Reference" "#PWR015"
-			(at 142.24 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 143.51 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 135.89 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b87c79d5-c583-4627-bb19-33437110bfa3")
-		)
-		(instances
-			(project "AVA"
-				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 118.11 168.91 90)
 		(unit 1)
@@ -9470,7 +9146,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 91.44 111.76 0)
+		(at 76.2 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9481,7 +9157,7 @@
 		(fields_autoplaced yes)
 		(uuid "e62df126-c51e-44ee-b013-054c2ac84c1a")
 		(property "Reference" "#PWR07"
-			(at 91.44 118.11 0)
+			(at 76.2 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9492,7 +9168,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 116.84 0)
+			(at 76.2 116.84 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9502,7 +9178,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 111.76 0)
+			(at 76.2 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9513,7 +9189,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 111.76 0)
+			(at 76.2 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9524,7 +9200,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 111.76 0)
+			(at 76.2 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9623,6 +9299,84 @@
 			(project "AVA"
 				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 223.52 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1a4f4f3-a8da-4bc4-8e3d-7f691d55389d")
+		(property "Reference" "#PWR02"
+			(at 223.52 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 223.52 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 223.52 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b68f292-35f9-4cec-be3f-3b7e3275c62b")
+		)
+		(instances
+			(project "AVA"
+				(path "/3a21ef45-a289-4ca0-a48e-1dc6434e5bcf"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
