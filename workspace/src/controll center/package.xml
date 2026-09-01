@@ -7,8 +7,8 @@
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>avaj_car_control</depend>
   <depend>nav_msgs</depend>
+  <depend>rc_car_interfaces</depend>
   <depend>rclcpp</depend>
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>

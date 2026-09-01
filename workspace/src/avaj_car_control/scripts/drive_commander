@@ -1,0 +1,265 @@
+#!/usr/bin/env python3
+
+"""Select one controller source and exclusively publish /drive_commands."""
+
+import json
+import math
+from time import monotonic
+
+from rc_car_interfaces.msg import DriveCommand, DriveRequest
+
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
+
+from std_msgs.msg import Bool, String
+
+
+LATCHED_QOS = QoSProfile(
+    depth=1,
+    reliability=ReliabilityPolicy.RELIABLE,
+    durability=DurabilityPolicy.TRANSIENT_LOCAL,
+)
+
+
+class DriveCommandArbiter:
+    """Keep source-transition state independent from ROS transport."""
+
+    VALID_SOURCES = ('AUTONOMOUS', 'MANUAL', 'TEST')
+
+    def __init__(self):
+        """Start disabled and without cached requests."""
+        self.mode = 'DISABLED'
+        self.drive_enable = False
+        self.requests = {}
+        self.waiting_reason = None
+        self.disabled_reason = 'mode_disabled'
+        self.last_rejection = None
+
+    def set_mode(self, requested_mode):
+        """Apply a mode input and report whether neutral output is required."""
+        mode = requested_mode.strip().upper()
+        if mode not in (*self.VALID_SOURCES, 'DISABLED'):
+            self.mode = 'DISABLED'
+            self._invalidate('invalid_mode')
+            self.disabled_reason = 'invalid_mode'
+            self._reject('mode', 'invalid_mode')
+            return True, 'invalid_mode'
+
+        if mode == self.mode:
+            return False, None
+
+        self.mode = mode
+        self._invalidate(
+            'source_refresh_required' if mode in self.VALID_SOURCES
+            else None
+        )
+        self.disabled_reason = 'mode_disabled'
+        return True, (
+            'source_transition'
+            if mode in self.VALID_SOURCES else 'mode_disabled'
+        )
+
+    def set_drive_enable(self, enabled):
+        """Apply safety enable; every edge requires a new source request."""
+        enabled = bool(enabled)
+        if enabled == self.drive_enable:
+            return False, None
+
+        self.drive_enable = enabled
+        self._invalidate(
+            'safety_refresh_required'
+            if enabled and self.mode in self.VALID_SOURCES else None
+        )
+        return True, 'safety_transition' if enabled else 'safety_off'
+
+    def accept_request(self, source, speed, steering, received_at):
+        """Accept only a valid request from the currently selected source."""
+        if source != self.mode:
+            self._reject(source, 'inactive_source')
+            return False, 'inactive_source'
+
+        reason = self._invalid_value_reason(speed, steering)
+        if reason is not None:
+            self.requests.pop(source, None)
+            self.waiting_reason = reason
+            self._reject(source, reason)
+            return False, reason
+
+        self.requests[source] = (int(speed), int(steering), received_at)
+        self.waiting_reason = None
+        return True, None
+
+    def evaluate(self, now, timeout_enabled, timeout):
+        """Return speed, steering, enabled and the current decision reason."""
+        if self.mode not in self.VALID_SOURCES:
+            return 0, 0, False, self.disabled_reason
+
+        stored = self.requests.get(self.mode)
+        if stored is None:
+            return 0, 0, False, self.waiting_reason or 'source_missing'
+
+        speed, steering, received_at = stored
+        if timeout_enabled and now - received_at > timeout:
+            self.requests.pop(self.mode, None)
+            self.waiting_reason = 'source_timeout'
+            self._reject(self.mode, 'source_timeout')
+            return 0, 0, False, 'source_timeout'
+
+        if not self.drive_enable:
+            return 0, 0, False, 'safety_off'
+
+        return speed, steering, True, 'enabled'
+
+    def _invalidate(self, waiting_reason):
+        self.requests.clear()
+        self.waiting_reason = waiting_reason
+
+    def _reject(self, source, reason):
+        self.last_rejection = {'source': source, 'reason': reason}
+
+    @staticmethod
+    def _invalid_value_reason(speed, steering):
+        for value in (speed, steering):
+            if isinstance(value, bool) or not isinstance(value, (int, float)):
+                return 'invalid_value'
+            if not math.isfinite(value):
+                return 'non_finite_value'
+            if value < -100 or value > 100:
+                return 'value_out_of_range'
+            if int(value) != value:
+                return 'invalid_value'
+        return None
+
+
+class DriveCommander(Node):
+    """The single final authority immediately before the hardware bridge."""
+
+    SOURCE_TOPICS = {
+        'AUTONOMOUS': '/control/autonomous_cmd',
+        'MANUAL': '/control/manual_cmd',
+        'TEST': '/control/test_cmd',
+    }
+
+    def __init__(self, **kwargs):
+        """Create inputs and the sole final-command publisher."""
+        super().__init__('drive_commander', **kwargs)
+        self.declare_parameter('publish_rate', 50.0)
+        self.declare_parameter('source_timeout_enabled', True)
+        self.declare_parameter('source_timeout', 0.3)
+
+        self._arbiter = DriveCommandArbiter()
+        self._sequence = 0
+        self._last_status = None
+
+        self._publisher = self.create_publisher(
+            DriveCommand, '/drive_commands', 10
+        )
+        self._status_publisher = self.create_publisher(
+            String, '/drive_commander/status', 10
+        )
+
+        for mode, topic in self.SOURCE_TOPICS.items():
+            self.create_subscription(
+                DriveRequest,
+                topic,
+                lambda message, selected_mode=mode: self._on_request(
+                    selected_mode, message
+                ),
+                10,
+            )
+
+        self.create_subscription(
+            String, '/system/mode', self._on_mode, LATCHED_QOS
+        )
+        self.create_subscription(
+            Bool, '/system/drive_enable', self._on_enable, LATCHED_QOS
+        )
+
+        rate = max(1.0, float(self.get_parameter('publish_rate').value))
+        self.create_timer(1.0 / rate, self._publish_final_command)
+
+    def _on_request(self, mode, message):
+        accepted, reason = self._arbiter.accept_request(
+            mode, message.speed, message.steering, monotonic()
+        )
+        if not accepted:
+            self.get_logger().error(
+                f'Rejected {mode} drive request: {reason}'
+            )
+            if mode == self._arbiter.mode:
+                self._publish_neutral(reason)
+
+    def _on_mode(self, message):
+        changed, reason = self._arbiter.set_mode(message.data)
+        if reason == 'invalid_mode':
+            self.get_logger().error(
+                f'Invalid mode forced DISABLED: {message.data}'
+            )
+        elif changed:
+            self.get_logger().info(
+                f'Drive source changed to {self._arbiter.mode}; '
+                'waiting for a fresh request'
+            )
+        if changed:
+            self._publish_neutral(reason)
+
+    def _on_enable(self, message):
+        changed, reason = self._arbiter.set_drive_enable(message.data)
+        if changed:
+            self._publish_neutral(reason)
+
+    def _publish_final_command(self):
+        speed, steering, enabled, reason = self._arbiter.evaluate(
+            monotonic(),
+            bool(self.get_parameter('source_timeout_enabled').value),
+            float(self.get_parameter('source_timeout').value),
+        )
+        self._publish_command(speed, steering, enabled, reason)
+
+    def _publish_neutral(self, reason):
+        self._publish_command(0, 0, False, reason)
+
+    def _publish_command(self, speed, steering, enabled, reason):
+        command = DriveCommand()
+        command.header.stamp = self.get_clock().now().to_msg()
+        command.header.frame_id = 'base_link'
+        command.sequence = self._sequence
+        self._sequence = (self._sequence + 1) & 0xFFFFFFFF
+        command.speed = speed if enabled else 0
+        command.steering = steering if enabled else 0
+        command.enabled = enabled
+        self._publisher.publish(command)
+
+        status = {
+            'mode': self._arbiter.mode,
+            'source': self.SOURCE_TOPICS.get(self._arbiter.mode, ''),
+            'drive_enable': self._arbiter.drive_enable,
+            'enabled': enabled,
+            'reason': reason,
+            'last_rejection': self._arbiter.last_rejection,
+        }
+        if status != self._last_status:
+            output = String()
+            output.data = json.dumps(status, separators=(',', ':'))
+            self._status_publisher.publish(output)
+            self._last_status = status
+
+
+def main():
+    """Run drive_commander until ROS shutdown."""
+    rclpy.init()
+    node = DriveCommander()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

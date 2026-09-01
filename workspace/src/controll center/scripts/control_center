@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# One command starts both the autonomous C++ node and the DriveCommand->Twist
-# converter used by Gazebo.
+# Start only the autonomous request source. The separate drive stack owns the
+# mode, safety decision, final /drive_commands publisher and hardware bridge.
 exec ros2 launch control_center control_center.launch.py "$@"

@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+
+"""Publish only the independent drive-enable decision."""
+
+from time import monotonic
+
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
+from rclpy.qos import qos_profile_sensor_data
+from sensor_msgs.msg import Image, Imu, LaserScan
+from std_msgs.msg import Bool, String
+
+from rc_car_interfaces.msg import DriveRequest
+
+
+LATCHED_QOS = QoSProfile(
+    depth=1,
+    reliability=ReliabilityPolicy.RELIABLE,
+    durability=DurabilityPolicy.TRANSIENT_LOCAL,
+)
+
+
+class SafetyWatchdog(Node):
+    """Monitor required heartbeats without generating motion commands."""
+
+    def __init__(self):
+        super().__init__('safety_watchdog')
+        self.declare_parameter('bypass', False)
+        self.declare_parameter('timeout', 0.5)
+        self.declare_parameter('require_lidar', True)
+        self.declare_parameter('require_camera', False)
+        self.declare_parameter('require_imu', True)
+        self.declare_parameter('require_control_center', True)
+        self.declare_parameter('require_usb_status', False)
+        self.declare_parameter('lidar_topic', '/scan')
+        self.declare_parameter('camera_topic', '/camera/image_raw')
+        self.declare_parameter('imu_topic', '/imu/data')
+
+        self._last_seen = {}
+        self._mode = 'DISABLED'
+        self._last_result = None
+        self._publisher = self.create_publisher(
+            Bool, '/system/drive_enable', LATCHED_QOS
+        )
+
+        self.create_subscription(
+            LaserScan, str(self.get_parameter('lidar_topic').value),
+            lambda _: self._mark('lidar'),
+            qos_profile_sensor_data
+        )
+        self.create_subscription(
+            Image, str(self.get_parameter('camera_topic').value),
+            lambda _: self._mark('camera'), qos_profile_sensor_data
+        )
+        self.create_subscription(
+            Imu, str(self.get_parameter('imu_topic').value),
+            lambda _: self._mark('imu'),
+            qos_profile_sensor_data
+        )
+        self.create_subscription(
+            DriveRequest, '/control/autonomous_cmd',
+            lambda _: self._mark('control_center'), 10
+        )
+        self.create_subscription(
+            String, '/drive_usb/status', lambda _: self._mark('usb_status'), 10
+        )
+        self.create_subscription(
+            String, '/system/mode', self._on_mode, LATCHED_QOS
+        )
+        self.create_timer(0.05, self._evaluate)
+
+        if bool(self.get_parameter('bypass').value):
+            self.get_logger().warn(
+                'SAFETY WATCHDOG BYPASS IS ACTIVE: test output only; '
+                'do not connect motors'
+            )
+
+    def _mark(self, name):
+        self._last_seen[name] = monotonic()
+
+    def _on_mode(self, message):
+        self._mode = message.data.strip().upper()
+
+    def _evaluate(self):
+        bypass = bool(self.get_parameter('bypass').value)
+        missing = []
+        timeout = float(self.get_parameter('timeout').value)
+        required = {
+            'lidar': bool(self.get_parameter('require_lidar').value),
+            'camera': bool(self.get_parameter('require_camera').value),
+            'imu': bool(self.get_parameter('require_imu').value),
+            'usb_status': bool(
+                self.get_parameter('require_usb_status').value
+            ),
+            'control_center': (
+                bool(self.get_parameter('require_control_center').value)
+                and self._mode == 'AUTONOMOUS'
+            ),
+        }
+        now = monotonic()
+        for name, is_required in required.items():
+            if is_required and (
+                name not in self._last_seen
+                or now - self._last_seen[name] > timeout
+            ):
+                missing.append(name)
+
+        enabled = bypass or not missing
+        message = Bool()
+        message.data = enabled
+        self._publisher.publish(message)
+        result = (enabled, tuple(missing), bypass)
+        if result != self._last_result:
+            if bypass:
+                self.get_logger().warn('Drive enabled by watchdog BYPASS')
+            elif missing:
+                self.get_logger().error(
+                    'Drive disabled; missing: ' + ', '.join(missing)
+                )
+            else:
+                self.get_logger().info('All configured watchdog inputs healthy')
+            self._last_result = result
+
+
+def main():
+    rclpy.init()
+    node = SafetyWatchdog()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

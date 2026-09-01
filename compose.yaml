@@ -8,6 +8,14 @@ services:
     network_mode: host
     ipc: host
     runtime: nvidia
+    group_add:
+      - "20"
+    # Dynamic USB-serial discovery for the drive bridge. Only USB CDC ACM
+    # (major 166) and USB-serial (major 188) character devices are allowed.
+    # No fixed /dev/ttyUSBx or by-id device is bound to the development shell.
+    device_cgroup_rules:
+      - "c 166:* rmw"
+      - "c 188:* rmw"
     stdin_open: true
     tty: true
     environment:
@@ -20,6 +28,8 @@ services:
       - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
       - ./config:/config:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev:/host/dev
+      - /sys:/host/sys:ro
 
   lidar:
     image: local/ros2-jazzy:desktop
@@ -35,6 +45,8 @@ services:
       - ./workspace:/workspace
       - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
     command: ["ros2", "launch", "ldlidar_stl_ros2", "stl27l.launch.py"]
+    depends_on:
+      - sensor_processing
     restart: unless-stopped
 
   camera:
@@ -79,7 +91,21 @@ services:
       - --params-file
       - /config/bno085.yaml
       - -r
-      - /imu:=/imu/data
+      - __ns:=/sensors
       - -r
-      - /magnetic_field:=/imu/mag
+      - __node:=imu_driver
+    depends_on:
+      - sensor_processing
+    restart: unless-stopped
+
+  sensor_processing:
+    image: local/ros2-jazzy:desktop
+    container_name: ros2-jazzy-sensor-processing
+    entrypoint: /ros2-jazzy-entrypoint.sh
+    network_mode: host
+    ipc: host
+    volumes:
+      - ./workspace:/workspace
+      - ./container-entrypoint.sh:/ros2-jazzy-entrypoint.sh:ro
+    command: ["ros2", "launch", "avaj_sensor_processing", "sensor_processing.launch.py"]
     restart: unless-stopped

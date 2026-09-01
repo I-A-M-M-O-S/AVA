@@ -63,34 +63,119 @@ oeffnen:
 wasd-drive
 ```
 
-Der Client veroeffentlicht mit 20 Hz auf `/drive_command` den Typ
-`avaj_car_control/msg/DriveCommand`. Beide Felder liegen zwischen 0 und 100:
+`wasd-drive` startet die komplette manuelle Testkette:
 
-- `steering`: 0 = ganz links, 50 = gerade, 100 = ganz rechts
-- `acceleration`: 0 = voll rueckwaerts, 50 = neutral, 100 = voll vorwaerts
-
-Im Steuerfenster werden die Tasten gehalten: `W` setzt vorwaerts auf 100, `S`
-rueckwaerts auf 0, `A` links auf 0 und `D` rechts auf 100. Beim Loslassen
-springt die jeweilige Achse sofort auf 50 zurueck. Dadurch funktionieren auch
-Kombinationen wie `W+A`. `Q` oder Escape beendet die Steuerung. Wenn das
-Steuerfenster den Tastaturfokus verliert, wird aus Sicherheitsgruenden sofort
-neutralisiert. Ein gleichzeitig gestarteter Konverter bildet den Befehl auf
-`/cmd_vel` ab.
-
-Für die autonome C++-Steuerung reicht jetzt ein einziger Startbefehl:
-
-```bash
-ros2-jazzy ros2 run control_center control_center
+```text
+wasd_teleop -> /control/manual_cmd -> drive_commander
+             -> /drive_commands -> usb_bridge -> USB-Serial
 ```
 
-Dieser startet den `control_center_node` und automatisch den
-`drive_command_to_twist`-Konverter. Der autonome Test fährt mit
-`acceleration=100` und entscheidet die Lenkung aus fünf LiDAR-Richtungen.
-`wasd-drive` und der autonome `control_center` sollten nicht gleichzeitig
-laufen, da beide auf `/drive_command` veröffentlichen.
+Der WASD-Node veröffentlicht mit 50 Hz ausschließlich
+`/control/manual_cmd` (`rc_car_interfaces/msg/DriveRequest`). Die Fahrwerte
+liegen zwischen -100 und +100:
 
-Der autonome Simulationsmodus enthält derzeit absichtlich keine
-Sicherheitsstopps und ist nur für Gazebo-Tests vorgesehen.
+- `steering`: -100 = ganz links, 0 = gerade, +100 = ganz rechts
+- `speed`: -100 = voll rueckwaerts, 0 = Stopp, +100 = voll vorwaerts
+
+Im Steuerfenster werden die Tasten gehalten: `W` setzt vorwaerts auf +100, `S`
+rueckwaerts auf -100, `A` links auf -100 und `D` rechts auf +100. Beim Loslassen
+springt die jeweilige Achse sofort auf 0 zurueck. Dadurch funktionieren auch
+Kombinationen wie `W+A`. `Q` oder Escape beendet die Steuerung. Wenn das
+Steuerfenster den Tastaturfokus verliert, wird aus Sicherheitsgruenden sofort
+neutralisiert. Der `drive_commander` ergänzt Zeitstempel, Sequenz und die
+separate Sicherheitsfreigabe. Er ist der einzige Publisher von
+`/drive_commands` (`rc_car_interfaces/msg/DriveCommand`). Der Gazebo-Konverter
+abonniert ebenfalls nur dieses finale Topic.
+
+Der aktuelle `manual_usb_test.launch.py` ist absichtlich ein reiner
+Ausgabetest: ROS-Quellenwatchdog, USB-Nachrichtenwatchdog und ESP-Rückkanal sind
+deaktiviert. Solange dieser Testmodus verwendet wird, dürfen Motorcontroller
+und Lenkservo nicht angeschlossen beziehungsweise nicht mit Leistung versorgt
+werden.
+
+Die autonome Kette startet sicher (USB zunächst Dry-Run) mit:
+
+```bash
+ros2-jazzy ros2 launch avaj_car_control autonomous_drive.launch.py
+```
+
+Der `control_center` veröffentlicht ausschließlich
+`/control/autonomous_cmd`. `mode_manager`, `safety_watchdog` und
+`drive_commander` entscheiden getrennt über Auswahl und Freigabe. Manuelle und
+autonome Launches nicht gleichzeitig starten.
+
+Die Testlogik besitzt noch keinen abstandsabhängigen Kollisionsstopp und ist
+nur für Gazebo-Tests vorgesehen.
+
+### ESP32-USB-Bridge
+
+Die Bridge abonniert ausschließlich `/drive_commands` und erzeugt ein lesbares,
+CRC-gesichertes Protokoll:
+
+```bash
+ros2-jazzy ros2 run rc_car_usb_bridge usb_bridge
+ros2-jazzy ros2 topic echo /drive_usb/tx
+ros2-jazzy ros2 topic echo /drive_usb/status
+```
+
+Ein Frame sieht beispielsweise so aus:
+
+```text
+CMD,42,30,-20,1*887F
+```
+
+Der Entwicklungscontainer erhält dynamischen Zugriff auf USB-CDC-Geräte
+(`/dev/ttyACM*`) und USB-Serial-Adapter (`/dev/ttyUSB*`). Es gibt absichtlich
+keine feste Gerätebindung. Der manuelle Ersttest filtert nach der physischen
+USB-Topologie `1-2.2`. Das ist die freie Buchse im selben physischen
+Doppel-USB-A-Block wie die Apple-Tastatur (`1-2.1`).
+Die Bridge wartet, bis dort genau ein serielles Gerät erscheint.
+
+Topologie eines eingesteckten Adapters kontrollieren:
+
+```bash
+for tty in /sys/class/tty/ttyACM* /sys/class/tty/ttyUSB*; do
+  test -e "$tty" && readlink -f "$tty/device"
+done
+```
+
+Falls der tatsächlich verwendete Anschluss nicht `1-2.2` enthält:
+
+```bash
+wasd-drive usb_physical_port:=GEFUNDENER_USB_PFAD
+```
+
+Ein USB-A-Port ist ein USB-Host und erzeugt ohne eingestecktes
+USB-Serial-Gerät keinen seriellen Datenstrom. Für PuTTY auf einem Laptop ist
+deshalb ein USB-Serial-Endpunkt erforderlich; eine direkte USB-A-zu-USB-A-
+Verbindung zwischen Jetson und Laptop ist nicht zulässig.
+
+Debugging:
+
+```bash
+ros2-jazzy ros2 topic echo /control/manual_cmd --no-daemon --spin-time 8
+ros2-jazzy ros2 topic info /drive_commands --verbose
+ros2-jazzy ros2 topic echo /drive_commands --no-daemon --spin-time 8
+ros2-jazzy ros2 topic echo /drive_usb/tx --no-daemon --spin-time 8
+ros2-jazzy ros2 topic echo /drive_usb/status --no-daemon --spin-time 8
+```
+
+`ros2-jazzy` erzeugt fuer jeden Aufruf einen neuen, kurzlebigen Docker-
+Container. Dessen ROS-Discovery-Cache ist beim Start leer. Ein normales
+`ros2 topic echo` kann deshalb faelschlich melden, dass ein nachweislich
+laufendes Topic nicht publiziert werde oder dass sein Typ unbekannt sei. Fuer
+Topic-Abfragen in diesem Projekt deshalb `--no-daemon --spin-time 8`
+verwenden. Damit wartet das CLI ohne veralteten Daemon-Cache bis zu acht
+Sekunden auf die DDS-Erkennung. Dieses Kommando wurde fuer `/drive_commands`
+im laufenden manuellen Stack erfolgreich geprueft.
+
+Für `/drive_commands` muss im normalen Betrieb `Publisher count: 1` gelten;
+der Publisher muss `/drive_commander` sein.
+
+**Noch zwingend umzusetzen, bevor Motoren angeschlossen werden:** Watchdogs
+wieder aktivieren, ESP-ACK/Status auf `/vehicle/status` implementieren,
+Encoderüberwachung ergänzen und einen unabhängigen Command-Timeout im ESP
+testen. Der aktuelle Einwegmodus erwartet bewusst keine Antwort.
 
 ### Simulierte Sensoren
 
@@ -100,12 +185,12 @@ Das Modell besitzt Sensoren an den angegebenen Montagepositionen:
 - STL27-LiDAR mittig vorne, 10 cm über Boden, Orientierung 90 Grad rechts
 - BNO085 aufrecht in der Fahrzeugmitte
 
-Damit echte und simulierte Messwerte gleichzeitig betrieben werden können,
-verwenden die simulierten Sensoren eigene Topics:
+Simulation und reale Hardware verwenden dieselbe Treibergrenze. Es darf immer
+nur ein Profil die gemeinsamen Rohdaten-Topics publizieren:
 
-- `/sim/camera/image_raw` und `/sim/camera/camera_info`
-- `/sim/scan`
-- `/sim/imu/data`
+- `/camera/image_raw` und `/camera/camera_info`
+- `/scan_raw`, aufbereitet als `/scan`
+- `/imu/data_raw`, validiert als `/imu/data`
 
 Die Kamera simuliert zunächst 640 x 360 Pixel mit 20 Hz, der LiDAR 720 Strahlen
 mit 10 Hz und die IMU 100 Hz. Diese moderaten Werte halten die Simulation auf
@@ -119,8 +204,8 @@ ros2-jazzy gz sim /workspace/simulation/worlds/eigene_strecke.sdf
 
 ## STL-27L
 
-Der STL-27L-Treiber läuft als eigener Dienst und veröffentlicht einen
-`sensor_msgs/msg/LaserScan` unter `/scan`.
+Der STL-27L-Treiber veröffentlicht `sensor_msgs/msg/LaserScan` unter
+`/scan_raw`. Der gemeinsame Preprocessor stellt anschließend `/scan` bereit.
 
 ```bash
 docker compose -f /home/avaj/ros2_jazzy/compose.yaml up -d lidar
@@ -163,9 +248,10 @@ Der BNO085 ist über den 40-Pin-I²C-Anschluss verbunden:
 - Pin 5: SCL
 
 Auf diesem Jetson ist das `/dev/i2c-7`; der Sensor verwendet Adresse `0x4A`.
-Der dauerhafte IMU-Dienst veröffentlicht mit 100 Hz:
+Der dauerhafte IMU-Dienst veröffentlicht mit 100 Hz Rohdaten; der gemeinsame
+Preprocessor validiert sie für die kanonische Schnittstelle:
 
-- `/imu/data` (`sensor_msgs/msg/Imu`, Frame `imu_link`)
+- `/imu/data_raw` -> `/imu/data` (`sensor_msgs/msg/Imu`, Frame `imu_link`)
 - `/imu/mag` (`sensor_msgs/msg/MagneticField`, Einheit Tesla)
 
 Start und Prüfung:
@@ -222,10 +308,13 @@ werden die Simulationsdaten automatisch auf die gemeinsamen SLAM-Topics
 abgebildet:
 
 ```text
-/sim/scan      -> /scan
-/sim/imu/data  -> /imu/data
+/scan_raw      -> /scan
+/imu/data_raw  -> /imu/data
 /odom          -> robot_localization -> odom -> base_link
 ```
+
+Der vollständige Node- und Topic-Vertrag steht in
+[`docs/ros_graph.md`](docs/ros_graph.md).
 
 Karte speichern:
 
@@ -242,3 +331,29 @@ ros2-jazzy ros2 launch avaj_slam slam.launch.py real:=true
 
 Dafür müssen `/scan`, eine Odometrie mit `odom`/`base_link` und der reale
 LiDAR-TF vorhanden sein. Die Kamera wird für 2D-LiDAR-SLAM nicht benötigt.
+
+### Experimenteller Nav2-Test während Online-SLAM
+
+Wenn Gazebo und der obige AVAJ-SLAM-Launch laufen und `/map` publiziert wird,
+können die installierten Nav2-Standardserver und die Nav2-RViz-Oberfläche in
+zwei weiteren Terminals gestartet werden:
+
+```bash
+ros2-jazzy ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+ros2-jazzy ros2 launch nav2_bringup rviz_launch.py use_sim_time:=true
+```
+
+In RViz `map` als Fixed Frame wählen und mit `Nav2 Goal` ein Ziel setzen.
+Nicht zusätzlich `nav2_bringup bringup_launch.py slam:=true` starten, weil
+bereits `avaj_slam` den einzigen SLAM-Publisher für `map -> odom` stellt.
+WASD und der manuelle Drive-Stack dürfen ebenfalls nicht parallel laufen:
+Nav2 publiziert in diesem vorläufigen Profil direkt `/cmd_vel`.
+
+Dieser Ablauf verwendet noch Nav2-Stockparameter. Fahrzeugkontur,
+Ackermann-Controller, Geschwindigkeits-/Beschleunigungsgrenzen, Costmaps und
+Zielnavigation sind nicht AVAJ-spezifisch validiert. Ein Profil für
+gespeicherte Karten und AMCL ist noch nicht implementiert.
+
+Der physische BNO085 bleibt fest an `/dev/i2c-7` angeschlossen und muss für
+Gazebo nicht entfernt werden. Die Simulation nutzt ihn derzeit nicht im EKF;
+dieser fusioniert ausschließlich Gazebos `/odom`.

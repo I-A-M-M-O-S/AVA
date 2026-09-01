@@ -410,15 +410,18 @@ z-Werte in der SDF kleiner als die genannten absoluten Montagehöhen.
 
 ### Simulierte Sensorparameter und Topics
 
-Die Simulation verwendet absichtlich `/sim/...`, damit reale und simulierte
-Publisher gleichzeitig laufen können, ohne Messungen zu vermischen.
+Gazebo behält intern seine `/sim/...`-Namen. Die ROS-Gazebo-Bridge bildet sie
+auf dieselbe Raw-Schnittstelle wie die realen Treiber ab. Simulation und reale
+Hardware sind deshalb exklusive Launchprofile und dürfen nicht gleichzeitig
+gestartet werden.
 
 ```text
-/sim/camera/image_raw     sensor_msgs/msg/Image       640×360 @ 20 Hz
-/sim/camera/camera_info   sensor_msgs/msg/CameraInfo
-/sim/scan                 sensor_msgs/msg/LaserScan   720 Strahlen @ 10 Hz,
+/camera/image_raw         sensor_msgs/msg/Image       640×360 @ 20 Hz
+/camera/camera_info       sensor_msgs/msg/CameraInfo
+/scan_raw -> /scan        sensor_msgs/msg/LaserScan   720 Strahlen @ 10 Hz,
                                                      360°, 0.02–25 m
-/sim/imu/data             sensor_msgs/msg/Imu         100 Hz
+/imu/data_raw ->          sensor_msgs/msg/Imu         100 Hz
+  /imu/data
 ```
 
 Alle vier Datenpfade wurden über die ROS-Gazebo-Bridge geprüft. Für
@@ -430,14 +433,14 @@ traten auf dem Jetson auf, waren aber nicht fatal; Gazebo und Ogre2 starteten.
 Kamerabild der Simulation:
 
 ```bash
-ros2-jazzy ros2 run rqt_image_view rqt_image_view /sim/camera/image_raw
+ros2-jazzy ros2 run rqt_image_view rqt_image_view /camera/image_raw
 ```
 
 ### Noch fehlend für komfortables Simulations-RViz
 
 - Gazebo-Pose-/TF-Topic nach ROS `/tf` bridgen oder einen passenden
   `robot_state_publisher` ergänzen
-- RViz-Gesamtkonfiguration für `/sim/scan`, `/sim/imu/data`, Kamera und Modell
+- RViz-Gesamtkonfiguration für `/scan`, `/imu/data`, Kamera und Modell
 - optional `/clock` bridgen und `use_sim_time=true` setzen
 - optional eigener AckermannDrive-Konverter
 
@@ -491,11 +494,12 @@ Gazebo:
 wasd-drive
 ```
 
-Sie veröffentlicht `/drive_command` (`avaj_car_control/msg/DriveCommand`) mit
-den Feldern `steering` und `acceleration`, jeweils 0 bis 100 und Neutralstellung
-50. Das Qt-Steuerfenster erkennt Druecken und Loslassen von WASD: gehaltene
-Tasten setzen die Achse direkt auf 0 oder 100, beim Loslassen springt sie auf
-50 zurueck. Der Konverter erzeugt daraus `/cmd_vel`.
+Sie veröffentlicht ausschließlich `/control/manual_cmd`
+(`rc_car_interfaces/msg/DriveRequest`) mit `speed` und `steering` von -100 bis
++100. Das Qt-Steuerfenster erkennt Druecken und Loslassen von WASD. Beim
+Loslassen werden beide Achsen auf 0 gesetzt. Der zentrale `drive_commander`
+erzeugt daraus das finale `/drive_commands`; Details und der bewusst unsichere
+USB-Ersttest stehen in Abschnitt 13.
 
 ## 11.2 Control-Center und autonome Simulationsfahrt
 
@@ -515,27 +519,26 @@ launch/control_center.launch.py
 scripts/control_center      Ein-Befehl-Startwrapper
 ```
 
-Der C++-Knoten abonniert standardmäßig die Simulationstopics:
+Der C++-Knoten abonniert die gemeinsamen, hardwareunabhängigen Topics:
 
 ```text
-/sim/camera/image_raw  sensor_msgs/msg/Image
-/sim/scan              sensor_msgs/msg/LaserScan
-/sim/imu/data          sensor_msgs/msg/Imu
+/camera/image_raw      sensor_msgs/msg/Image
+/scan                  sensor_msgs/msg/LaserScan
+/imu/data              sensor_msgs/msg/Imu
 /imu/mag               sensor_msgs/msg/MagneticField
-/odom                  nav_msgs/msg/Odometry
-/drive_command         avaj_car_control/msg/DriveCommand
+/odometry/filtered     nav_msgs/msg/Odometry
 ```
 
-Er veröffentlicht `/drive_command` und `/control_center/status`. Der
-Ein-Befehl-Start lautet:
+Er veröffentlicht ausschließlich `/control/autonomous_cmd`
+(`rc_car_interfaces/msg/DriveRequest`) und `/control_center/status`. Die
+komplette autonome Kette startet mit:
 
 ```bash
-ros2-jazzy ros2 run control_center control_center
+ros2-jazzy ros2 launch avaj_car_control autonomous_drive.launch.py
 ```
 
-Der Wrapper startet automatisch `control_center_node` und
-`drive_command_to_twist`. Der Konverter veröffentlicht anschließend auf
-`/cmd_vel` (`linear.x` in m/s, `angular.z` in rad/s).
+Dieser Launch startet `control_center_node`, `mode_manager`, `safety_watchdog`,
+`drive_commander`, den Gazebo-Konverter und die USB-Bridge im sicheren Dry-Run.
 
 ### Autonome LiDAR-Testlogik
 
@@ -552,15 +555,17 @@ lidar_right_45_    -45°
 Die Summen links und rechts bestimmen die Lenkung:
 
 ```text
-linke Summe kleiner  -> steering 75 (rechts ausweichen)
-rechte Summe kleiner -> steering 25 (links ausweichen)
-gleich               -> steering 50 (geradeaus)
+linke Summe kleiner  -> steering +50 (rechts ausweichen)
+rechte Summe kleiner -> steering -50 (links ausweichen)
+gleich               -> steering 0 (geradeaus)
 ```
 
-Der Vorwärtswert steht aktuell auf `acceleration=100`, was mit den aktuellen
-Konverterparametern `linear.x=1.5 m/s` entspricht. Für diesen reinen Gazebo-
-Test wurden Sicherheitsstopps entfernt; fehlende LiDARwerte werden als weit
-entfernt behandelt. Nicht ungeprüft auf das reale Fahrzeug übertragen.
+Der Vorwärtswunsch steht aktuell auf `speed=100`, was mit den aktuellen
+Konverterparametern `linear.x=1.5 m/s` entspricht. Ein fehlender oder älter als
+0,5 Sekunden alter LiDAR-Scan erzeugt einen neutralen Fahrwunsch. Die
+unabhängige Freigabe entscheidet ausschließlich der `safety_watchdog`. Ein
+abstandsabhängiger Kollisionsstopp fehlt noch. Nicht ungeprüft auf das reale
+Fahrzeug übertragen.
 
 ### Build nach C++-Änderungen
 
@@ -577,8 +582,9 @@ Prüfkommandos:
 
 ```bash
 ros2-jazzy ros2 node list
-ros2-jazzy ros2 topic info /drive_command -v
-ros2-jazzy ros2 topic echo /drive_command
+ros2-jazzy ros2 topic echo /control/autonomous_cmd
+ros2-jazzy ros2 topic info /drive_commands -v
+ros2-jazzy ros2 topic echo /drive_commands
 ros2-jazzy ros2 topic echo /cmd_vel
 ros2-jazzy ros2 topic echo /control_center/status
 ```
@@ -588,20 +594,18 @@ ros2-jazzy ros2 topic echo /control_center/status
 Heute erledigt:
 
 - `control_center` als ROS-2-C++-Paket eingerichtet und erfolgreich gebaut.
-- Kamera, LiDAR, IMU, Magnetometer, Odometrie und Fahrbefehle abonniert.
+- Kamera, LiDAR, IMU, Magnetometer und Odometrie abonniert.
 - Fünf feste LiDAR-Richtungen implementiert.
 - Autonome Ausweichlogik im C++-Knoten ergänzt.
 - Simulations-Topics als Standard gesetzt (`/sim/...`).
-- Sicherheitsstopps für den reinen Gazebo-Test entfernt.
 - Vorwärtswert auf `100` gesetzt.
-- ROS-Launch integriert, der Control-Center und Converter gemeinsam startet.
-- Ein-Befehl-Start erfolgreich getestet.
+- Der frühere Direktpfad wurde am 28. August durch Abschnitt 13 ersetzt.
 
 Empfohlener Testablauf:
 
 ```bash
 gazebo-harmonic
-ros2-jazzy ros2 run control_center control_center
+ros2-jazzy ros2 launch avaj_car_control autonomous_drive.launch.py
 ```
 
 Für die WASD-Steuerung stattdessen `wasd-drive` verwenden, aber nicht
@@ -648,8 +652,342 @@ mit der alten laufenden Bridge noch keine Simulationszeit empfangen.
 > läuft in Docker, reale Kamera und IMU sind aktiv, LiDAR ist hotplugfähig,
 > Gazebo Harmonic enthält ein fahrbares AWD-Ackermann-Modell mit simulierten
 > Sensoren. Prüfe vor Änderungen den aktuellen Container-, Topic- und
-> Geräte-Zustand. Der aktuelle Test-Control-Center startet mit einem Befehl
-> automatisch auch den DriveCommand-Konverter, nutzt standardmäßig `/sim/...`
-> und fährt mit `acceleration=100` ohne Sicherheitsstopp. Beachte besonders
-> den möglicherweise veralteten realen `roll=pi`-TF der IMU und übertrage die
-> autonome Testlogik nicht ungeprüft auf das reale Fahrzeug.
+> Geräte-Zustand. Die verbindliche Steuerungsarchitektur steht in Abschnitt
+> 13: Quellen publizieren nur DriveRequest, ausschließlich drive_commander
+> publiziert `/drive_commands`, und nur usb_bridge transportiert dieses Topic.
+> Der manuelle USB-Ersttest hat Watchdogs und ESP-Rückkanal bewusst deaktiviert
+> und darf nicht mit bestromten Aktoren benutzt werden. Beachte außerdem den
+> möglicherweise veralteten realen `roll=pi`-TF der IMU.
+
+## 13. Verbindliche Steuerungsarchitektur (28. August 2026)
+
+Dieser Abschnitt ersetzt ältere Aussagen in 11.1 bis 11.3 über einen direkten
+Publisher auf `/drive_command`.
+
+```text
+control_center  -> /control/autonomous_cmd --+
+wasd_teleop     -> /control/manual_cmd -----+--> drive_commander
+test_controller -> /control/test_cmd -------+          |
+mode_manager    -> /system/mode ------------+          v
+safety_watchdog -> /system/drive_enable ----+   /drive_commands
+                                                       |
+                                                       v
+                                                   usb_bridge
+                                                       |
+                                                       v
+                                                   USB-Serial
+```
+
+- Quellen verwenden `rc_car_interfaces/msg/DriveRequest` und enthalten nur
+  `speed` und `steering`.
+- Nur `/drive_commander` darf
+  `rc_car_interfaces/msg/DriveCommand` auf `/drive_commands` veröffentlichen.
+- Der `drive_commander` ergänzt `sequence` und `enabled` und akzeptiert beide
+  Fahrwerte ausschließlich im Bereich -100 bis +100. Ungültige Werte werden
+  verworfen und nicht begrenzt.
+- `usb_bridge` abonniert ausschließlich `/drive_commands` und trifft keine
+  Fahrentscheidung.
+- `drive_command_to_twist` abonniert ebenfalls ausschließlich das finale Topic.
+
+Manueller Einweg-Ausgabetest:
+
+```bash
+wasd-drive
+```
+
+Dieser Launch startet mit `MANUAL`, `watchdog_bypass=true`,
+`source_timeout_enabled=false`, `usb_message_watchdog=false`,
+`expect_response=false` und `dry_run=false`. Er wählt dynamisch ein
+USB-Serial-Gerät am physischen Topologiezweig `1-2.2`; dies ist die freie
+Buchse im selben Doppel-USB-A-Block wie die Apple-Tastatur (`1-2.1`). Es gibt
+keine feste
+by-id-/tty-Gerätebindung. `/dev` und `/sys` werden für die Erkennung als
+`/host/dev` und `/host/sys` in den Entwicklungscontainer eingebunden, während
+die Device-Cgroup nur die Major-Nummern 166 (CDC ACM) und 188 (USB serial)
+zulässt.
+
+Der serielle Einwegframe lautet:
+
+```text
+CMD,<sequence>,<speed>,<steering>,<enabled>*<CRC16-CCITT>\n
+```
+
+### ROS-Discovery bei Diagnosebefehlen
+
+Der Wrapper `ros2-jazzy` startet fuer jeden Aufruf einen neuen, kurzlebigen
+Docker-Container. Dessen ROS-Discovery-Cache ist anfangs leer. Ein direktes
+
+```bash
+ros2-jazzy ros2 topic echo /drive_commands
+```
+
+kann daher faelschlich `does not appear to be published yet` und
+`Could not determine the type` melden, obwohl `/drive_commander` aktiv mit
+50 Hz publiziert. Fuer Topic-Abfragen immer die direkte DDS-Erkennung mit
+ausreichender Wartezeit verwenden:
+
+```bash
+ros2-jazzy ros2 topic echo /drive_commands --no-daemon --spin-time 8
+ros2-jazzy ros2 topic echo /drive_usb/tx --no-daemon --spin-time 8
+```
+
+Dieses Verhalten und der korrigierte Befehl wurden am 29. August 2026 am
+laufenden manuellen Stack reproduziert und verifiziert. Ein einmaliges Paket
+von `/drive_commands` wurde damit sofort empfangen.
+
+### Zwingender offener Sicherheitspunkt
+
+**Vor Anschluss beziehungsweise Bestromung von Motorcontroller oder Lenkservo
+müssen alle folgenden Punkte umgesetzt und getestet werden:**
+
+1. ROS-Sensor- und Quellenwatchdogs aktivieren und passende Timeouts festlegen.
+2. Encoder-Topic und Encoderüberwachung im `safety_watchdog` ergänzen.
+3. Bidirektionalen ESP-Rückkanal und `/vehicle/status` implementieren.
+4. ESP-ACK/Sequenzfortschritt im Watchdog überwachen.
+5. Unabhängigen Command-Timeout/Hardware-Watchdog im ESP implementieren.
+6. USB-Trennung und Prozessabbruch unter Last testen.
+
+Der aktuelle Einwegmodus erwartet absichtlich keine Antwort und sendet bei
+ausbleibenden ROS-Nachrichten absichtlich keinen zusätzlichen Bridge-Stopp.
+Das ist ausschließlich zum Mitlesen der Textframes gedacht.
+
+## 14. Kanonischer ROS-Graph (31. August 2026)
+
+Die dokumentierte Trennung zwischen Treibern und High-Level-Nodes ist jetzt
+als ausführbare Baseline umgesetzt:
+
+```text
+LiDAR/Gazebo -> /scan_raw -> /sensors/lidar_preprocessor -> /scan
+BNO085/Gazebo -> /imu/data_raw -> /sensors/imu_preprocessor -> /imu/data
+Kamera/Gazebo -> /camera/image_raw
+```
+
+High-Level-Nodes abonnieren keine `/sim/...`-Topics mehr. Die Gazebo-Namen
+existieren nur intern auf der Gazebo-Seite der Bridge. Der vollständige
+Schnittstellenvertrag steht in `docs/ros_graph.md`; ein ausführlicher
+Status- und Testnachweis steht in Abschnitt 39 von `AGENTS (1).md`.
+
+Wichtige Änderungen:
+
+- neues Paket `avaj_sensor_processing` mit LiDAR- und IMU-Validierung;
+- realer BNO085 publiziert `/imu/data_raw`, der Preprocessor `/imu/data`;
+- realer STL27L publiziert `/scan_raw`, der Preprocessor `/scan`;
+- Sensor-Nodes liegen unter `/sensors/...`;
+- `control_center` und `safety_watchdog` verwenden nur gemeinsame Topics;
+- Gazebo startet Bridge und Preprocessing gemeinsam;
+- `simulation:=true` und `real:=true` sind im SLAM-Launch exklusiv;
+- Compose-Service `sensor_processing` läuft dauerhaft für Hardware-Sensoren.
+
+Verifiziert wurden der Build von sechs betroffenen Paketen, zwei Linttests,
+ein synthetischer LiDAR-Datenpfad, die SLAM-Profilsperre und die reale
+BNO085-Kette. Der reale LiDAR war nicht angeschlossen und wurde nicht geprüft.
+
+Aktueller Hardwarestart:
+
+```bash
+docker compose up -d imu
+```
+
+Vor dem Gazebo-Start dürfen Hardware und Simulation nicht gleichzeitig die
+Raw-Topics belegen:
+
+```bash
+docker compose stop imu lidar camera sensor_processing
+gazebo-harmonic
+```
+
+Der nächste sinnvolle, hardwareunabhängige Sicherheitsschritt ist das Löschen
+gecachter Requests bei jedem Moduswechsel im `drive_commander`, eine neutrale
+Übergangsphase und die Forderung nach einem erst nach dem Wechsel eingegangenen
+frischen Request. Dazu gehören automatisierte Übergangs- und Timeout-Tests.
+
+## 15. Delta: sichere Quellenübergänge im drive_commander (31. August 2026)
+
+Repository-Basis: Branch `orin`, HEAD `c091798`, einschließlich des weiterhin
+umfangreichen uncommitteten und ungetrackten Working Trees.
+
+Der in Abschnitt 14 genannte nächste Sicherheitsschritt ist umgesetzt:
+
+- Jeder tatsächliche Modus-/Quellenwechsel löscht alle gecachten Requests und
+  publiziert sofort `speed=0`, `steering=0`, `enabled=false`.
+- Die gewählte Quelle bleibt gesperrt, bis nach dem Wechsel ein neuer gültiger
+  Request genau dieser Quelle eingetroffen ist. Requests inaktiver Quellen
+  werden nicht gecacht. Auch die Rückkehr zu einer früher verwendeten Quelle
+  kann deshalb keinen alten Request reaktivieren.
+- Jede Änderung von `/system/drive_enable` invalidiert die Requests. Nach dem
+  erneuten Freigeben ist ebenfalls ein neuer Request erforderlich.
+- Ein Source-Timeout verwirft den Request dauerhaft; das Abschalten des
+  Timeouts kann ihn nicht wieder gültig machen.
+- `DISABLED` neutralisiert unmittelbar. Ein ungültiger Modus setzt den
+  `drive_commander` fail-safe auf `DISABLED` und invalidiert alle Requests.
+- Werte außerhalb `-100..100`, nicht-endliche und anderweitig ungültige Werte
+  werden abgelehnt statt geclamp't. Status-JSON und Logs enthalten den
+  aktuellen Entscheidungsgrund sowie die letzte Ablehnung.
+- Nur `drive_commander` publiziert weiterhin `/drive_commands`; Topicnamen und
+  Nachrichtenformate wurden nicht geändert.
+
+Geänderte Dateien:
+
+- `workspace/src/avaj_car_control/scripts/drive_commander`
+- `workspace/src/avaj_car_control/test/test_drive_commander.py`
+- `workspace/src/avaj_car_control/CMakeLists.txt`
+- `workspace/src/avaj_car_control/package.xml`
+- `HANDOFF.md` und `AGENTS (1).md`
+
+Verifikation im ROS-Jazzy-Container, ohne Hardware- oder Aktoransteuerung:
+
+- `colcon build --symlink-install --packages-select rc_car_interfaces avaj_car_control`:
+  beide Pakete erfolgreich gebaut.
+- `colcon test --packages-select avaj_car_control --event-handlers console_direct+`:
+  18 neue Tests bestanden. Abgedeckt sind Start in `DISABLED`, alle drei
+  Quellen, frische Requests, Rückkehr zu Quellen, nichtneutrale Übergänge,
+  Timeout, Safety-Flanken, ungültige Modi/Werte, NaN/Inf im Validator,
+  Sequenznummern und Publisherzahl.
+- `colcon test-result --verbose`: keine Fehler oder Fehlschläge; die globale
+  Ergebnisablage enthielt 21 erfolgreiche Tests, davon 18 aus diesem Paketlauf.
+- `python3 -m flake8 .../drive_commander .../test_drive_commander.py`:
+  ohne Befund.
+- Isolierter ROS-Test in `ROS_DOMAIN_ID=187`: ein Test bestanden; fünf finale
+  Befehle wurden empfangen, ihre Sequenzen stiegen streng, und der Graph hatte
+  genau einen `/drive_commands`-Publisher namens `/drive_commander`.
+- Vollständiger `drive_stack.launch.py` im sicheren Dry-Run in
+  `ROS_DOMAIN_ID=188`: `Publisher count: 1`, Publisher `/drive_commander`;
+  gelesener Ausgang `speed=0`, `steering=0`, `enabled=false`. Der dauerhafte
+  Launch wurde nach abgeschlossener Diagnose per Interrupt beendet.
+
+Einschränkungen:
+
+- `DriveRequest` verwendet `int8`; NaN/Inf und Werte außerhalb `-128..127`
+  können nicht über ROS serialisiert werden. Der gemeinsame Validator deckt
+  diese Fälle trotzdem ab; über ROS testbar sind insbesondere `-128..-101`
+  und `101..127`.
+- `DriveCommand.sequence` ist `uint32`; die getestete strenge Monotonie gilt
+  bis zum typbedingten Wrap nach `2^32` Ausgaben.
+- Die übrigen Sicherheitsabweichungen aus `AGENTS (1).md`, Abschnitt 38.3,
+  bleiben bestehen. Insbesondere wurden kein ESP-Rückkanal, kein unabhängiger
+  ESP-Watchdog und kein Hardware- oder Fahrtest ergänzt.
+
+### Nächstes begrenztes Aufgabenpaket
+
+Als nächster hardwareunabhängiger Sicherheitsschritt soll der typisierte
+ESP-Rückkanal vorbereitet werden:
+
+- minimale, klar dokumentierte ROS-Messages für Protokollversion, bestätigte
+  Sequenz, `SAFE/MANUAL/JETSON`-Owner, Jetson-Lock/Arming, Faults, angewandten
+  Aktorzustand und vier Encoder;
+- dokumentiertes, versioniertes und CRC-geschütztes Feedbackprotokoll, ohne das
+  bestehende ausgehende `CMD,...*CRC` stillschweigend umzudeuten;
+- inkrementeller, streng validierender Decoder im `rc_car_usb_bridge`;
+- ausschließlich typisierte Publikation validierter Daten, Raw-RX nur zur
+  Diagnose;
+- korrekt in `colcon test` registrierte Unit- und Pseudo-Terminal-Tests für
+  fragmentierte, verkettete, ungültige und gültige Frames.
+
+Der `safety_watchdog` darf in diesem Paket noch nicht von synthetischem oder
+unverifiziertem Feedback abhängig gemacht werden. Diese Kopplung folgt erst
+nach passender ESP-Firmware oder einem vertragstreuen Emulator. Keine Hardware,
+USB-Geräte oder Aktoren verwenden und keinen weiteren Publisher für
+`/drive_commands` hinzufügen.
+
+## 16. Delta: typisierter ESP-Rückkanal, hardwareunabhängig (1. September 2026)
+
+Das in Abschnitt 15 abgegrenzte Paket ist ohne Hardwarezugriff umgesetzt.
+`rc_car_interfaces` enthält nun `VehicleStatus`, `ActuatorStatus` und
+`WheelEncoderState`. Die stabilen Topics sind `/vehicle/status`,
+`/vehicle/actuator_status` und `/vehicle/encoders`; jeder Header trägt mangels
+synchronisierter ESP-Zeit die Jetson-ROS-Empfangszeit. Felder, Einheiten,
+`SAFE/MANUAL/JETSON`, Faultbits sowie uint32-/int32-Wrap stehen vollständig in
+den Message-Kommentaren und `docs/esp_feedback_protocol.md`.
+
+Der V1-Vertrag definiert streng validierte ASCII-Zeilen `V1,STA`, `V1,ACT` und
+`V1,ENC` mit CRC-16/CCITT-FALSE, LF/CRLF, kanonischen Integerformaten und maximal
+128 Byte vor LF. Das bestehende ausgehende
+`CMD,<sequence>,<speed>,<steering>,<enabled>*CRC\n` blieb bytekompatibel und
+wird nicht als V1 interpretiert.
+
+Der neue ROS-unabhängige inkrementelle Decoder verarbeitet fragmentierte und
+verkettete Reads, hält seinen Puffer begrenzt, setzt Fragmente und ACK-Zustand
+beim Reconnect zurück und erholt sich nach jeder verworfenen Zeile. Ungültige
+Frames aktualisieren kein typisiertes Topic und erzeugen konkrete Diagnosen,
+unter anderem für Version, Typ, CRC, Format/Bereich, ACK-Duplikat/-Rückschritt
+und Overlength. Raw-RX bleibt ausschließlich Diagnose.
+
+Verifikation im ROS-Jazzy-Container:
+
+- `colcon build --symlink-install --packages-select rc_car_interfaces rc_car_usb_bridge`:
+  erfolgreich für beide Pakete.
+- `colcon test --packages-select rc_car_interfaces rc_car_usb_bridge --event-handlers console_direct+`:
+  36/36 Bridge-Tests bestanden.
+- `colcon test-result --verbose`: 57 Tests in der gemeinsamen Ablage, keine
+  Fehler, Fehlschläge oder Skips.
+- Flake8 über alle geänderten Python-Dateien: ohne Befund.
+- Isolierter PTY-Test mit `ROS_DOMAIN_ID=220`: 1/1 bestanden; fragmentierte und
+  verkettete STA/ACT/ENC-Frames wurden typisiert publiziert, ein CRC-Fehler nicht.
+- Sicherer Graphlauf mit `ROS_DOMAIN_ID=221`, `initial_mode:=DISABLED` und
+  `usb_dry_run:=true`: jedes neue Topic hatte genau den Publisher `/usb_bridge`.
+  `/drive_commands` hatte exakt einen Publisher (`/drive_commander`); die
+  Bridge erschien dort ausschließlich als Subscriber.
+- Der bestehende automatisierte Publisher-/Sequenztest wurde zusätzlich unter
+  `ROS_DOMAIN_ID=219` isoliert wiederholt: 1/1 bestanden, exakt ein Publisher
+  `/drive_commander` und fünf streng steigende beobachtete Sequenzen.
+
+Betroffen sind nur `rc_car_interfaces`, `rc_car_usb_bridge`, deren Tests,
+`docs/esp_feedback_protocol.md`, `docs/ros_graph.md`, `HANDOFF.md` und
+`AGENTS (1).md`. `safety_watchdog` wurde nicht geändert. Es gab weder ESP-
+Firmware-, Hardware-, USB-Geräte-, Aktor- noch Fahrvalidierung.
+
+Offen bleiben passende ESP-Firmware beziehungsweise ein unabhängiger
+vertragstreuer Emulator, echte ACK-/Owner-/Lock-/Fault-Semantik,
+Encoderpolarität/-skalierung, ESP-Watchdog, finale Aktorautorität und physischer
+Not-Aus. Erst das folgende Paket darf nach dieser Verifikation die neuen Topics
+für Verbindung, ACK-Fortschritt, Owner, Lock, Faults und Encoderplausibilität in
+den `safety_watchdog` integrieren. Reine Topic-Ankunft reicht dafür nicht.
+
+## 17. Delta: Gazebo-SLAM-TF und experimenteller Nav2-Start (1. September 2026)
+
+Gazebo publiziert Odometrie in den Frames `avaj_car/odom` und
+`avaj_car/base_link`, während der AVAJ-EKF die kanonischen Frames `odom` und
+`base_link` verwendet. Dieser fehlende Anschluss verhinderte
+`/odometry/filtered` und führte bei `slam_toolbox` zu einer vollen
+Message-Filter-Queue für `avaj_car/lidar_link/stl27_sim`.
+
+Das Simulationsprofil in `avaj_slam/launch/slam.launch.py` startet deshalb nun
+automatisch zwei Identitätstransforms:
+
+```text
+odom      -> avaj_car/odom
+base_link -> avaj_car/base_link
+```
+
+Build und Live-Test waren erfolgreich: `/odometry/filtered` erschien mit den
+kanonischen Frames, `odom -> base_link` aktualisierte sich, und
+`/slam_toolbox` publizierte `/map`. Nach der Änderung muss ein bereits laufender
+SLAM-Launch einmal beendet und neu gestartet werden.
+
+Der BNO085 ist weiterhin fest an `/dev/i2c-7` angeschlossen und kann aktuell
+nicht entfernt werden. Seine Entfernung darf für Simulationstests nicht
+vorausgesetzt werden. Der IMU-Dienst wurde bei dieser Reparatur weder gestoppt
+noch verändert. Hardware- und Gazebo-Sensorprofile können derzeit doppelte
+Preprocessor-Namen erzeugen; das ist vom reparierten Odometrie-/TF-Fehler zu
+unterscheiden. Eine vollständig isolierte Profilumschaltung bleibt offen.
+
+Online-SLAM plus experimentelles Nav2 wird so gestartet:
+
+```bash
+gazebo-harmonic
+ros2-jazzy ros2 launch avaj_slam slam.launch.py \
+  simulation:=true use_sim_time:=true rviz:=true
+ros2-jazzy ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+ros2-jazzy ros2 launch nav2_bringup rviz_launch.py use_sim_time:=true
+```
+
+In RViz gilt `map` als Fixed Frame; Ziele werden mit `Nav2 Goal` gesetzt.
+Keinesfalls zusätzlich `bringup_launch.py slam:=true` starten, da sonst ein
+zweites SLAM `map -> odom` beansprucht. WASD/Drive-Stack dürfen nicht parallel
+laufen, weil Nav2 in diesem Entwicklungsprofil direkt `/cmd_vel` publiziert.
+
+Dieser Nav2-Start verwendet noch die Stock-Parameter. AVAJ-Footprint,
+Ackermann-Controller, Limits, Costmaps und Zielnavigation sind nicht
+fahrzeugspezifisch validiert. Ein Profil für gespeicherte Karten und AMCL
+existiert noch nicht. Der Ablauf ist ausschließlich ein langsamer
+Gazebo-Entwicklungstest.

@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+
+"""Own and publish the selected vehicle operating mode."""
+
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
+from std_msgs.msg import String
+
+
+LATCHED_QOS = QoSProfile(
+    depth=1,
+    reliability=ReliabilityPolicy.RELIABLE,
+    durability=DurabilityPolicy.TRANSIENT_LOCAL,
+)
+VALID_MODES = {'AUTONOMOUS', 'MANUAL', 'TEST', 'DISABLED'}
+
+
+class ModeManager(Node):
+    def __init__(self):
+        super().__init__('mode_manager')
+        self.declare_parameter('initial_mode', 'DISABLED')
+        requested = str(self.get_parameter('initial_mode').value).upper()
+        self._mode = requested if requested in VALID_MODES else 'DISABLED'
+        self._publisher = self.create_publisher(
+            String, '/system/mode', LATCHED_QOS
+        )
+        self.create_subscription(
+            String, '/system/mode/set', self._on_set_mode, 10
+        )
+        self.create_timer(1.0, self._publish)
+        self._publish()
+
+    def _on_set_mode(self, message):
+        requested = message.data.strip().upper()
+        if requested not in VALID_MODES:
+            self.get_logger().error(f'Invalid mode requested: {message.data}')
+            return
+        if requested != self._mode:
+            self._mode = requested
+            self.get_logger().info(f'Drive mode changed to {self._mode}')
+        self._publish()
+
+    def _publish(self):
+        message = String()
+        message.data = self._mode
+        self._publisher.publish(message)
+
+
+def main():
+    rclpy.init()
+    node = ModeManager()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

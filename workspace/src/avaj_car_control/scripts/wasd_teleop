@@ -11,25 +11,25 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QLabel, QVBoxLayout, QWidget
 from rclpy.node import Node
 
-from avaj_car_control.msg import DriveCommand
+from rc_car_interfaces.msg import DriveRequest
 
 
 class DrivePublisher(Node):
     def __init__(self):
         super().__init__('wasd_teleop')
         self._publisher = self.create_publisher(
-            DriveCommand, '/drive_command', 10
+            DriveRequest, '/control/manual_cmd', 10
         )
 
-    def publish(self, steering, acceleration):
-        command = DriveCommand()
+    def publish(self, steering, speed):
+        command = DriveRequest()
         command.steering = steering
-        command.acceleration = acceleration
+        command.speed = speed
         self._publisher.publish(command)
 
     def neutral(self):
         for _ in range(3):
-            self.publish(50, 50)
+            self.publish(0, 0)
             time.sleep(0.02)
 
 
@@ -38,8 +38,8 @@ class WasdWindow(QWidget):
         super().__init__()
         self._drive_publisher = drive_publisher
         self._pressed = set()
-        self.steering = 50
-        self.acceleration = 50
+        self.steering = 0
+        self.speed = 0
 
         self.setWindowTitle('AVAJ WASD-Steuerung')
         self.setMinimumSize(460, 240)
@@ -57,7 +57,7 @@ class WasdWindow(QWidget):
             'Tasten gedrueckt halten\n'
             'W = vorwaerts    S = rueckwaerts\n'
             'A = links        D = rechts\n\n'
-            'Loslassen = sofort zurueck auf 50\n'
+            'Loslassen = sofort zurueck auf 0\n'
             'Fensterwechsel = Not-Stopp'
         )
         help_text.setAlignment(Qt.AlignCenter)
@@ -115,34 +115,34 @@ class WasdWindow(QWidget):
 
     def _update_command(self):
         if (Qt.Key_A in self._pressed) == (Qt.Key_D in self._pressed):
-            self.steering = 50
-        elif Qt.Key_A in self._pressed:
             self.steering = 0
+        elif Qt.Key_A in self._pressed:
+            self.steering = -100
         else:
             self.steering = 100
 
         if (Qt.Key_W in self._pressed) == (Qt.Key_S in self._pressed):
-            self.acceleration = 50
+            self.speed = 0
         elif Qt.Key_W in self._pressed:
-            self.acceleration = 100
+            self.speed = 100
         else:
-            self.acceleration = 0
+            self.speed = -100
         self._update_display()
 
     def _neutralize(self):
         self._pressed.clear()
-        self.steering = 50
-        self.acceleration = 50
+        self.steering = 0
+        self.speed = 0
         self._update_display()
         self._publish()
 
     def _publish(self):
-        self._drive_publisher.publish(self.steering, self.acceleration)
+        self._drive_publisher.publish(self.steering, self.speed)
 
     def _update_display(self):
         self._values.setText(
             f'Lenkung: {self.steering:3d}    '
-            f'Beschleunigung: {self.acceleration:3d}'
+            f'Geschwindigkeit: {self.speed:4d}'
         )
 
 

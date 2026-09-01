@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import (DeclareLaunchArgument, EmitEvent,
+from launch.actions import (DeclareLaunchArgument, EmitEvent, OpaqueFunction,
                             RegisterEventHandler)
 from launch.events import matches_action
 from lifecycle_msgs.msg import Transition
@@ -25,13 +25,22 @@ def generate_launch_description():
 
     robot_description = open(urdf, encoding='utf-8').read()
 
+    def validate_profiles(context):
+        simulation_enabled = simulation.perform(context).lower() == 'true'
+        real_value = LaunchConfiguration('real').perform(context)
+        real_enabled = real_value.lower() == 'true'
+        if simulation_enabled and real_enabled:
+            raise RuntimeError(
+                'simulation and real are mutually exclusive launch profiles'
+            )
+        return []
+
     slam_sim = LifecycleNode(
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         namespace='',
         parameters=[slam_params, {'use_sim_time': use_sim_time}],
-        remappings=[('/scan', '/sim/scan')],
         condition=IfCondition(simulation),
         output='screen')
 
@@ -57,6 +66,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'rviz', default_value='false',
             description='Start RViz2'),
+        OpaqueFunction(function=validate_profiles),
 
         Node(
             package='robot_state_publisher',
@@ -66,6 +76,32 @@ def generate_launch_description():
                 'robot_description': robot_description,
                 'use_sim_time': use_sim_time,
             }],
+            output='screen'),
+
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='sim_odom_frame_bridge',
+            arguments=[
+                '--x', '0.0', '--y', '0.0', '--z', '0.0',
+                '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+                '--frame-id', 'odom',
+                '--child-frame-id', 'avaj_car/odom',
+            ],
+            condition=IfCondition(simulation),
+            output='screen'),
+
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='sim_base_frame_bridge',
+            arguments=[
+                '--x', '0.0', '--y', '0.0', '--z', '0.0',
+                '--roll', '0.0', '--pitch', '0.0', '--yaw', '0.0',
+                '--frame-id', 'base_link',
+                '--child-frame-id', 'avaj_car/base_link',
+            ],
+            condition=IfCondition(simulation),
             output='screen'),
 
         Node(

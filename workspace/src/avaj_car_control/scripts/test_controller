@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+"""Publish a parameterized request on /control/test_cmd."""
+
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+
+from rc_car_interfaces.msg import DriveRequest
+
+
+class TestController(Node):
+    def __init__(self):
+        super().__init__('test_controller')
+        self.declare_parameter('speed', 0)
+        self.declare_parameter('steering', 0)
+        self.declare_parameter('rate', 20.0)
+        self._publisher = self.create_publisher(
+            DriveRequest, '/control/test_cmd', 10
+        )
+        rate = max(1.0, float(self.get_parameter('rate').value))
+        self.create_timer(1.0 / rate, self._publish)
+
+    def _publish(self):
+        message = DriveRequest()
+        message.speed = self._clamp(self.get_parameter('speed').value)
+        message.steering = self._clamp(
+            self.get_parameter('steering').value
+        )
+        self._publisher.publish(message)
+
+    @staticmethod
+    def _clamp(value):
+        return max(-100, min(100, int(value)))
+
+
+def main():
+    rclpy.init()
+    node = TestController()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

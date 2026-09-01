@@ -9,7 +9,7 @@ from geometry_msgs.msg import Twist
 from rclpy.executors import ExternalShutdownException
 from rclpy.node import Node
 
-from avaj_car_control.msg import DriveCommand
+from rc_car_interfaces.msg import DriveCommand
 
 
 class DriveCommandToTwist(Node):
@@ -22,20 +22,25 @@ class DriveCommandToTwist(Node):
 
         self._publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         self.create_subscription(
-            DriveCommand, '/drive_command', self._on_command, 10
+            DriveCommand, '/drive_commands', self._on_command, 10
         )
         self.create_timer(0.1, self._check_timeout)
         self._last_command = None
         self._timed_out = True
 
     def _on_command(self, command):
-        steering = max(0, min(100, int(command.steering)))
-        acceleration = max(0, min(100, int(command.acceleration)))
+        steering = max(-100, min(100, int(command.steering)))
+        throttle = max(-100, min(100, int(command.speed))) / 100.0
 
-        throttle = (acceleration - 50) / 50.0
+        if not command.enabled:
+            self._publisher.publish(Twist())
+            self._last_command = monotonic()
+            self._timed_out = False
+            return
+
         # Positive angular.z means left in ROS. Reverse motion reverses the
         # resulting yaw while the physical steering direction stays the same.
-        left = (50 - steering) / 50.0
+        left = -steering / 100.0
 
         if throttle >= 0.0:
             speed = throttle * float(

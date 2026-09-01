@@ -2,17 +2,22 @@
 <package format="3">
   <name>avaj_car_control</name>
   <version>0.1.0</version>
-  <description>WASD control and normalized drive commands for the AVAJ car.</description>
+  <description>WASD control and Gazebo conversion for RC car drive commands.</description>
   <maintainer email="avaj@example.com">avaj</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <build_depend>rosidl_default_generators</build_depend>
-  <exec_depend>rosidl_default_runtime</exec_depend>
   <exec_depend>rclpy</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
+  <depend>geometry_msgs</depend>
+  <depend>rc_car_interfaces</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>control_center</exec_depend>
 
-  <member_of_group>rosidl_interface_packages</member_of_group>
+  <test_depend>ament_cmake_pytest</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

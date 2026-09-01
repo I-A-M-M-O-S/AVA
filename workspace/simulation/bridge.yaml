@@ -10,25 +10,25 @@
   gz_type_name: gz.msgs.Odometry
   direction: GZ_TO_ROS
 
-- ros_topic_name: /sim/scan
+- ros_topic_name: /scan_raw
   gz_topic_name: lidar
   ros_type_name: sensor_msgs/msg/LaserScan
   gz_type_name: gz.msgs.LaserScan
   direction: GZ_TO_ROS
 
-- ros_topic_name: /sim/camera/image_raw
+- ros_topic_name: /camera/image_raw
   gz_topic_name: /sim/camera/image_raw
   ros_type_name: sensor_msgs/msg/Image
   gz_type_name: gz.msgs.Image
   direction: GZ_TO_ROS
 
-- ros_topic_name: /sim/camera/camera_info
+- ros_topic_name: /camera/camera_info
   gz_topic_name: /sim/camera/camera_info
   ros_type_name: sensor_msgs/msg/CameraInfo
   gz_type_name: gz.msgs.CameraInfo
   direction: GZ_TO_ROS
 
-- ros_topic_name: /sim/imu/data
+- ros_topic_name: /imu/data_raw
   gz_topic_name: /sim/imu/data
   ros_type_name: sensor_msgs/msg/Imu
   gz_type_name: gz.msgs.IMU
