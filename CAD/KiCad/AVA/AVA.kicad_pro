@@ -553,7 +553,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "FAB/PDF/",
+      "plot": "FAB/SVG/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
