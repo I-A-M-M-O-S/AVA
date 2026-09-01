@@ -1,0 +1,83 @@
+[0.023s] Invoking command in '/workspace/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/src/bno08x_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/install/bno08x_driver
+[0.285s] -- The C compiler identification is GNU 13.3.0
+[0.472s] -- The CXX compiler identification is GNU 13.3.0
+[0.514s] -- Detecting C compiler ABI info
+[0.704s] -- Detecting C compiler ABI info - done
+[0.730s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.731s] -- Detecting C compile features
+[0.732s] -- Detecting C compile features - done
+[0.751s] -- Detecting CXX compiler ABI info
+[0.937s] -- Detecting CXX compiler ABI info - done
+[0.974s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.975s] -- Detecting CXX compile features
+[0.976s] -- Detecting CXX compile features - done
+[0.991s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.282s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.433s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.517s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.613s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.639s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.673s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.708s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.845s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.851s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.006s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.044s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.087s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.221s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.324s] -- Found ament_cmake_gmock: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)
+[2.329s] -- Found ament_cmake_gtest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[2.336s] -- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built
+[2.343s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.524s] -- Configuring done (2.4s)
+[2.590s] -- Generating done (0.0s)
+[2.601s] -- Build files have been written to: /workspace/build/bno08x_driver
+[2.626s] Invoked command in '/workspace/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /workspace/src/bno08x_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/install/bno08x_driver
+[2.630s] Invoking command in '/workspace/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/bno08x_driver -- -j8 -l8
+[2.729s] [ 16%] Building CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[2.729s] [ 16%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2.c.o
+[2.729s] [ 22%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2_util.c.o
+[2.729s] [ 22%] Building C object include/sh2/CMakeFiles/sh2_library.dir/shtp.c.o
+[2.729s] [ 27%] Building CXX object gmock/CMakeFiles/gmock.dir/opt/ros/jazzy/src/gtest_vendor/src/gtest-all.cc.o
+[2.731s] [ 33%] Building CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[2.737s] [ 38%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2_SensorValue.c.o
+[2.907s] [ 44%] Linking C static library libsh2_library.a
+[2.973s] [ 44%] Built target sh2_library
+[3.010s] [ 55%] Building CXX object CMakeFiles/bno08x_driver.dir/src/bno08x.cpp.o
+[3.010s] [ 55%] Building CXX object CMakeFiles/bno08x_driver.dir/src/ros_node.cpp.o
+[3.011s] [ 61%] Building CXX object CMakeFiles/bno08x_driver.dir/src/bno08x_ros.cpp.o
+[5.095s] [ 66%] Linking CXX static library libgmock_main.a
+[5.159s] [ 66%] Built target gmock_main
+[10.224s] [ 72%] Linking CXX static library libgmock.a
+[10.357s] [ 72%] Built target gmock
+[10.393s] [ 77%] Building CXX object CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o
+[10.393s] [ 83%] Building CXX object CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o
+[12.982s] [ 88%] Linking CXX executable test_watchdog
+[13.218s] [ 88%] Built target test_watchdog
+[14.753s] [ 94%] Linking CXX executable bno08x_driver
+[14.765s] [100%] Linking CXX executable test_i2c_mock
+[15.068s] [100%] Built target test_i2c_mock
+[15.224s] [100%] Built target bno08x_driver
+[15.251s] Invoked command in '/workspace/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/bno08x_driver -- -j8 -l8
+[15.271s] Invoking command in '/workspace/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/bno08x_driver
+[15.286s] -- Install configuration: ""
+[15.286s] -- Execute custom install script
+[15.287s] -- Symlinking: /workspace/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[15.306s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[15.324s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[15.341s] -- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[15.359s] -- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[15.377s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[15.397s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[15.415s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[15.434s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[15.452s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[15.470s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[15.487s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[15.504s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[15.521s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/package.dsv
+[15.539s] -- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[15.555s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[15.574s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[15.591s] -- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/package.xml
+[15.614s] Invoked command in '/workspace/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/bno08x_driver

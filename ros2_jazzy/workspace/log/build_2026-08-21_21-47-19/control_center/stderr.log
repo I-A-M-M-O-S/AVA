@@ -1,0 +1,6 @@
+c++: warning: /workspace/src/controll center/c++: linker input file unused because linking not done
+/usr/bin/ld: cannot find CMakeFiles/control_center.dir/c++.o: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/control_center.dir/build.make:202: control_center] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,248 @@
+[0.000000] (-) TimerEvent: {}
+[0.000278] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.000728] (bno08x_driver) JobQueued: {'identifier': 'bno08x_driver', 'dependencies': OrderedDict()}
+[0.000947] (bno08x_driver) JobStarted: {'identifier': 'bno08x_driver'}
+[0.021028] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'cmake'}
+[0.021894] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '/workspace/src/bno08x_driver', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/workspace/install/bno08x_driver'], 'cwd': '/workspace/build/bno08x_driver', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/bno08x_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099399] (-) TimerEvent: {}
+[0.199836] (-) TimerEvent: {}
+[0.285579] (bno08x_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.300001] (-) TimerEvent: {}
+[0.400389] (-) TimerEvent: {}
+[0.472755] (bno08x_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.500556] (-) TimerEvent: {}
+[0.514820] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600741] (-) TimerEvent: {}
+[0.701139] (-) TimerEvent: {}
+[0.704875] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.731087] (bno08x_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.731655] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.732898] (bno08x_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.751864] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801327] (-) TimerEvent: {}
+[0.901687] (-) TimerEvent: {}
+[0.937106] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.974412] (bno08x_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.975420] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.977107] (bno08x_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.992336] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.001782] (-) TimerEvent: {}
+[1.102096] (-) TimerEvent: {}
+[1.202495] (-) TimerEvent: {}
+[1.282383] (bno08x_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.302645] (-) TimerEvent: {}
+[1.402984] (-) TimerEvent: {}
+[1.433784] (bno08x_driver) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.503179] (-) TimerEvent: {}
+[1.518040] (bno08x_driver) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.603467] (-) TimerEvent: {}
+[1.613988] (bno08x_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.639509] (bno08x_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.674124] (bno08x_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.703610] (-) TimerEvent: {}
+[1.708435] (bno08x_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.803783] (-) TimerEvent: {}
+[1.846107] (bno08x_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.851850] (bno08x_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.903935] (-) TimerEvent: {}
+[2.004299] (-) TimerEvent: {}
+[2.007066] (bno08x_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[2.044885] (bno08x_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[2.088263] (bno08x_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.104408] (-) TimerEvent: {}
+[2.204667] (-) TimerEvent: {}
+[2.221862] (bno08x_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.305069] (-) TimerEvent: {}
+[2.325033] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake_gmock: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)\n'}
+[2.329705] (bno08x_driver) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)\n'}
+[2.336442] (bno08x_driver) StdoutLine: {'line': b"-- Found gmock sources under '/opt/ros/jazzy/src/gmock_vendor': C++ tests using 'Google Mock' will be built\n"}
+[2.343645] (bno08x_driver) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[2.405206] (-) TimerEvent: {}
+[2.505582] (-) TimerEvent: {}
+[2.524621] (bno08x_driver) StdoutLine: {'line': b'-- Configuring done (2.4s)\n'}
+[2.590982] (bno08x_driver) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.602225] (bno08x_driver) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/bno08x_driver\n'}
+[2.605651] (-) TimerEvent: {}
+[2.626262] (bno08x_driver) CommandEnded: {'returncode': 0}
+[2.627982] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'build'}
+[2.630310] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/bno08x_driver', '--', '-j8', '-l8'], 'cwd': '/workspace/build/bno08x_driver', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/bno08x_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.705862] (-) TimerEvent: {}
+[2.729384] (bno08x_driver) StdoutLine: {'line': b'[ 16%] Building CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o\n'}
+[2.729812] (bno08x_driver) StdoutLine: {'line': b'[ 16%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2.c.o\n'}
+[2.729961] (bno08x_driver) StdoutLine: {'line': b'[ 22%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2_util.c.o\n'}
+[2.730273] (bno08x_driver) StdoutLine: {'line': b'[ 22%] Building C object include/sh2/CMakeFiles/sh2_library.dir/shtp.c.o\n'}
+[2.730425] (bno08x_driver) StdoutLine: {'line': b'[ 27%] Building CXX object gmock/CMakeFiles/gmock.dir/opt/ros/jazzy/src/gtest_vendor/src/gtest-all.cc.o\n'}
+[2.732231] (bno08x_driver) StdoutLine: {'line': b'[ 33%] Building CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o\n'}
+[2.737505] (bno08x_driver) StdoutLine: {'line': b'[ 38%] Building C object include/sh2/CMakeFiles/sh2_library.dir/sh2_SensorValue.c.o\n'}
+[2.806049] (-) TimerEvent: {}
+[2.906388] (-) TimerEvent: {}
+[2.908096] (bno08x_driver) StdoutLine: {'line': b'[ 44%] Linking C static library libsh2_library.a\n'}
+[2.973301] (bno08x_driver) StdoutLine: {'line': b'[ 44%] Built target sh2_library\n'}
+[3.006587] (-) TimerEvent: {}
+[3.010898] (bno08x_driver) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/bno08x_driver.dir/src/bno08x.cpp.o\n'}
+[3.011339] (bno08x_driver) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/bno08x_driver.dir/src/ros_node.cpp.o\n'}
+[3.011729] (bno08x_driver) StdoutLine: {'line': b'[ 61%] Building CXX object CMakeFiles/bno08x_driver.dir/src/bno08x_ros.cpp.o\n'}
+[3.106817] (-) TimerEvent: {}
+[3.208077] (-) TimerEvent: {}
+[3.308440] (-) TimerEvent: {}
+[3.408809] (-) TimerEvent: {}
+[3.509170] (-) TimerEvent: {}
+[3.609549] (-) TimerEvent: {}
+[3.710260] (-) TimerEvent: {}
+[3.810659] (-) TimerEvent: {}
+[3.911077] (-) TimerEvent: {}
+[4.011469] (-) TimerEvent: {}
+[4.111863] (-) TimerEvent: {}
+[4.212242] (-) TimerEvent: {}
+[4.312630] (-) TimerEvent: {}
+[4.413028] (-) TimerEvent: {}
+[4.513428] (-) TimerEvent: {}
+[4.613944] (-) TimerEvent: {}
+[4.714335] (-) TimerEvent: {}
+[4.814712] (-) TimerEvent: {}
+[4.915110] (-) TimerEvent: {}
+[5.015506] (-) TimerEvent: {}
+[5.095328] (bno08x_driver) StdoutLine: {'line': b'[ 66%] Linking CXX static library libgmock_main.a\n'}
+[5.115709] (-) TimerEvent: {}
+[5.159402] (bno08x_driver) StdoutLine: {'line': b'[ 66%] Built target gmock_main\n'}
+[5.215872] (-) TimerEvent: {}
+[5.316264] (-) TimerEvent: {}
+[5.416643] (-) TimerEvent: {}
+[5.517032] (-) TimerEvent: {}
+[5.617438] (-) TimerEvent: {}
+[5.717835] (-) TimerEvent: {}
+[5.818221] (-) TimerEvent: {}
+[5.918578] (-) TimerEvent: {}
+[6.018941] (-) TimerEvent: {}
+[6.119305] (-) TimerEvent: {}
+[6.219659] (-) TimerEvent: {}
+[6.320012] (-) TimerEvent: {}
+[6.420364] (-) TimerEvent: {}
+[6.520721] (-) TimerEvent: {}
+[6.621109] (-) TimerEvent: {}
+[6.721474] (-) TimerEvent: {}
+[6.821867] (-) TimerEvent: {}
+[6.922247] (-) TimerEvent: {}
+[7.022601] (-) TimerEvent: {}
+[7.122951] (-) TimerEvent: {}
+[7.223339] (-) TimerEvent: {}
+[7.323690] (-) TimerEvent: {}
+[7.424065] (-) TimerEvent: {}
+[7.524440] (-) TimerEvent: {}
+[7.624825] (-) TimerEvent: {}
+[7.725394] (-) TimerEvent: {}
+[7.825738] (-) TimerEvent: {}
+[7.926094] (-) TimerEvent: {}
+[8.026438] (-) TimerEvent: {}
+[8.126809] (-) TimerEvent: {}
+[8.227172] (-) TimerEvent: {}
+[8.327516] (-) TimerEvent: {}
+[8.427863] (-) TimerEvent: {}
+[8.528200] (-) TimerEvent: {}
+[8.628558] (-) TimerEvent: {}
+[8.728896] (-) TimerEvent: {}
+[8.829243] (-) TimerEvent: {}
+[8.929583] (-) TimerEvent: {}
+[9.029923] (-) TimerEvent: {}
+[9.130260] (-) TimerEvent: {}
+[9.230600] (-) TimerEvent: {}
+[9.330942] (-) TimerEvent: {}
+[9.431282] (-) TimerEvent: {}
+[9.531620] (-) TimerEvent: {}
+[9.631959] (-) TimerEvent: {}
+[9.732308] (-) TimerEvent: {}
+[9.832643] (-) TimerEvent: {}
+[9.933003] (-) TimerEvent: {}
+[10.033363] (-) TimerEvent: {}
+[10.133732] (-) TimerEvent: {}
+[10.224522] (bno08x_driver) StdoutLine: {'line': b'[ 72%] Linking CXX static library libgmock.a\n'}
+[10.233909] (-) TimerEvent: {}
+[10.334283] (-) TimerEvent: {}
+[10.358099] (bno08x_driver) StdoutLine: {'line': b'[ 72%] Built target gmock\n'}
+[10.393773] (bno08x_driver) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/test_i2c_mock.dir/test/i2c_interface_mock_test.cpp.o\n'}
+[10.394396] (bno08x_driver) StdoutLine: {'line': b'[ 83%] Building CXX object CMakeFiles/test_watchdog.dir/test/watchdog_test.cpp.o\n'}
+[10.434453] (-) TimerEvent: {}
+[10.534853] (-) TimerEvent: {}
+[10.635204] (-) TimerEvent: {}
+[10.735588] (-) TimerEvent: {}
+[10.835949] (-) TimerEvent: {}
+[10.936312] (-) TimerEvent: {}
+[11.036703] (-) TimerEvent: {}
+[11.137270] (-) TimerEvent: {}
+[11.237650] (-) TimerEvent: {}
+[11.338227] (-) TimerEvent: {}
+[11.438686] (-) TimerEvent: {}
+[11.539089] (-) TimerEvent: {}
+[11.639489] (-) TimerEvent: {}
+[11.739867] (-) TimerEvent: {}
+[11.840239] (-) TimerEvent: {}
+[11.940606] (-) TimerEvent: {}
+[12.041005] (-) TimerEvent: {}
+[12.141475] (-) TimerEvent: {}
+[12.241909] (-) TimerEvent: {}
+[12.342254] (-) TimerEvent: {}
+[12.442624] (-) TimerEvent: {}
+[12.543086] (-) TimerEvent: {}
+[12.643446] (-) TimerEvent: {}
+[12.743778] (-) TimerEvent: {}
+[12.844138] (-) TimerEvent: {}
+[12.944468] (-) TimerEvent: {}
+[12.983163] (bno08x_driver) StdoutLine: {'line': b'[ 88%] Linking CXX executable test_watchdog\n'}
+[13.044662] (-) TimerEvent: {}
+[13.145087] (-) TimerEvent: {}
+[13.219285] (bno08x_driver) StdoutLine: {'line': b'[ 88%] Built target test_watchdog\n'}
+[13.245260] (-) TimerEvent: {}
+[13.345600] (-) TimerEvent: {}
+[13.445940] (-) TimerEvent: {}
+[13.546279] (-) TimerEvent: {}
+[13.646627] (-) TimerEvent: {}
+[13.747037] (-) TimerEvent: {}
+[13.847429] (-) TimerEvent: {}
+[13.947793] (-) TimerEvent: {}
+[14.048161] (-) TimerEvent: {}
+[14.148518] (-) TimerEvent: {}
+[14.248863] (-) TimerEvent: {}
+[14.349338] (-) TimerEvent: {}
+[14.449862] (-) TimerEvent: {}
+[14.550303] (-) TimerEvent: {}
+[14.651003] (-) TimerEvent: {}
+[14.751729] (-) TimerEvent: {}
+[14.753894] (bno08x_driver) StdoutLine: {'line': b'[ 94%] Linking CXX executable bno08x_driver\n'}
+[14.766073] (bno08x_driver) StdoutLine: {'line': b'[100%] Linking CXX executable test_i2c_mock\n'}
+[14.851910] (-) TimerEvent: {}
+[14.952310] (-) TimerEvent: {}
+[15.052698] (-) TimerEvent: {}
+[15.068870] (bno08x_driver) StdoutLine: {'line': b'[100%] Built target test_i2c_mock\n'}
+[15.152859] (-) TimerEvent: {}
+[15.224535] (bno08x_driver) StdoutLine: {'line': b'[100%] Built target bno08x_driver\n'}
+[15.251363] (bno08x_driver) CommandEnded: {'returncode': 0}
+[15.252984] (bno08x_driver) JobProgress: {'identifier': 'bno08x_driver', 'progress': 'install'}
+[15.253217] (-) TimerEvent: {}
+[15.271592] (bno08x_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/workspace/build/bno08x_driver'], 'cwd': '/workspace/build/bno08x_driver', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/bno08x_driver', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[15.286560] (bno08x_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.287270] (bno08x_driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.287904] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/lib/bno08x_driver/bno08x_driver\n'}
+[15.306308] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml\n'}
+[15.325072] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py\n'}
+[15.341426] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver\n'}
+[15.353376] (-) TimerEvent: {}
+[15.359940] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver\n'}
+[15.377556] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh\n'}
+[15.397436] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv\n'}
+[15.415903] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.sh\n'}
+[15.434433] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/environment/path.dsv\n'}
+[15.453092] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.bash\n'}
+[15.453535] (-) TimerEvent: {}
+[15.470651] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.sh\n'}
+[15.487830] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.zsh\n'}
+[15.505227] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/local_setup.dsv\n'}
+[15.522114] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/package.dsv\n'}
+[15.540100] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver\n'}
+[15.553657] (-) TimerEvent: {}
+[15.555657] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake\n'}
+[15.574415] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake\n'}
+[15.591523] (bno08x_driver) StdoutLine: {'line': b'-- Symlinking: /workspace/install/bno08x_driver/share/bno08x_driver/package.xml\n'}
+[15.614075] (bno08x_driver) CommandEnded: {'returncode': 0}
+[15.653831] (-) TimerEvent: {}
+[15.673844] (bno08x_driver) JobEnded: {'identifier': 'bno08x_driver', 'rc': 0}
+[15.675616] (-) EventReactorShutdown: {}

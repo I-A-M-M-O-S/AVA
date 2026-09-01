@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-85c6ba53ad5d8cad9dfc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "avaj_car_control__py",
+					"jsonFile" : "directory-avaj_car_control__py-45c6c567dc896b70b98a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspace/build/avaj_car_control/avaj_car_control__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "avaj_car_control__rs",
+					"jsonFile" : "directory-avaj_car_control__rs-cf90f281bb8a08041e31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/workspace/build/avaj_car_control/avaj_car_control__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "avaj_car_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_avaj_car_control_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_avaj_car_control_egg-40235ee86929d217acb5.json",
+					"name" : "ament_cmake_python_build_avaj_car_control_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_avaj_car_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_avaj_car_control-1154d851cbcc85b2c95b.json",
+					"name" : "ament_cmake_python_symlink_avaj_car_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control-9a4f489a7b1e779fb0cc.json",
+					"name" : "avaj_car_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__cpp-86e57ee0e6d69702eba2.json",
+					"name" : "avaj_car_control__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "avaj_car_control__py::@492f31e1d47672fd947f",
+					"jsonFile" : "target-avaj_car_control__py-ab66d110f97d83addf0a.json",
+					"name" : "avaj_car_control__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_generator_c-515117ab94a95ab20fb9.json",
+					"name" : "avaj_car_control__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_generator_py-b6c3ad46bcf47c50211d.json",
+					"name" : "avaj_car_control__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_generator_type_description-e82fcbd9ef101ad0feee.json",
+					"name" : "avaj_car_control__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_c-5842cee14a90b0d45be0.json",
+					"name" : "avaj_car_control__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_cpp-0722ebe870d879c60ef6.json",
+					"name" : "avaj_car_control__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_fastrtps_c-d3374762b04a0622c691.json",
+					"name" : "avaj_car_control__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_fastrtps_cpp-38b62a9edccd01d789d2.json",
+					"name" : "avaj_car_control__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_introspection_c-7b797432d9049bbc25d7.json",
+					"name" : "avaj_car_control__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control__rosidl_typesupport_introspection_cpp-5d3db0a9c8891d2e8723.json",
+					"name" : "avaj_car_control__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "avaj_car_control__rs::@dba8ba2cfd9084c5121c",
+					"jsonFile" : "target-avaj_car_control__rs-585db2167a3cb9c17dde.json",
+					"name" : "avaj_car_control__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control_s__rosidl_typesupport_c-9e0517b5e379ce8a5112.json",
+					"name" : "avaj_car_control_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control_s__rosidl_typesupport_fastrtps_c-8b4888613b155c6fde64.json",
+					"name" : "avaj_car_control_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control_s__rosidl_typesupport_introspection_c-cea40ddc8ba9db5f59a8.json",
+					"name" : "avaj_car_control_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "avaj_car_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-avaj_car_control_uninstall-374812bdbcc018efe47a.json",
+					"name" : "avaj_car_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-333b6d57024ec184eba9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/build/avaj_car_control",
+		"source" : "/workspace/src/avaj_car_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

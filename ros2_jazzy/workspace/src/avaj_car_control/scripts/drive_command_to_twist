@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+
+"""Convert normalized AVAJ drive commands to Gazebo's Twist commands."""
+
+from time import monotonic
+
+import rclpy
+from geometry_msgs.msg import Twist
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+
+from avaj_car_control.msg import DriveCommand
+
+
+class DriveCommandToTwist(Node):
+    def __init__(self):
+        super().__init__('drive_command_to_twist')
+        self.declare_parameter('max_forward_speed', 1.5)
+        self.declare_parameter('max_reverse_speed', 1.0)
+        self.declare_parameter('max_yaw_rate', 1.2)
+        self.declare_parameter('command_timeout', 0.5)
+
+        self._publisher = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.create_subscription(
+            DriveCommand, '/drive_command', self._on_command, 10
+        )
+        self.create_timer(0.1, self._check_timeout)
+        self._last_command = None
+        self._timed_out = True
+
+    def _on_command(self, command):
+        steering = max(0, min(100, int(command.steering)))
+        acceleration = max(0, min(100, int(command.acceleration)))
+
+        throttle = (acceleration - 50) / 50.0
+        # Positive angular.z means left in ROS. Reverse motion reverses the
+        # resulting yaw while the physical steering direction stays the same.
+        left = (50 - steering) / 50.0
+
+        if throttle >= 0.0:
+            speed = throttle * float(
+                self.get_parameter('max_forward_speed').value
+            )
+        else:
+            speed = throttle * float(
+                self.get_parameter('max_reverse_speed').value
+            )
+
+        twist = Twist()
+        twist.linear.x = speed
+        twist.angular.z = (
+            left
+            * abs(throttle)
+            * float(self.get_parameter('max_yaw_rate').value)
+            * (1.0 if speed >= 0.0 else -1.0)
+        )
+        self._publisher.publish(twist)
+        self._last_command = monotonic()
+        self._timed_out = False
+
+    def _check_timeout(self):
+        if self._last_command is None or self._timed_out:
+            return
+        timeout = float(self.get_parameter('command_timeout').value)
+        if monotonic() - self._last_command > timeout:
+            self._publisher.publish(Twist())
+            self._timed_out = True
+            self.get_logger().warn('Drive command timed out; vehicle stopped')
+
+
+def main():
+    rclpy.init()
+    node = DriveCommandToTwist()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        if rclpy.ok():
+            node._publisher.publish(Twist())
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

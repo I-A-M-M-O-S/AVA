@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "avaj_car_control__rs",
+		"source" : "/workspace/build/avaj_car_control/avaj_car_control__rs"
+	}
+}

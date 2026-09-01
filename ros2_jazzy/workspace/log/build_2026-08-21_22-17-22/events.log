@@ -1,0 +1,252 @@
+[0.000000] (-) TimerEvent: {}
+[0.000176] (-) JobUnselected: {'identifier': 'avaj_car_control'}
+[0.000250] (-) JobUnselected: {'identifier': 'bno08x_driver'}
+[0.000290] (-) JobUnselected: {'identifier': 'ldlidar_stl_ros2'}
+[0.000327] (control_center) JobQueued: {'identifier': 'control_center', 'dependencies': OrderedDict({'avaj_car_control': '/workspace/install/avaj_car_control'})}
+[0.002503] (control_center) JobStarted: {'identifier': 'control_center'}
+[0.028687] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'cmake'}
+[0.030285] (control_center) JobProgress: {'identifier': 'control_center', 'progress': 'build'}
+[0.031380] (control_center) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/control_center', '--', '-j8', '-l8'], 'cwd': '/workspace/build/control_center', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/workspace/install/avaj_car_control/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/workspace/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/workspace/install/avaj_car_control:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/control_center', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/workspace/install/avaj_car_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.097144] (control_center) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099415] (-) TimerEvent: {}
+[0.199771] (-) TimerEvent: {}
+[0.300127] (-) TimerEvent: {}
+[0.400707] (-) TimerEvent: {}
+[0.501067] (-) TimerEvent: {}
+[0.557084] (control_center) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.571557] (control_center) StdoutLine: {'line': b'-- Found avaj_car_control: 0.1.0 (/workspace/install/avaj_car_control/share/avaj_car_control/cmake)\n'}
+[0.601235] (-) TimerEvent: {}
+[0.625855] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.644380] (control_center) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.665929] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.690419] (control_center) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.701391] (-) TimerEvent: {}
+[0.713899] (control_center) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.801559] (-) TimerEvent: {}
+[0.833910] (control_center) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.893562] (control_center) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.896736] (control_center) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.901705] (-) TimerEvent: {}
+[1.003223] (-) TimerEvent: {}
+[1.024398] (control_center) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.103394] (-) TimerEvent: {}
+[1.133527] (control_center) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.203543] (-) TimerEvent: {}
+[1.303862] (-) TimerEvent: {}
+[1.378313] (control_center) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.404042] (-) TimerEvent: {}
+[1.420452] (control_center) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.427420] (control_center) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/control_center\n'}
+[1.504213] (-) TimerEvent: {}
+[1.546292] (control_center) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/control_center.dir/control_center.cpp.o\n'}
+[1.604380] (-) TimerEvent: {}
+[1.704741] (-) TimerEvent: {}
+[1.805121] (-) TimerEvent: {}
+[1.905496] (-) TimerEvent: {}
+[2.005864] (-) TimerEvent: {}
+[2.106221] (-) TimerEvent: {}
+[2.206594] (-) TimerEvent: {}
+[2.308308] (-) TimerEvent: {}
+[2.408680] (-) TimerEvent: {}
+[2.509066] (-) TimerEvent: {}
+[2.609421] (-) TimerEvent: {}
+[2.709791] (-) TimerEvent: {}
+[2.810172] (-) TimerEvent: {}
+[2.910533] (-) TimerEvent: {}
+[3.010899] (-) TimerEvent: {}
+[3.111270] (-) TimerEvent: {}
+[3.211659] (-) TimerEvent: {}
+[3.312188] (-) TimerEvent: {}
+[3.412563] (-) TimerEvent: {}
+[3.512977] (-) TimerEvent: {}
+[3.614432] (-) TimerEvent: {}
+[3.714801] (-) TimerEvent: {}
+[3.815176] (-) TimerEvent: {}
+[3.915557] (-) TimerEvent: {}
+[4.018259] (-) TimerEvent: {}
+[4.118649] (-) TimerEvent: {}
+[4.219083] (-) TimerEvent: {}
+[4.319464] (-) TimerEvent: {}
+[4.419852] (-) TimerEvent: {}
+[4.520232] (-) TimerEvent: {}
+[4.620599] (-) TimerEvent: {}
+[4.720983] (-) TimerEvent: {}
+[4.821351] (-) TimerEvent: {}
+[4.921710] (-) TimerEvent: {}
+[5.022093] (-) TimerEvent: {}
+[5.122462] (-) TimerEvent: {}
+[5.222986] (-) TimerEvent: {}
+[5.323373] (-) TimerEvent: {}
+[5.423830] (-) TimerEvent: {}
+[5.524201] (-) TimerEvent: {}
+[5.624560] (-) TimerEvent: {}
+[5.727623] (-) TimerEvent: {}
+[5.828640] (-) TimerEvent: {}
+[5.929033] (-) TimerEvent: {}
+[6.029438] (-) TimerEvent: {}
+[6.130557] (-) TimerEvent: {}
+[6.230933] (-) TimerEvent: {}
+[6.332228] (-) TimerEvent: {}
+[6.432681] (-) TimerEvent: {}
+[6.533731] (-) TimerEvent: {}
+[6.634090] (-) TimerEvent: {}
+[6.734446] (-) TimerEvent: {}
+[6.841198] (-) TimerEvent: {}
+[6.941568] (-) TimerEvent: {}
+[7.041938] (-) TimerEvent: {}
+[7.129329] (control_center) StderrLine: {'line': b'/workspace/build/control_center/control_center.cpp:310:16: error: expected initializer before \xe2\x80\x98drive\xe2\x80\x99\n'}
+[7.129847] (control_center) StderrLine: {'line': b'  310 | void autonomus drive(){\n'}
+[7.130004] (control_center) StderrLine: {'line': b'      |                ^~~~~\n'}
+[7.142100] (-) TimerEvent: {}
+[7.242500] (-) TimerEvent: {}
+[7.342914] (-) TimerEvent: {}
+[7.443290] (-) TimerEvent: {}
+[7.543731] (-) TimerEvent: {}
+[7.644093] (-) TimerEvent: {}
+[7.744473] (-) TimerEvent: {}
+[7.845088] (-) TimerEvent: {}
+[7.945469] (-) TimerEvent: {}
+[8.045838] (-) TimerEvent: {}
+[8.146335] (-) TimerEvent: {}
+[8.246710] (-) TimerEvent: {}
+[8.349087] (-) TimerEvent: {}
+[8.449571] (-) TimerEvent: {}
+[8.549962] (-) TimerEvent: {}
+[8.651943] (-) TimerEvent: {}
+[8.752313] (-) TimerEvent: {}
+[8.852866] (-) TimerEvent: {}
+[8.953256] (-) TimerEvent: {}
+[9.053644] (-) TimerEvent: {}
+[9.154057] (-) TimerEvent: {}
+[9.254472] (-) TimerEvent: {}
+[9.354849] (-) TimerEvent: {}
+[9.455207] (-) TimerEvent: {}
+[9.555574] (-) TimerEvent: {}
+[9.660539] (-) TimerEvent: {}
+[9.760962] (-) TimerEvent: {}
+[9.861335] (-) TimerEvent: {}
+[9.961708] (-) TimerEvent: {}
+[10.062079] (-) TimerEvent: {}
+[10.162443] (-) TimerEvent: {}
+[10.263381] (-) TimerEvent: {}
+[10.363755] (-) TimerEvent: {}
+[10.464156] (-) TimerEvent: {}
+[10.564533] (-) TimerEvent: {}
+[10.664940] (-) TimerEvent: {}
+[10.765305] (-) TimerEvent: {}
+[10.865679] (-) TimerEvent: {}
+[10.966188] (-) TimerEvent: {}
+[11.066562] (-) TimerEvent: {}
+[11.166953] (-) TimerEvent: {}
+[11.267350] (-) TimerEvent: {}
+[11.367863] (-) TimerEvent: {}
+[11.468314] (-) TimerEvent: {}
+[11.568703] (-) TimerEvent: {}
+[11.669072] (-) TimerEvent: {}
+[11.769438] (-) TimerEvent: {}
+[11.869822] (-) TimerEvent: {}
+[11.970231] (-) TimerEvent: {}
+[12.070606] (-) TimerEvent: {}
+[12.170992] (-) TimerEvent: {}
+[12.271762] (-) TimerEvent: {}
+[12.372148] (-) TimerEvent: {}
+[12.472580] (-) TimerEvent: {}
+[12.572986] (-) TimerEvent: {}
+[12.673388] (-) TimerEvent: {}
+[12.773789] (-) TimerEvent: {}
+[12.874165] (-) TimerEvent: {}
+[12.974560] (-) TimerEvent: {}
+[13.074989] (-) TimerEvent: {}
+[13.175431] (-) TimerEvent: {}
+[13.275814] (-) TimerEvent: {}
+[13.376229] (-) TimerEvent: {}
+[13.476606] (-) TimerEvent: {}
+[13.577062] (-) TimerEvent: {}
+[13.681113] (-) TimerEvent: {}
+[13.781656] (-) TimerEvent: {}
+[13.882114] (-) TimerEvent: {}
+[13.982551] (-) TimerEvent: {}
+[14.082982] (-) TimerEvent: {}
+[14.183376] (-) TimerEvent: {}
+[14.283772] (-) TimerEvent: {}
+[14.384170] (-) TimerEvent: {}
+[14.484557] (-) TimerEvent: {}
+[14.584953] (-) TimerEvent: {}
+[14.685332] (-) TimerEvent: {}
+[14.785765] (-) TimerEvent: {}
+[14.886228] (-) TimerEvent: {}
+[14.986600] (-) TimerEvent: {}
+[15.086967] (-) TimerEvent: {}
+[15.187339] (-) TimerEvent: {}
+[15.287727] (-) TimerEvent: {}
+[15.388117] (-) TimerEvent: {}
+[15.488481] (-) TimerEvent: {}
+[15.588873] (-) TimerEvent: {}
+[15.689495] (-) TimerEvent: {}
+[15.789872] (-) TimerEvent: {}
+[15.890250] (-) TimerEvent: {}
+[15.990950] (-) TimerEvent: {}
+[16.091404] (-) TimerEvent: {}
+[16.192025] (-) TimerEvent: {}
+[16.292425] (-) TimerEvent: {}
+[16.392896] (-) TimerEvent: {}
+[16.493354] (-) TimerEvent: {}
+[16.593731] (-) TimerEvent: {}
+[16.694124] (-) TimerEvent: {}
+[16.794569] (-) TimerEvent: {}
+[16.894935] (-) TimerEvent: {}
+[16.995360] (-) TimerEvent: {}
+[17.095821] (-) TimerEvent: {}
+[17.196213] (-) TimerEvent: {}
+[17.296577] (-) TimerEvent: {}
+[17.396994] (-) TimerEvent: {}
+[17.497378] (-) TimerEvent: {}
+[17.597762] (-) TimerEvent: {}
+[17.698132] (-) TimerEvent: {}
+[17.798789] (-) TimerEvent: {}
+[17.899168] (-) TimerEvent: {}
+[17.999540] (-) TimerEvent: {}
+[18.099906] (-) TimerEvent: {}
+[18.200281] (-) TimerEvent: {}
+[18.300687] (-) TimerEvent: {}
+[18.401130] (-) TimerEvent: {}
+[18.501515] (-) TimerEvent: {}
+[18.603476] (-) TimerEvent: {}
+[18.703876] (-) TimerEvent: {}
+[18.804245] (-) TimerEvent: {}
+[18.904620] (-) TimerEvent: {}
+[19.005011] (-) TimerEvent: {}
+[19.105463] (-) TimerEvent: {}
+[19.205836] (-) TimerEvent: {}
+[19.306207] (-) TimerEvent: {}
+[19.406575] (-) TimerEvent: {}
+[19.506951] (-) TimerEvent: {}
+[19.607336] (-) TimerEvent: {}
+[19.707814] (-) TimerEvent: {}
+[19.808191] (-) TimerEvent: {}
+[19.908789] (-) TimerEvent: {}
+[20.009266] (-) TimerEvent: {}
+[20.109655] (-) TimerEvent: {}
+[20.210053] (-) TimerEvent: {}
+[20.310455] (-) TimerEvent: {}
+[20.410845] (-) TimerEvent: {}
+[20.511234] (-) TimerEvent: {}
+[20.611650] (-) TimerEvent: {}
+[20.712040] (-) TimerEvent: {}
+[20.812405] (-) TimerEvent: {}
+[20.912786] (-) TimerEvent: {}
+[21.013198] (-) TimerEvent: {}
+[21.113573] (-) TimerEvent: {}
+[21.213957] (-) TimerEvent: {}
+[21.314324] (-) TimerEvent: {}
+[21.414727] (-) TimerEvent: {}
+[21.515136] (-) TimerEvent: {}
+[21.615517] (-) TimerEvent: {}
+[21.715889] (-) TimerEvent: {}
+[21.816262] (-) TimerEvent: {}
+[21.823385] (control_center) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/control_center.dir/build.make:76: CMakeFiles/control_center.dir/control_center.cpp.o] Error 1\n'}
+[21.823959] (control_center) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/control_center.dir/all] Error 2\n'}
+[21.824266] (control_center) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[21.827811] (control_center) CommandEnded: {'returncode': 2}
+[21.856374] (control_center) JobEnded: {'identifier': 'control_center', 'rc': 2}
+[21.868773] (-) EventReactorShutdown: {}

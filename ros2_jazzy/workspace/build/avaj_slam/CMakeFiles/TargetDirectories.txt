@@ -1,0 +1,9 @@
+/workspace/build/avaj_slam/CMakeFiles/uninstall.dir
+/workspace/build/avaj_slam/CMakeFiles/avaj_slam_uninstall.dir
+/workspace/build/avaj_slam/CMakeFiles/test.dir
+/workspace/build/avaj_slam/CMakeFiles/edit_cache.dir
+/workspace/build/avaj_slam/CMakeFiles/rebuild_cache.dir
+/workspace/build/avaj_slam/CMakeFiles/list_install_components.dir
+/workspace/build/avaj_slam/CMakeFiles/install.dir
+/workspace/build/avaj_slam/CMakeFiles/install/local.dir
+/workspace/build/avaj_slam/CMakeFiles/install/strip.dir

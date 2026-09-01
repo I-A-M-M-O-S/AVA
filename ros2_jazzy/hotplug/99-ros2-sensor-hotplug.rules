@@ -1,0 +1,7 @@
+# Arducam UC-852: react only to the capture node, not its metadata node.
+ACTION=="add", SUBSYSTEM=="video4linux", ENV{ID_VENDOR_ID}=="0c45", ENV{ID_MODEL_ID}=="6366", ENV{ID_SERIAL_SHORT}=="UC852", ENV{ID_V4L_CAPABILITIES}==":capture:", RUN+="/usr/bin/systemctl --no-block restart ros2-sensor-hotplug@camera-add.service"
+ACTION=="remove", SUBSYSTEM=="video4linux", ENV{ID_VENDOR_ID}=="0c45", ENV{ID_MODEL_ID}=="6366", ENV{ID_SERIAL_SHORT}=="UC852", ENV{ID_V4L_CAPABILITIES}==":capture:", RUN+="/usr/bin/systemctl --no-block restart ros2-sensor-hotplug@camera-remove.service"
+
+# STL27L USB-UART bridge, uniquely identified by VID/PID and serial number.
+ACTION=="add", SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="10c4", ENV{ID_MODEL_ID}=="ea60", ENV{ID_SERIAL_SHORT}=="0001", RUN+="/usr/bin/systemctl --no-block restart ros2-sensor-hotplug@lidar-add.service"
+ACTION=="remove", SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="10c4", ENV{ID_MODEL_ID}=="ea60", ENV{ID_SERIAL_SHORT}=="0001", RUN+="/usr/bin/systemctl --no-block restart ros2-sensor-hotplug@lidar-remove.service"

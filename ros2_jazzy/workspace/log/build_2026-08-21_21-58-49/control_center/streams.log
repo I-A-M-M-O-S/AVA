@@ -1,0 +1,41 @@
+[0.031s] Invoking command in '/workspace/build/control_center': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/control_center -- -j8 -l8
+[0.100s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.555s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.571s] -- Found avaj_car_control: 0.1.0 (/workspace/install/avaj_car_control/share/avaj_car_control/cmake)
+[0.636s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.654s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.683s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.712s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.748s] -- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.892s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.951s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.953s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.074s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.181s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.422s] -- Configuring done (1.3s)
+[1.455s] -- Generating done (0.0s)
+[1.463s] -- Build files have been written to: /workspace/build/control_center
+[1.572s] [ 50%] Building CXX object CMakeFiles/control_center.dir/control_center.cpp.o
+[42.487s] [100%] Linking CXX executable control_center
+[44.403s] [100%] Built target control_center
+[44.431s] Invoked command in '/workspace/build/control_center' returned '0': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /workspace/build/control_center -- -j8 -l8
+[44.455s] Invoking command in '/workspace/build/control_center': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/control_center
+[44.472s] -- Install configuration: ""
+[44.473s] -- Execute custom install script
+[44.474s] -- Up-to-date symlink: /workspace/install/control_center/lib/control_center/control_center
+[44.474s] -- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/package_run_dependencies/control_center
+[44.475s] -- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/parent_prefix_path/control_center
+[44.475s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.sh
+[44.475s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/ament_prefix_path.dsv
+[44.475s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.sh
+[44.475s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/environment/path.dsv
+[44.476s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.bash
+[44.476s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.sh
+[44.476s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.zsh
+[44.476s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/local_setup.dsv
+[44.477s] -- Symlinking: /workspace/install/control_center/share/control_center/package.dsv
+[44.499s] -- Up-to-date symlink: /workspace/install/control_center/share/ament_index/resource_index/packages/control_center
+[44.499s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig.cmake
+[44.499s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/cmake/control_centerConfig-version.cmake
+[44.500s] -- Up-to-date symlink: /workspace/install/control_center/share/control_center/package.xml
+[44.503s] Invoked command in '/workspace/build/control_center' returned '0': CMAKE_PREFIX_PATH=/workspace/install/avaj_car_control:/workspace/install/ldlidar_stl_ros2:/workspace/install/control_center:/workspace/install/bno08x_driver:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /workspace/build/control_center

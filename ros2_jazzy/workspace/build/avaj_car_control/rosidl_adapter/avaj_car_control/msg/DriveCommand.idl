@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from avaj_car_control/msg/DriveCommand.msg
+// generated code does not contain a copyright notice
+
+
+module avaj_car_control {
+  module msg {
+    @verbatim (language="comment", text=
+      "Normalized driver input. Every value is limited to the inclusive range 0..100." "\n"
+      "steering:    0 = fully left, 50 = straight, 100 = fully right" "\n"
+      "acceleration: 0 = full reverse, 50 = neutral, 100 = full forward")
+    struct DriveCommand {
+      uint8 steering;
+
+      uint8 acceleration;
+    };
+  };
+};

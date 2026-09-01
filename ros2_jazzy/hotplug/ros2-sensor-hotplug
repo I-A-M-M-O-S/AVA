@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_dir="/home/avaj/ros2_jazzy"
+camera_device="/dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9782_USB_Camera_UC852-video-index0"
+camera_metadata="/dev/v4l/by-id/usb-Arducam_Technology_Co.__Ltd._Arducam_OV9782_USB_Camera_UC852-video-index1"
+lidar_device="/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0"
+
+wait_for_device() {
+    local device="$1"
+    local attempt
+
+    for attempt in {1..40}; do
+        [[ -e "$device" ]] && return 0
+        sleep 0.25
+    done
+
+    logger -t ros2-sensor-hotplug "Gerät nicht rechtzeitig verfügbar: $device"
+    return 1
+}
+
+stop_service() {
+    local service="$1"
+    local container="$2"
+
+    # ROS 2 launch processes handle SIGINT and can close their devices cleanly.
+    /usr/bin/docker kill --signal=SIGINT "$container" >/dev/null 2>&1 || true
+    /usr/bin/docker compose --project-directory "$project_dir" stop -t 10 "$service" || true
+}
+
+case "${1:-}" in
+    camera-add)
+        wait_for_device "$camera_device"
+        wait_for_device "$camera_metadata"
+        logger -t ros2-sensor-hotplug "Arducam UC-852 erkannt; starte ROS-Kameradienst"
+        exec /usr/bin/docker compose --project-directory "$project_dir" up -d camera
+        ;;
+    camera-remove)
+        logger -t ros2-sensor-hotplug "Arducam UC-852 entfernt; stoppe ROS-Kameradienst"
+        stop_service camera ros2-jazzy-camera
+        ;;
+    lidar-add)
+        wait_for_device "$lidar_device"
+        logger -t ros2-sensor-hotplug "STL27L erkannt; starte ROS-LiDAR-Dienst"
+        exec /usr/bin/docker compose --project-directory "$project_dir" up -d lidar
+        ;;
+    lidar-remove)
+        logger -t ros2-sensor-hotplug "STL27L entfernt; stoppe ROS-LiDAR-Dienst"
+        stop_service lidar ros2-jazzy-stl27l
+        ;;
+    *)
+        echo "Unbekanntes Ereignis: ${1:-<leer>}" >&2
+        exit 2
+        ;;
+esac

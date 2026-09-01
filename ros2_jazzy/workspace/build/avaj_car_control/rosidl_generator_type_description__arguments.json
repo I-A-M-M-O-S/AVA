@@ -1,0 +1,7 @@
+{
+  "package_name": "avaj_car_control",
+  "output_dir": "/workspace/build/avaj_car_control/rosidl_generator_type_description/avaj_car_control",
+  "idl_tuples": [
+    "/workspace/build/avaj_car_control/rosidl_adapter/avaj_car_control:msg/DriveCommand.idl"
+  ]
+}

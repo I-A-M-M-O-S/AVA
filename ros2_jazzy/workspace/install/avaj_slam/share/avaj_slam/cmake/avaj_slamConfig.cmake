@@ -1,0 +1,1 @@
+/workspace/build/avaj_slam/ament_cmake_core/avaj_slamConfig.cmake

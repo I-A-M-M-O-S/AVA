@@ -1,0 +1,206 @@
+[0.000000] (-) TimerEvent: {}
+[0.000115] (ldlidar_stl_ros2) JobQueued: {'identifier': 'ldlidar_stl_ros2', 'dependencies': OrderedDict()}
+[0.000812] (ldlidar_stl_ros2) JobStarted: {'identifier': 'ldlidar_stl_ros2'}
+[0.021434] (ldlidar_stl_ros2) JobProgress: {'identifier': 'ldlidar_stl_ros2', 'progress': 'cmake'}
+[0.022222] (ldlidar_stl_ros2) Command: {'cmd': ['/usr/bin/cmake', '/workspace/src/ldlidar_stl_ros2', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/workspace/install/ldlidar_stl_ros2'], 'cwd': '/workspace/build/ldlidar_stl_ros2', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ldlidar_stl_ros2', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099638] (-) TimerEvent: {}
+[0.200000] (-) TimerEvent: {}
+[0.286928] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.300104] (-) TimerEvent: {}
+[0.400442] (-) TimerEvent: {}
+[0.488761] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.500584] (-) TimerEvent: {}
+[0.534831] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600754] (-) TimerEvent: {}
+[0.701111] (-) TimerEvent: {}
+[0.731052] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.758139] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.759304] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.760912] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.782168] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801285] (-) TimerEvent: {}
+[0.901645] (-) TimerEvent: {}
+[0.974027] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.991137] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.991678] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.992495] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.001499] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.001841] (-) TimerEvent: {}
+[1.102038] (-) TimerEvent: {}
+[1.202421] (-) TimerEvent: {}
+[1.286147] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.302569] (-) TimerEvent: {}
+[1.402883] (-) TimerEvent: {}
+[1.437298] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.503050] (-) TimerEvent: {}
+[1.515440] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.596230] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.603176] (-) TimerEvent: {}
+[1.620850] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.651852] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.685490] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.703317] (-) TimerEvent: {}
+[1.803612] (-) TimerEvent: {}
+[1.820159] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.825675] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.903775] (-) TimerEvent: {}
+[1.985125] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[2.003940] (-) TimerEvent: {}
+[2.025861] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[2.070845] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.104068] (-) TimerEvent: {}
+[2.204330] (-) TimerEvent: {}
+[2.205960] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[2.302405] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.304439] (-) TimerEvent: {}
+[2.404716] (-) TimerEvent: {}
+[2.505142] (-) TimerEvent: {}
+[2.530159] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.538415] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.539571] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /workspace/src/ldlidar_stl_ros2/include;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/core;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/dataprocess;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/filter;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/logger;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/networkcom;/workspace/src/ldlidar_stl_ros2/ldlidar_driver/include/serialcom\n'}
+[2.539941] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.548434] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.548790] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.550612] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.550953] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[2.553554] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.555658] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.562882] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.563248] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.565302] (ldlidar_stl_ros2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.568476] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Configuring done (2.5s)\n'}
+[2.594346] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.601109] (ldlidar_stl_ros2) StdoutLine: {'line': b'-- Build files have been written to: /workspace/build/ldlidar_stl_ros2\n'}
+[2.605214] (-) TimerEvent: {}
+[2.621003] (ldlidar_stl_ros2) CommandEnded: {'returncode': 0}
+[2.624505] (ldlidar_stl_ros2) JobProgress: {'identifier': 'ldlidar_stl_ros2', 'progress': 'build'}
+[2.624711] (ldlidar_stl_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/workspace/build/ldlidar_stl_ros2', '--', '-j8', '-l8'], 'cwd': '/workspace/build/ldlidar_stl_ros2', 'env': OrderedDict({'HOSTNAME': 'avaj-desktop', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ubuntu', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/workspace/build/ldlidar_stl_ros2', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'void', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.705421] (-) TimerEvent: {}
+[2.727177] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/logger/log_module.cpp.o\n'}
+[2.727687] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/serialcom/serial_interface_linux.cpp.o\n'}
+[2.727857] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/core/ldlidar_driver.cpp.o\n'}
+[2.728585] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/filter/tofbf.cpp.o\n'}
+[2.728797] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/dataprocess/lipkg.cpp.o\n'}
+[2.728946] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/src/demo.cpp.o\n'}
+[2.729080] (ldlidar_stl_ros2) StdoutLine: {'line': b'[ 87%] Building CXX object CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/networkcom/network_socket_interface_linux.cpp.o\n'}
+[2.805597] (-) TimerEvent: {}
+[2.905959] (-) TimerEvent: {}
+[3.006307] (-) TimerEvent: {}
+[3.106665] (-) TimerEvent: {}
+[3.207028] (-) TimerEvent: {}
+[3.307402] (-) TimerEvent: {}
+[3.352612] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp: In member function \xe2\x80\x98void LogModule::InitLock()\xe2\x80\x99:\n'}
+[3.353167] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp:172:3: error: \xe2\x80\x98pthread_mutex_init\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98pthread_mutex_t\xe2\x80\x99?\n'}
+[3.353361] (ldlidar_stl_ros2) StderrLine: {'line': b'  172 |   pthread_mutex_init(&mutex_lock_,NULL);\n'}
+[3.353498] (ldlidar_stl_ros2) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~\n'}
+[3.353622] (ldlidar_stl_ros2) StderrLine: {'line': b'      |   pthread_mutex_t\n'}
+[3.359703] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp: In member function \xe2\x80\x98void LogModule::RealseLock()\xe2\x80\x99:\n'}
+[3.360164] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp:180:9: error: \xe2\x80\x98pthread_mutex_unlock\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98pthread_mutex_t\xe2\x80\x99?\n'}
+[3.360325] (ldlidar_stl_ros2) StderrLine: {'line': b'  180 |         pthread_mutex_unlock(&mutex_lock_);\n'}
+[3.360456] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~~~~~~~~\n'}
+[3.360577] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         pthread_mutex_t\n'}
+[3.366311] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp: In member function \xe2\x80\x98void LogModule::Lock()\xe2\x80\x99:\n'}
+[3.366830] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp:188:9: error: \xe2\x80\x98pthread_mutex_lock\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98pthread_mutex_t\xe2\x80\x99?\n'}
+[3.367001] (ldlidar_stl_ros2) StderrLine: {'line': b'  188 |         pthread_mutex_lock(&mutex_lock_);\n'}
+[3.367137] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~~~~~~\n'}
+[3.367268] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         pthread_mutex_t\n'}
+[3.373294] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp: In member function \xe2\x80\x98void LogModule::UnLock()\xe2\x80\x99:\n'}
+[3.373658] (ldlidar_stl_ros2) StderrLine: {'line': b'/workspace/src/ldlidar_stl_ros2/ldlidar_driver/src/logger/log_module.cpp:196:9: error: \xe2\x80\x98pthread_mutex_unlock\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98pthread_mutex_t\xe2\x80\x99?\n'}
+[3.373884] (ldlidar_stl_ros2) StderrLine: {'line': b'  196 |         pthread_mutex_unlock(&mutex_lock_);\n'}
+[3.374017] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         ^~~~~~~~~~~~~~~~~~~~\n'}
+[3.374137] (ldlidar_stl_ros2) StderrLine: {'line': b'      |         pthread_mutex_t\n'}
+[3.407583] (-) TimerEvent: {}
+[3.453091] (ldlidar_stl_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ldlidar_stl_ros2_node.dir/build.make:132: CMakeFiles/ldlidar_stl_ros2_node.dir/ldlidar_driver/src/logger/log_module.cpp.o] Error 1\n'}
+[3.453521] (ldlidar_stl_ros2) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[3.507763] (-) TimerEvent: {}
+[3.608144] (-) TimerEvent: {}
+[3.708535] (-) TimerEvent: {}
+[3.808934] (-) TimerEvent: {}
+[3.909344] (-) TimerEvent: {}
+[4.009760] (-) TimerEvent: {}
+[4.110135] (-) TimerEvent: {}
+[4.210513] (-) TimerEvent: {}
+[4.310883] (-) TimerEvent: {}
+[4.411480] (-) TimerEvent: {}
+[4.511836] (-) TimerEvent: {}
+[4.612174] (-) TimerEvent: {}
+[4.712554] (-) TimerEvent: {}
+[4.812991] (-) TimerEvent: {}
+[4.913429] (-) TimerEvent: {}
+[5.013892] (-) TimerEvent: {}
+[5.114343] (-) TimerEvent: {}
+[5.214801] (-) TimerEvent: {}
+[5.315254] (-) TimerEvent: {}
+[5.415705] (-) TimerEvent: {}
+[5.516159] (-) TimerEvent: {}
+[5.616591] (-) TimerEvent: {}
+[5.717041] (-) TimerEvent: {}
+[5.817470] (-) TimerEvent: {}
+[5.917864] (-) TimerEvent: {}
+[6.018244] (-) TimerEvent: {}
+[6.118654] (-) TimerEvent: {}
+[6.219074] (-) TimerEvent: {}
+[6.319521] (-) TimerEvent: {}
+[6.419968] (-) TimerEvent: {}
+[6.520414] (-) TimerEvent: {}
+[6.620846] (-) TimerEvent: {}
+[6.721297] (-) TimerEvent: {}
+[6.821717] (-) TimerEvent: {}
+[6.922147] (-) TimerEvent: {}
+[7.022588] (-) TimerEvent: {}
+[7.123035] (-) TimerEvent: {}
+[7.223487] (-) TimerEvent: {}
+[7.323917] (-) TimerEvent: {}
+[7.424374] (-) TimerEvent: {}
+[7.524828] (-) TimerEvent: {}
+[7.625255] (-) TimerEvent: {}
+[7.725760] (-) TimerEvent: {}
+[7.826207] (-) TimerEvent: {}
+[7.926640] (-) TimerEvent: {}
+[8.027064] (-) TimerEvent: {}
+[8.127493] (-) TimerEvent: {}
+[8.227920] (-) TimerEvent: {}
+[8.328358] (-) TimerEvent: {}
+[8.428799] (-) TimerEvent: {}
+[8.529256] (-) TimerEvent: {}
+[8.629698] (-) TimerEvent: {}
+[8.730167] (-) TimerEvent: {}
+[8.830614] (-) TimerEvent: {}
+[8.931064] (-) TimerEvent: {}
+[9.031510] (-) TimerEvent: {}
+[9.131976] (-) TimerEvent: {}
+[9.232499] (-) TimerEvent: {}
+[9.332954] (-) TimerEvent: {}
+[9.433409] (-) TimerEvent: {}
+[9.533894] (-) TimerEvent: {}
+[9.634327] (-) TimerEvent: {}
+[9.734766] (-) TimerEvent: {}
+[9.835193] (-) TimerEvent: {}
+[9.935616] (-) TimerEvent: {}
+[10.036034] (-) TimerEvent: {}
+[10.136446] (-) TimerEvent: {}
+[10.236864] (-) TimerEvent: {}
+[10.337309] (-) TimerEvent: {}
+[10.437795] (-) TimerEvent: {}
+[10.538203] (-) TimerEvent: {}
+[10.638578] (-) TimerEvent: {}
+[10.739022] (-) TimerEvent: {}
+[10.839437] (-) TimerEvent: {}
+[10.939857] (-) TimerEvent: {}
+[11.040247] (-) TimerEvent: {}
+[11.140607] (-) TimerEvent: {}
+[11.241082] (-) TimerEvent: {}
+[11.341509] (-) TimerEvent: {}
+[11.441919] (-) TimerEvent: {}
+[11.542341] (-) TimerEvent: {}
+[11.642760] (-) TimerEvent: {}
+[11.743171] (-) TimerEvent: {}
+[11.843581] (-) TimerEvent: {}
+[11.944011] (-) TimerEvent: {}
+[12.044440] (-) TimerEvent: {}
+[12.100536] (ldlidar_stl_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ldlidar_stl_ros2_node.dir/all] Error 2\n'}
+[12.101251] (ldlidar_stl_ros2) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[12.105583] (ldlidar_stl_ros2) CommandEnded: {'returncode': 2}
+[12.134271] (ldlidar_stl_ros2) JobEnded: {'identifier': 'ldlidar_stl_ros2', 'rc': 2}
+[12.144603] (-) TimerEvent: {}
+[12.145438] (-) EventReactorShutdown: {}

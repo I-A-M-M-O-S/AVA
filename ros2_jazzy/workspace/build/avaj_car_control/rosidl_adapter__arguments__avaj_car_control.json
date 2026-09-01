@@ -1,0 +1,6 @@
+{
+  "package_name": "avaj_car_control",
+  "non_idl_tuples": [
+    "/workspace/src/avaj_car_control:msg/DriveCommand.msg"
+  ]
+}

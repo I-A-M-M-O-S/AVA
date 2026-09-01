@@ -1,0 +1,14 @@
+/**:
+  ros__parameters:
+    frame_id: "imu_link"
+    i2c:
+      enabled: true
+      bus: "/dev/i2c-7"
+      address: "0x4A"
+    publish:
+      magnetic_field:
+        enabled: true
+        rate: 100
+      imu:
+        enabled: true
+        rate: 100
