@@ -2,6 +2,11 @@
 
 Stand: 22. August 2026, Zeitzone Europe/Berlin
 
+> **Aktueller Stand:** Diese historische Übergabe wird durch
+> [`CURRENT_STATE.md`](CURRENT_STATE.md) ergänzt. Neue Agenten müssen zuerst
+> `AGENTS.md` und `CURRENT_STATE.md` lesen; der dort datierte Live-, Test- und
+> Sicherheitsstand hat bei Abweichungen Vorrang.
+
 Diese Datei ist der zentrale Einstiegspunkt für eine neue Codex-/ChatGPT-Instanz.
 Vor Änderungen zuerst diese Datei und anschließend `README.md`, `compose.yaml`
 und die betroffenen Konfigurationen lesen. Das System ist produktiv benutzt;

@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(avaj_car_control)
 
 find_package(ament_cmake REQUIRED)
+find_package(ackermann_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rc_car_interfaces REQUIRED)
 
@@ -12,9 +13,20 @@ if(BUILD_TESTING)
     test/test_drive_commander.py
     TIMEOUT 60
   )
+  ament_add_pytest_test(
+    test_ackermann_to_drive_request
+    test/test_ackermann_to_drive_request.py
+    TIMEOUT 60
+  )
+  ament_add_pytest_test(
+    test_graph_invariants
+    test/test_graph_invariants.py
+    TIMEOUT 60
+  )
 endif()
 
 install(PROGRAMS
+  scripts/ackermann_to_drive_request
   scripts/drive_commander
   scripts/drive_command_to_twist
   scripts/mode_manager

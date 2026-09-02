@@ -7,6 +7,7 @@
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ackermann_msgs</depend>
   <exec_depend>rclpy</exec_depend>
   <depend>geometry_msgs</depend>
   <depend>rc_car_interfaces</depend>
@@ -18,6 +19,7 @@
   <exec_depend>control_center</exec_depend>
 
   <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>tf2_msgs</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

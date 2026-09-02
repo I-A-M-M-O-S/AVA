@@ -53,7 +53,9 @@ Steuerungsnamen bleiben absichtlich stabil, insbesondere `/drive_commander`.
 | `/camera/camera_info` | `sensor_msgs/msg/CameraInfo` | Kamera oder Gazebo-Bridge | Bildverarbeitung | Kamerakalibrierung | Bildrate | Unkalibrierte Hardwaredaten sind nicht produktionsreif |
 | `/odom` | `nav_msgs/msg/Odometry` | Gazebo oder spätere Radodometrie | EKF | m, m/s, `odom -> base_link` | 50 Hz | Rohquelle; nicht direkt von High-Level-Steuerung verwenden |
 | `/odometry/filtered` | `nav_msgs/msg/Odometry` | EKF | Steuerung, SLAM | SI, `odom -> base_link` | EKF-Rate | Bei Verlust autonomes Fahren sperren (noch umzusetzen) |
-| `/control/autonomous_cmd` | `rc_car_interfaces/msg/DriveRequest` | temporärer `control_center` | `drive_commander` | normiert, Übergangsschnittstelle | 10 Hz | Quellen-Timeout 0,3 s |
+| `/planning/racing_line` | `nav_msgs/msg/Path` | späterer Racing-Line-Planer | `control_center` | m, üblicherweise `map` | bei neuer Planung | Noch optional; die LIDAR_GAP-Basislogik nutzt es noch nicht |
+| `/control/autonomous_ackermann_cmd` | `ackermann_msgs/msg/AckermannDriveStamped` | `control_center` | `ackermann_to_drive_request` | m/s und Lenkwinkel rad, `base_link` | 20 Hz | Frische LiDAR-/Odometrie- und Fahrfreigabeprüfung vor Bewegung |
+| `/control/autonomous_cmd` | `rc_car_interfaces/msg/DriveRequest` | `ackermann_to_drive_request` | `drive_commander`, Watchdog | normiert, späte Aktuatoranpassung | Eingangsrate | Adapter-Timeout 0,3 s; danach einmal neutral und keine künstliche Heartbeat-Verlängerung |
 | `/control/manual_cmd` | `rc_car_interfaces/msg/DriveRequest` | `wasd_teleop` | `drive_commander` | normiert, Testpfad | 50 Hz | Nicht die spätere ESP-direkte MANUAL-Architektur |
 | `/system/mode` | `std_msgs/msg/String` | `mode_manager` | Watchdog, `drive_commander` | Enum als Übergangslösung | 1 Hz + Änderung | Ungültige Werte werden abgelehnt |
 | `/system/drive_enable` | `std_msgs/msg/Bool` | `safety_watchdog` | `drive_commander` | bool | 20 Hz | Fehlende Pflichtinputs ergeben `false` |
@@ -63,6 +65,14 @@ Steuerungsnamen bleiben absichtlich stabil, insbesondere `/drive_commander`.
 | `/vehicle/encoders` | `rc_car_interfaces/msg/WheelEncoderState` | `usb_bridge` | spätere Odometrie/Watchdog | vier signed Counts; Jetson-Empfangszeit | gültige `V1,ENC`-Frames | int32-Wrap; derzeit keine Safety-Gate-Wirkung |
 | `/drive_usb/rx` | `std_msgs/msg/String` | `usb_bridge` | ausschließlich Diagnose | untrusted Raw-RX | abgeschlossene/verworfene Zeile | Nie als Fahrzeugzustand oder Fahrfreigabe verwenden |
 | `/drive_usb/status` | `std_msgs/msg/String` | `usb_bridge` | Diagnose; bestehender optionaler Arrival-Watchdog | JSON-Übergangsschnittstelle | Zustandsänderung | connected/disconnected, valid feedback sowie konkrete Reject-Gründe; setzt selbst kein Drive-Enable |
+
+`control_center` konsumiert zusätzlich Kamera/Kamerakalibrierung, IMU,
+Magnetometer, Karte, Fahrzeugstatus, Aktuatorstatus, Encoder, Systemmodus,
+Fahrfreigabe sowie die Status-Heartbeats von `drive_commander` und USB-Bridge.
+Sein Fahralgorithmus bleibt dadurch von der normierten ESP-Schnittstelle
+getrennt. Die aktuelle `LIDAR_GAP`-Logik ist nur der erste austauschbare
+Algorithmus; ein Racing-Line-Follower publiziert später über denselben
+Ackermann-Ausgang.
 
 Der vollständige Frame-, CRC-, Sequenz-, Zeit-, Bereichs- und Wrap-Vertrag
 steht in `docs/esp_feedback_protocol.md`. Die neuen Feedbacktopics entstehen

@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+
+"""Convert an SI Ackermann command into the normalized AVAJ request."""
+
+import math
+from time import monotonic
+
+from ackermann_msgs.msg import AckermannDriveStamped
+import rclpy
+from rclpy.executors import ExternalShutdownException
+from rclpy.node import Node
+
+from rc_car_interfaces.msg import DriveRequest
+
+
+class AckermannRequestConverter:
+    """Pure, testable conversion from vehicle units to actuator units."""
+
+    def __init__(
+        self, max_forward_speed, max_reverse_speed, max_steering_angle
+    ):
+        self.max_forward_speed = float(max_forward_speed)
+        self.max_reverse_speed = float(max_reverse_speed)
+        self.max_steering_angle = float(max_steering_angle)
+        if min(
+            self.max_forward_speed,
+            self.max_reverse_speed,
+            self.max_steering_angle,
+        ) <= 0.0:
+            raise ValueError('all conversion limits must be positive')
+
+    def convert(self, speed, steering_angle):
+        """Return normalized speed and steering, or neutral if invalid."""
+        if not math.isfinite(speed) or not math.isfinite(steering_angle):
+            return 0, 0
+
+        speed_limit = (
+            self.max_forward_speed if speed >= 0.0
+            else self.max_reverse_speed
+        )
+        normalized_speed = round(100.0 * speed / speed_limit)
+
+        # Ackermann/ROS positive steering is left. The established AVAJ
+        # low-level convention uses negative values for left.
+        normalized_steering = round(
+            -100.0 * steering_angle / self.max_steering_angle
+        )
+        return (
+            max(-100, min(100, normalized_speed)),
+            max(-100, min(100, normalized_steering)),
+        )
+
+
+class AckermannToDriveRequest(Node):
+    """Late adapter between autonomous vehicle control and drive safety."""
+
+    def __init__(self):
+        super().__init__('ackermann_to_drive_request')
+        self.declare_parameter(
+            'input_topic', '/control/autonomous_ackermann_cmd'
+        )
+        self.declare_parameter('output_topic', '/control/autonomous_cmd')
+        self.declare_parameter('max_forward_speed', 1.5)
+        self.declare_parameter('max_reverse_speed', 0.7)
+        self.declare_parameter('max_steering_angle', 0.55)
+        self.declare_parameter('command_timeout', 0.3)
+
+        self._converter = AckermannRequestConverter(
+            self.get_parameter('max_forward_speed').value,
+            self.get_parameter('max_reverse_speed').value,
+            self.get_parameter('max_steering_angle').value,
+        )
+        self._publisher = self.create_publisher(
+            DriveRequest, self.get_parameter('output_topic').value, 10
+        )
+        self.create_subscription(
+            AckermannDriveStamped,
+            self.get_parameter('input_topic').value,
+            self._on_command,
+            10,
+        )
+        self.create_timer(0.05, self._check_timeout)
+        self._last_command = None
+        self._timeout_stop_sent = True
+
+    def _on_command(self, message):
+        speed, steering = self._converter.convert(
+            float(message.drive.speed), float(message.drive.steering_angle)
+        )
+        self._publish(speed, steering)
+        self._last_command = monotonic()
+        self._timeout_stop_sent = False
+
+    def _check_timeout(self):
+        if self._last_command is None or self._timeout_stop_sent:
+            return
+        timeout = float(self.get_parameter('command_timeout').value)
+        if monotonic() - self._last_command > timeout:
+            self._publish(0, 0)
+            self._timeout_stop_sent = True
+            self.get_logger().error(
+                'Ackermann command timed out; autonomous request stopped'
+            )
+
+    def _publish(self, speed, steering):
+        request = DriveRequest()
+        request.speed = speed
+        request.steering = steering
+        self._publisher.publish(request)
+
+
+def main():
+    rclpy.init()
+    node = AckermannToDriveRequest()
+    try:
+        rclpy.spin(node)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
+    finally:
+        if rclpy.ok():
+            node._publish(0, 0)
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

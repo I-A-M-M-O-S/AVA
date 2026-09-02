@@ -18,9 +18,11 @@ def generate_launch_description():
     usb_physical_port = LaunchConfiguration('usb_physical_port')
     usb_expect_response = LaunchConfiguration('usb_expect_response')
     usb_message_watchdog = LaunchConfiguration('usb_message_watchdog')
+    use_sim_time = LaunchConfiguration('use_sim_time')
 
     return LaunchDescription([
         DeclareLaunchArgument('initial_mode', default_value='DISABLED'),
+        DeclareLaunchArgument('use_sim_time', default_value='false'),
         DeclareLaunchArgument('watchdog_bypass', default_value='false'),
         DeclareLaunchArgument(
             'source_timeout_enabled', default_value='true'
@@ -35,7 +37,10 @@ def generate_launch_description():
             executable='mode_manager',
             name='mode_manager',
             output='screen',
-            parameters=[{'initial_mode': initial_mode}],
+            parameters=[{
+                'initial_mode': initial_mode,
+                'use_sim_time': use_sim_time,
+            }],
         ),
         Node(
             package='avaj_car_control',
@@ -44,7 +49,15 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'bypass': ParameterValue(watchdog_bypass, value_type=bool),
+                'use_sim_time': use_sim_time,
             }],
+        ),
+        Node(
+            package='avaj_car_control',
+            executable='ackermann_to_drive_request',
+            name='ackermann_to_drive_request',
+            output='screen',
+            parameters=[{'use_sim_time': use_sim_time}],
         ),
         Node(
             package='avaj_car_control',
@@ -55,6 +68,7 @@ def generate_launch_description():
                 'source_timeout_enabled': ParameterValue(
                     source_timeout_enabled, value_type=bool
                 ),
+                'use_sim_time': use_sim_time,
             }],
         ),
         Node(
@@ -62,6 +76,7 @@ def generate_launch_description():
             executable='drive_command_to_twist',
             name='drive_command_to_twist',
             output='screen',
+            parameters=[{'use_sim_time': use_sim_time}],
         ),
         Node(
             package='rc_car_usb_bridge',
@@ -84,6 +99,7 @@ def generate_launch_description():
                 'validate_sequence': ParameterValue(
                     usb_message_watchdog, value_type=bool
                 ),
+                'use_sim_time': use_sim_time,
             }],
         ),
     ])

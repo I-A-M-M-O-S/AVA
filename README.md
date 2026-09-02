@@ -1,5 +1,9 @@
 # ROS 2 Jazzy auf dem Jetson
 
+Der kanonische, zuletzt verifizierte Projektstand steht in
+[`CURRENT_STATE.md`](CURRENT_STATE.md). Neue Entwickler und Agenten müssen diese
+Datei vor Änderungen lesen.
+
 Eine vollständige technische Übergabe für die Fortsetzung mit einer anderen
 Instanz steht in [`HANDOFF.md`](HANDOFF.md).
 

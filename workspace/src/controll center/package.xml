@@ -7,6 +7,7 @@
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ackermann_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>rc_car_interfaces</depend>
   <depend>rclcpp</depend>

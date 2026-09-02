@@ -1,5 +1,10 @@
 # AGENTS.md — AVAJ RC-Car
 
+> **Current implementation state:** Read [`CURRENT_STATE.md`](CURRENT_STATE.md)
+> before making changes. This file remains the binding target architecture;
+> `CURRENT_STATE.md` records the latest verified implementation, runtime and
+> safety delta.
+
 ## 1. Purpose of this file
 
 This file defines the architectural and implementation rules for AI coding agents working on the AVAJ autonomous 1:10 RC-car project.
