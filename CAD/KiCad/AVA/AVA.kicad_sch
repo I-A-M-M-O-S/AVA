@@ -7,7 +7,7 @@
 	(title_block
 		(title "AVA")
 		(date "0026-04-28")
-		(rev "0")
+		(rev "10")
 	)
 	(lib_symbols
 		(symbol "AVA:ESP32-C3-SuperMini"
@@ -6088,7 +6088,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02_Pin"
+		(property "Value" "Fan"
 			(at 45.085 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6564,7 +6564,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02_Pin"
+		(property "Value" "Neopixel"
 			(at 140.335 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6644,7 +6644,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Servo"
 			(at 45.085 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6927,7 +6927,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Hall#1"
 			(at 36.195 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7724,7 +7724,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "ESC"
 			(at 45.085 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8152,7 +8152,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
+		(property "Value" "Radio-Receiver"
 			(at 45.085 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8555,7 +8555,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02_Pin"
+		(property "Value" "Bat-Supervisor"
 			(at 22.225 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9581,7 +9581,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Hall#0"
 			(at 36.195 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9820,7 +9820,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Hall#2"
 			(at 36.195 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9980,7 +9980,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Hall#3"
 			(at 36.195 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
