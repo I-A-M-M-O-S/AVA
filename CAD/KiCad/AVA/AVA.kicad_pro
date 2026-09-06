@@ -555,7 +555,7 @@
       "netlist": "",
       "plot": "FAB/PDF/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "FAB/STL/AVA.stl",
       "vrml": ""
     },
     "page_layout_descr_file": ""
